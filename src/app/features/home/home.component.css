@@ -1,0 +1,268 @@
+:host {
+    display: block;
+}
+
+:root {
+    --text-color: #596774;
+    --footer-color-light: #D7FAFF;
+    --footer-color-dark: #0074E1;
+    --nav-bg-color: #d3eff0;
+}
+
+.back-color {
+    position: fixed;
+    top: -8em;
+    right: 20em;
+    width: 20%;
+    height: 10em;
+    /* background-color: var(--nav-bg-color); */
+    background-color: var(--nav-bg-color);
+    border-radius: 50%;
+    box-shadow: -15px 10px 80px 80px var(--nav-bg-color);
+}
+
+.home {
+    height: 100vh;
+}
+
+.cover-content {
+    position: relative;
+    top: 50vh;
+    right: 1em;
+    width: 100%;
+}
+
+.scroll-content {
+    width: 100%;
+    height: 2.8em;
+    overflow: hidden;
+}
+
+.scroll-content li {
+    font-size: 2.5em;
+    line-height: 42px;
+    overflow: hidden;
+}
+
+.scroll-content li p {
+    font-family: "Limelight", sans-serif;
+    font-size: 1.5rem;
+}
+
+.cover-content h1 {
+    font-size: 5em;
+}
+
+.cover-content h3 {
+    font-size: 3em;
+}
+
+.cover-content h1,
+.cover-content h3,
+.cover-content p {
+    text-shadow: 1.5px 1.5px 0 white;
+    padding-top: 0;
+}
+
+
+:root {
+    --text-color: #596774;
+    --footer-color-light: #D7FAFF;
+    --footer-color-dark: #0074E1;
+    --nav-bg-color: #d3eff0;
+}
+
+/*font style*/
+/*  <weight>: Use a value from 100 to 900
+      <uniquifier>: Use a unique and descriptive class name*/
+
+.roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+.limelight-regular {
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*font-size*/
+h1 {
+    font-size: 1.8em;
+    padding-top: 1em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+p {
+    line-height: 180%;
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+}
+
+li {
+    font-size: 1em;
+}
+
+/*Google icon*/
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+/*Bg-video in home and contact*/
+.home video,
+.contact video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1000;
+    margin: 0 auto;
+}
+
+/*general page setting*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 85%;
+    margin: auto;
+    padding-top: 10vh;
+    color: var(--text-color);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/* loading animation */
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    /* Background color */
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* On top of everything else */
+    display: flex;
+}
+
+.loader {
+    width: 65px;
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.loader:before,
+.loader:after {
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0 0 0 3px inset #fff;
+    animation: l5 2.5s infinite;
+}
+
+.loader:after {
+    animation-delay: -1.25s;
+    border-radius: 0;
+}
+
+@keyframes l5 {
+    0% {
+        inset: 0 35px 35px 0;
+    }
+
+    12.5% {
+        inset: 0 35px 0 0;
+    }
+
+    25% {
+        inset: 35px 35px 0 0;
+    }
+
+    37.5% {
+        inset: 35px 0 0 0;
+    }
+
+    50% {
+        inset: 35px 0 0 35px;
+    }
+
+    62.5% {
+        inset: 0 0 0 35px;
+    }
+
+    75% {
+        inset: 0 0 35px 35px;
+    }
+
+    87.5% {
+        inset: 0 0 35px 0;
+    }
+
+    100% {
+        inset: 0 35px 35px 0;
+    }
+}
+
+/* Hide the loader when page content is ready */
+.hide-loader {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+
+@media screen and (min-width: 1600px) {
+
+    /*font-size*/
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+
+    h5 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    li {
+        font-size: 1.2em;
+    }
+}

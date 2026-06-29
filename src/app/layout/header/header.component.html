@@ -1,1 +1,55 @@
-<p>header works!</p>
+<section>
+    <div id="menuBtn" (click)="openMenu()">
+        <i class="fa fa-bars"></i>
+    </div>
+    <div class="menu-bg" id="mobileMenu" [style.display]="menuVisible ? 'flex' : 'none'">
+        <div class="close-container" id="closeBtn" (click)="closeMenu()">
+            <div class=" leftright"></div>
+            <div class="rightleft"></div>
+        </div>
+
+        <div class="menu-container">
+            <a routerLink="/">
+                <i class="material-icons">home</i>
+                <span>HOME</span>
+            </a>
+
+            <a routerLink="/projects">
+                <i class="material-icons">folder</i>
+                <span>PROJECTS</span>
+            </a>
+
+            <a routerLink="/about">
+                <i class="material-icons">perm_contact_calendar</i>
+                <span>ABOUT</span>
+            </a>
+
+            <a routerLink="/contact">
+                <i class="material-icons">mail</i>
+                <span>CONTACT</span>
+            </a>
+        </div>
+    </div>
+
+    <header>
+        <nav class="nav">
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                <i class="material-icons">home</i>
+            </a>
+
+            <a routerLink="/projects" routerLinkActive="active">
+                <i class="material-icons">folder</i>
+            </a>
+
+            <a routerLink="/about" routerLinkActive="active">
+                <i class="material-icons">perm_contact_calendar</i>
+            </a>
+
+            <a routerLink="/contact" routerLinkActive="active">
+                <i class="material-icons">mail</i>
+            </a>
+        </nav>
+    </header>
+
+    <div class="back-color"></div>
+</section>
