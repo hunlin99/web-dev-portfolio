@@ -4,6 +4,8 @@
     --footer-color-light: #D7FAFF;
     --footer-color-dark: #0074E1;
     --nav-bg-color: #d3eff0;
+    --transition: 0.28s;
+    --font-size: 1.5rem;
 }
 
 /*general page setting*/
@@ -14,9 +16,9 @@
 }
 
 body {
-    width: 85%;
+    /* width: 85%;
     margin: auto;
-    padding-top: 10vh;
+    padding-top: 10vh; */
     color: var(--text-color);
     background-size: 100% 100%;
     background-repeat: no-repeat;
