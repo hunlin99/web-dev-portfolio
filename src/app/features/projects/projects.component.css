@@ -1,20 +1,14 @@
 .projects {
-    /* padding-top: 10vh; */
     background-image: url(/images/bg-img-opasity.png);
     width: 100%;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-}
-
-main {
-    padding-top: 10vh;
-    /* width: 85%;
-    margin: auto; */
-    padding: 0 10%;
+    padding: 10%;
     max-width: 1680px;
 }
+
 
 /*header*/
 .back-color {
@@ -233,22 +227,13 @@ button {
         grid-column: auto;
     }
 
-    .back-color {
-        display: none;
-    }
-
 }
 
 @media only screen and (max-width: 700px) {
 
-    main {
-        padding-top: 10vh;
-        /* width: 85%;
-        margin: auto; */
-        padding: 0 4%;
-        max-width: 1680px;
+    .projects {
+        padding: 10% 4%;
     }
-
 
     .col-container-1,
     .col-container-2 {
@@ -305,6 +290,10 @@ button {
     h1 {
         font-size: 1.8em
     }
+
+}
+
+@media only screen and (max-width: 1200px) {
 
     .back-color {
         display: none;
