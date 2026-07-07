@@ -20,10 +20,8 @@
 
             <br>
 
-            <a *ngFor="let item of aboutLinks" [href]="item.link" target="_blank">
-
+            <a class="roboto-regular" *ngFor="let item of aboutLinks" [href]="item.link" target="_blank">
                 {{ item.linkTo }}
-
             </a>
 
         </div>
@@ -59,40 +57,28 @@
 
             </div>
 
-            <div class="bg-content">
+            <div class="bg-content roboto-regular">
 
                 <p>
-
                     {{ edu.period }}
-
                 </p>
 
                 <h3>
-
                     {{ edu.college }}
-
                 </h3>
 
                 <h5>
-
                     {{ edu.major }}
-
                 </h5>
 
                 <ul>
-
                     <li>
-
                         Focus Areas: {{ edu.focus }}
-
                     </li>
 
                     <li *ngIf="edu.gpa">
-
                         GPA: {{ edu.gpa }}
-
                     </li>
-
                 </ul>
 
             </div>
@@ -105,117 +91,74 @@
     <section class="background">
 
         <h1 class="limelight-regular">
-
             Work Experience
-
         </h1>
 
         <hr>
 
         <div class="background-holder" *ngFor="let work of workExperience">
-
             <div class="time-line">
-
                 <p>
-
                     {{ work.period }}
-
                 </p>
-
             </div>
 
-            <div class="bg-content">
-
+            <div class="bg-content roboto-regular">
                 <p>
-
                     {{ work.period }}
-
                 </p>
 
                 <h3>
-
                     {{ work.jobTitle }}
-
                 </h3>
 
                 <h5>
-
                     {{ work.company }}
-
                 </h5>
 
                 <ul>
-
                     <li *ngFor="let item of work.highlights">
-
                         {{ item }}
-
                     </li>
-
                 </ul>
-
             </div>
-
         </div>
-
     </section>
 
     <!-- Activities -->
     <section class="background">
-
         <h1 class="limelight-regular">
-
             Activities & Leadership
-
         </h1>
 
         <hr>
 
         <div class="background-holder" *ngFor="let activity of activities">
-
             <div class="time-line">
-
                 <p>
-
                     {{ activity.period }}
-
                 </p>
-
             </div>
 
-            <div class="bg-content">
-
+            <div class="bg-content roboto-regular">
                 <p>
-
                     {{ activity.period }}
-
                 </p>
 
                 <h3>
-
                     {{ activity.jobTitle }}
-
                 </h3>
 
                 <h5>
-
                     {{ activity.organization }}
-
                 </h5>
 
                 <ul>
-
                     <li *ngFor="let item of activity.highlights">
-
                         {{ item }}
-
                     </li>
-
                 </ul>
-
             </div>
-
         </div>
-
     </section>
 </main>

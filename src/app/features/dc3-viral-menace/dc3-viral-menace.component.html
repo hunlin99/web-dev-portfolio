@@ -1,1 +1,174 @@
-<p>dc3-viral-menace works!</p>
+<main class="body">
+    <app-project-detail-page-header></app-project-detail-page-header>
+    <!-- <app-back-button></app-back-button>
+    <app-header></app-header> -->
+    <section class="cover">
+        <div class="cover-container">
+            <div class="cover-content">
+                <h1 class="limelight-regular">
+                    {{ project.title }}
+                </h1>
+
+                <p class="limelight-regular">
+                    {{ project.subtitle }}
+                </p>
+
+                <a [href]="project.website" target="_blank">
+                    <button class="learn-more">
+                        <span class="circle">
+                            <i class="fa fa-link icon icon-link"></i>
+                            <i class="fa fa-arrow-right icon icon-arrow"></i>
+                        </span>
+
+                        <span class="button-text">
+                            Visit Website
+                        </span>
+                    </button>
+                </a>
+            </div>
+
+            <img [src]="project.coverImage" [alt]="project.title">
+
+        </div>
+
+    </section>
+
+    <!-- ================= Overview ================= -->
+
+    <section class="progress">
+
+        <div class="progress-container">
+
+            <h1 class="limelight-regular">
+                Project Overview
+            </h1>
+
+            <hr>
+
+            <div class="progress-grid">
+                <div class="progress-block" *ngFor="let phase of project.phases">
+                    <h3 class="limelight-regular">
+                        {{ phase.title }}
+                    </h3>
+
+                    <p>
+                        {{ phase.organization }}
+                    </p>
+
+                    <p>
+                        Timeline: {{ phase.timeline }}
+                    </p>
+
+                    <hr>
+
+                    <p>
+                        {{ phase.description }}
+                    </p>
+
+                    <h4 class="limelight-regular">
+                        My Role
+                    </h4>
+
+                    <ul>
+                        <li *ngFor="let role of phase.roles">
+                            {{ role }}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= Description ================= -->
+
+    <section class="description">
+
+        <div class="description-container">
+
+            <h1 class="limelight-regular">
+                APP Main Pages
+            </h1>
+
+            <hr>
+
+            <img class="showcase-img" src="images/DC3-Viral-Menace/DC3-Viral-Menace-project-img.jpg">
+
+            <h1 class="limelight-regular">
+                Project Goals
+            </h1>
+
+            <hr>
+
+            <ul>
+                <li *ngFor="let goal of project.goals">
+                    {{ goal }}
+                </li>
+            </ul>
+
+            <h1 class="limelight-regular">
+                Technical Stack & Tools
+            </h1>
+
+            <hr>
+
+            <div *ngFor="let stack of project.techStack">
+                <h3>
+                    {{ stack.category }}
+                </h3>
+
+                <ul>
+                    <li *ngFor="let item of stack.items">
+                        {{ item }}
+                    </li>
+
+                </ul>
+            </div>
+
+            <h1 class="limelight-regular">
+                Sitemap
+            </h1>
+
+            <hr>
+
+            <img class="showcase-img" src="images/DC3-Viral-Menace/dc3-viral-menace-sitemap.png">
+        </div>
+    </section>
+
+    <!-- ================= Design ================= -->
+
+    <section class="design-system">
+        <div class="design-system-container">
+            <h1 class="limelight-regular">
+                Design Iteration
+            </h1>
+
+            <hr>
+
+            <img class="showcase-img" src="images/DC3-Viral-Menace/Design-iteration.png">
+
+            <h1 class="limelight-regular">
+                Interactive UI
+            </h1>
+
+            <hr>
+
+            <div class="screen-video-container">
+                <video autoplay muted loop playsinline>
+                    <source src="images/DC3-Viral-Menace/interactive.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <h1 class="limelight-regular">
+                CSS Clip-Path Layout
+            </h1>
+
+            <hr>
+
+            <div class="screen-video-container">
+                <video autoplay muted loop playsinline>
+                    <source src="images/DC3-Viral-Menace/clip-path.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </section>
+</main>

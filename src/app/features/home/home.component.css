@@ -15,14 +15,14 @@
 }
 
 .home {
-    height: 100%;
-    width: 85%;
-    margin: auto;
+    width: 100%;
+    max-width: 1680px;
+    padding: 10%;
 }
 
 .cover-content {
     position: relative;
-    top: 50vh;
+    top: 40vh;
     right: 1em;
     width: 100%;
 }
@@ -59,70 +59,6 @@
     padding-top: 0;
 }
 
-/*font style*/
-/*  <weight>: Use a value from 100 to 900
-      <uniquifier>: Use a unique and descriptive class name*/
-
-.roboto-regular {
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    font-variation-settings:
-        "wdth" 100;
-}
-
-.limelight-regular {
-    font-family: "Limelight", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-/*font-size*/
-h1 {
-    font-size: 1.8em;
-    padding-top: 1em;
-}
-
-h3 {
-    font-size: 1.2em;
-}
-
-h5 {
-    font-size: 1em;
-}
-
-p {
-    line-height: 180%;
-    font-size: 1rem;
-    font-family: "Roboto", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-}
-
-li {
-    font-size: 1em;
-}
-
-/*Google icon*/
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24
-}
-
-main {
-    width: 85%;
-    margin: auto;
-    padding-top: 10vh;
-    color: var(--text-color);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-}
 
 @media screen and (min-width: 1600px) {
 

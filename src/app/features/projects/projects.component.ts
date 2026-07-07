@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { HeaderComponent } from '../../layout/header/header.component';
+
 @Component({
   selector: 'app-projects',
   imports: [HeaderComponent, CommonModule, RouterLink, RouterLinkActive],
