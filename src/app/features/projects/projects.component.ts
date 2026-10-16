@@ -21,7 +21,7 @@ export class ProjectsComponent {
 
   //section title: APP development and design
   appProjects = [
-    { title: "TracLocal", type: "App design and front end Development", Skills: "Figma, Angular, JavaScript", year: "2025", image: "images/TravLocal/TravLocal-image.jpg", link: "/tracLocal" },
+    { title: "TracLocal", type: "App design and front end Development", Skills: "Figma, Angular, JavaScript", year: "2025", image: "images/TravLocal/TravLocal-image.jpg", link: "/traclocal" },
     { title: "Health Pocket", type: "APP UI Design", Skills: "Figma, Interactive Prototype", year: "2022", image: "images/Health-Pocket/health-pocket-imgpng.png", link: "/health-pocket" },
   ]
 }
