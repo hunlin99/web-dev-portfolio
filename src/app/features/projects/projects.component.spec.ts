@@ -29,4 +29,10 @@ describe('ProjectsComponent', () => {
     expect(ampa?.querySelector('button')).toBeNull();
     expect(page.querySelector('a[href="/organic-care"]')).not.toBeNull();
   });
+  it('links both app projects to their Angular case studies', () => {
+    const page: HTMLElement = fixture.nativeElement;
+    expect(page.querySelector('a[href="/traclocal"]')).not.toBeNull();
+    expect(page.querySelector('a[href="/health-pocket"]')).not.toBeNull();
+  });
+
 });

@@ -1,0 +1,287 @@
+:host {
+    --text-color: #596774;
+    --footer-color-light: #D7FAFF;
+    --footer-color-dark: #0074E1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.body {
+    width: 100%;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    padding-top: 3%;
+}
+
+#nav {
+    margin-right: 5.25%;
+}
+
+.cover-container,
+.prototype-container,
+.design-system-container,
+.description-container,
+.component-container,
+.mockup-container {
+    max-width: 1200px;
+    margin: auto;
+    width: 85%;
+}
+
+
+/*Text*/
+.cover-content h2 {
+    font-size: 3em;
+}
+
+.subtitle {
+    font-size: 1.5em;
+}
+
+/*Cover section*/
+.cover {
+    height: auto;
+    margin: auto;
+    padding-bottom: 10%;
+}
+
+.cover-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.cover-container img {
+    object-fit: contain;
+    width: 100%;
+    margin-left: auto;
+    padding: 15%;
+}
+
+.cover-content {
+    padding-top: 20%;
+    background-color: #004668;
+    padding: 15%;
+    border-radius: 0 50% 50% 0;
+    background-image: url("/images/Health-Pocket/color-block.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*description section*/
+.description {
+    padding: 5% 0;
+    background-color: #D9F2E2;
+    width: 100%;
+}
+
+.description h2 {
+    padding-top: 1em;
+}
+
+.description p {
+    padding: 1em;
+}
+
+.description-container {
+    width: 80%;
+    margin: auto;
+}
+
+/*persona*/
+.persona {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    justify-content: center;
+    text-align: center;
+}
+
+.persona-block img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 15%;
+    padding: 5% 0;
+}
+
+/*Design system section*/
+.design-system-container {
+    padding: 5% 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.logo {
+    width: 100%;
+}
+
+.logo img {
+    object-fit: scale-down;
+    width: 100%;
+}
+
+/*color-scheme-section*/
+.color-scheme {
+    width: 100%;
+    margin: auto;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    height: 100%;
+    padding-left: 5%;
+}
+
+.color-scheme-container {
+    display: flex;
+    padding: 5% 0;
+}
+
+.color-1,
+.color-2,
+.color-3,
+.color-4,
+.color-5 {
+    height: 5em;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.color-1 {
+    background-color: #d3f3e1;
+}
+
+.color-2 {
+    background-color: #9ad6cc;
+}
+
+.color-3 {
+    background-color: #99b6c2;
+}
+
+.color-4 {
+    background-color: #004668;
+    color: white;
+}
+
+.color-5 {
+    background-color: #e6b087;
+}
+
+
+/*component*/
+.component {
+    background-color: #D9F2E2;
+}
+
+.component-container {
+    display: flex;
+    padding-top: 5%;
+    gap: 10%;
+}
+
+.component h2 {
+    padding-top: 1em;
+}
+
+.component img {
+    object-fit: scale-down;
+    width: 100%;
+    padding-top: 1em;
+    margin-top: 1em;
+}
+
+.nav-ui img {
+    background-color: white;
+    padding: 5%;
+    border-radius: 1rem;
+}
+
+/*mockup section*/
+.mockup{
+    padding-top: 5%;
+}
+
+
+@media screen and (min-width: 651px) and (max-width: 1000px) {
+    .cover-container {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .device-mockup {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .cover-container {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .device-mockup {
+        display: none;
+    }
+
+    .app-positioning {
+        display: none;
+    }
+
+    .cover-content hr {
+        display: none;
+    }
+
+    .component-container {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .btn-ui h2 {
+        padding-top: 2em;
+    }
+
+    .persona {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .persona p {
+        padding: 0;
+    }
+
+    .persona-block img {
+        padding: 2% 0;
+    }
+}
+:host { display: block; }
+.body { position: relative; }
+.back-btn { position: absolute; top: 0; z-index: 1; width: auto; }
+.back-btn a { display: block; padding: 1.5rem; color: inherit; }
+a { color: inherit; }
+a:focus-visible { outline: 3px solid #0074e1; outline-offset: 4px; }
+img { display: block; height: auto; }
+h2 { font-size: 1.8rem; padding-top: 1.5rem; margin-bottom: 1rem; }
+.cover-content h1 { font-size: clamp(2rem, 4vw, 3rem); padding-top: 0; }
+.external-link { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+.cover { padding-top: 5rem; }
+.component-container { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; padding-bottom: 3rem; }
+.persona { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; }
+@media (max-width: 700px) {
+ .cover-container { grid-template-columns: 1fr; }
+ .cover-content { padding: 2rem; border-radius: 1rem; background-attachment: scroll; }
+ .cover-container .device-mockup { display: block; }
+ .cover-container img { padding: 1rem; max-height: 28rem; }
+ .app-positioning { display: block; }
+ .design-system-container, .component-container, .persona { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+ .color-scheme { grid-column: auto; padding-left: 0; }
+}

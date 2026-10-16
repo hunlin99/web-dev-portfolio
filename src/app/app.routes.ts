@@ -37,6 +37,15 @@ export const routes: Routes = [
         loadComponent: () => import('./features/organic-care/organic-care.component').then(m => m.OrganicCareComponent),
     },
     {
+        path: 'traclocal',
+        loadComponent: () => import('./features/traclocal/traclocal.component').then(m => m.TraclocalComponent),
+    },
+    {
+        path: 'health-pocket',
+        loadComponent: () => import('./features/health-pocket/health-pocket.component').then(m => m.HealthPocketComponent),
+    },
+    { path: 'tracLocal', redirectTo: 'traclocal', pathMatch: 'full' },
+    {
         path: '**',
         redirectTo: '',
     },
