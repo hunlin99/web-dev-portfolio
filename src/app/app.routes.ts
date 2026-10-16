@@ -33,6 +33,10 @@ export const routes: Routes = [
         component: CuisinesAroundUsComponent,
     },
     {
+        path: 'organic-care',
+        loadComponent: () => import('./features/organic-care/organic-care.component').then(m => m.OrganicCareComponent),
+    },
+    {
         path: '**',
         redirectTo: '',
     },

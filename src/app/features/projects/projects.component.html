@@ -1,3 +1,10 @@
+<ng-template #projectAction>
+    <span class="circle" aria-hidden="true">
+        <i class="fa fa-folder-open icon icon-folder"></i>
+        <i class="fa fa-arrow-right icon icon-arrow"></i>
+    </span>
+    <span class="button-text">Learn More</span>
+</ng-template>
 <main class="projects">
 
     <div class="back-color"></div>
@@ -39,22 +46,15 @@
 
                     <div class="container">
 
-                        <a [routerLink]="project.link">
-                            <button class="learn-more">
-
-                                <span class="circle">
-
-                                    <i class="fa fa-folder-open icon icon-folder"></i>
-                                    <i class="fa fa-arrow-right icon icon-arrow"></i>
-
-                                </span>
-
-                                <span class="button-text">
-                                    Learn More
-                                </span>
-
-                            </button>
-                        </a>
+                        @if (project.link.startsWith('https://')) {
+                            <a class="learn-more" [href]="project.link" target="_blank" rel="noopener noreferrer">
+                                <ng-container *ngTemplateOutlet="projectAction"></ng-container>
+                            </a>
+                        } @else {
+                            <a class="learn-more" [routerLink]="project.link">
+                                <ng-container *ngTemplateOutlet="projectAction"></ng-container>
+                            </a>
+                        }
 
                     </div>
 
@@ -80,22 +80,15 @@
 
                     <div class="container">
 
-                        <a [routerLink]="project.link">
-                            <button class="learn-more" [routerLink]="project.link">
-
-                                <span class="circle">
-
-                                    <i class="fa fa-folder-open icon icon-folder"></i>
-                                    <i class="fa fa-arrow-right icon icon-arrow"></i>
-
-                                </span>
-
-                                <span class="button-text">
-                                    Learn More
-                                </span>
-
-                            </button>
-                        </a>
+                        @if (project.link.startsWith('https://')) {
+                            <a class="learn-more" [href]="project.link" target="_blank" rel="noopener noreferrer">
+                                <ng-container *ngTemplateOutlet="projectAction"></ng-container>
+                            </a>
+                        } @else {
+                            <a class="learn-more" [routerLink]="project.link">
+                                <ng-container *ngTemplateOutlet="projectAction"></ng-container>
+                            </a>
+                        }
                     </div>
 
                 </div>

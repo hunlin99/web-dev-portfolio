@@ -299,3 +299,5 @@ button {
         display: none;
     }
 }
+a.learn-more { display: inline-block; width: 13rem; height: 3rem; text-decoration: none; cursor: pointer; }
+a.learn-more:focus-visible { outline: 3px solid #0074e1; outline-offset: 4px; }
