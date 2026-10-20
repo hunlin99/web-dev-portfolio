@@ -28,20 +28,42 @@
 }
 
 .scroll-content {
+    --scroll-line-height: 2.8rem;
     width: 100%;
-    height: 2.8em;
+    height: var(--scroll-line-height);
     overflow: hidden;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .scroll-content li {
-    font-size: 2.5em;
-    line-height: 42px;
-    overflow: hidden;
+    height: var(--scroll-line-height);
+    display: flex;
+    align-items: center;
+    animation: home-text-scroll 6s cubic-bezier(0.37, 0, 0.63, 1) 3s infinite;
 }
 
 .scroll-content li p {
     font-family: "Limelight", sans-serif;
-    font-size: 1.5rem;
+    font-size: clamp(0.75rem, 2.3vw, 1.5rem);
+    line-height: 1.8;
+    white-space: nowrap;
+    margin: 0;
+}
+
+/* Match the original: start a 500ms upward slide every 3000ms. */
+@keyframes home-text-scroll {
+    0% { transform: translateY(0); }
+    8.333333%, 50% { transform: translateY(-100%); }
+    58.333333%, 100% { transform: translateY(-200%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-content { height: auto; }
+    .scroll-content li { animation: none; height: auto; }
+    .scroll-content li p { white-space: normal; }
+    .scroll-content li[aria-hidden="true"] { display: none; }
 }
 
 .cover-content h1 {
