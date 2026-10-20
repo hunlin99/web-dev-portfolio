@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { ProjectDetailPageHeaderComponent } from '../../shared/components/project-detail-page-header/project-detail-page-header.component';
 
 interface Persona {
   id: number;
@@ -9,7 +10,7 @@ interface Persona {
 
 @Component({
   selector: 'app-cuisines-around-us',
-  imports: [RouterLink],
+  imports: [RouterLink, ProjectDetailPageHeaderComponent],
   templateUrl: './cuisines-around-us.component.html',
   styleUrl: './cuisines-around-us.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
@@ -31,7 +32,7 @@ export class CuisinesAroundUsComponent {
     if (event.target !== dialog) return;
     const bounds = dialog.getBoundingClientRect();
     if (event.clientX < bounds.left || event.clientX > bounds.right ||
-        event.clientY < bounds.top || event.clientY > bounds.bottom) {
+      event.clientY < bounds.top || event.clientY > bounds.bottom) {
       dialog.close();
     }
   }

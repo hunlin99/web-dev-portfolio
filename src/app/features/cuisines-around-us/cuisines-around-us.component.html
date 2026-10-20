@@ -1,7 +1,6 @@
 <main class="body">
-    <nav class="back-btn" aria-label="Project navigation">
-        <a routerLink="/projects" class="limelight-regular"><span aria-hidden="true">←</span> Back to Projects</a>
-    </nav>
+    <app-project-detail-page-header></app-project-detail-page-header>
+
     <section class="cover">
         <div class="cover-container">
             <div class="cover-content">
@@ -10,16 +9,19 @@
                 <div class="external-link">
                     <a href="https://github.com/hunlin99/15081-assignment2-rebuild" class="limelight-regular"><i
                             class="fa fa-github" style="font-size:24px"></i>&ensp; Code on Github</a>&emsp;
-                    <a href="https://hunlin99.github.io/15081-assignment2-rebuild/" target="_blank" rel="noopener noreferrer"
-                        class="limelight-regular"><i class="fa fa-link" style="font-size:24px"></i>&ensp; Visit
+                    <a href="https://hunlin99.github.io/15081-assignment2-rebuild/" target="_blank"
+                        rel="noopener noreferrer" class="limelight-regular"><i class="fa fa-link"
+                            style="font-size:24px"></i>&ensp; Visit
                         website</a>
                 </div>
             </div>
-            <img src="/images/Cuisines-Around-Us/mockup.png" alt="Cuisine Around Us responsive website mockup" fetchpriority="high">
+            <img src="/images/Cuisines-Around-Us/mockup.png" alt="Cuisine Around Us responsive website mockup"
+                fetchpriority="high">
         </div>
     </section>
     <section class="design">
-        <img src="/images/Cuisines-Around-Us/design.png" alt="Cuisine Around Us visual design" loading="lazy" decoding="async">
+        <img src="/images/Cuisines-Around-Us/design.png" alt="Cuisine Around Us visual design" loading="lazy"
+            decoding="async">
     </section>
     <section class="description">
         <div class="description-container">
@@ -61,16 +63,18 @@
             <hr>
             <div class="personas-container">
                 @for (persona of personas; track persona.id) {
-                    <button type="button" class="persona-card" (click)="openPersona(persona, personaDialog)"
-                        [attr.aria-label]="'View persona ' + persona.id" aria-haspopup="dialog">
-                        <img [src]="persona.thumbnail" [alt]="'Persona ' + persona.id + ' preview'" loading="lazy" decoding="async">
-                        <span>View persona {{ persona.id }} <span aria-hidden="true">↗</span></span>
-                    </button>
+                <button type="button" class="persona-card" (click)="openPersona(persona, personaDialog)"
+                    [attr.aria-label]="'View persona ' + persona.id" aria-haspopup="dialog">
+                    <img [src]="persona.thumbnail" [alt]="'Persona ' + persona.id + ' preview'" loading="lazy"
+                        decoding="async">
+                    <span>View persona {{ persona.id }} <span aria-hidden="true">↗</span></span>
+                </button>
                 }
             </div>
             <h1 class=" limelight-regular">User Journey Map</h1>
             <hr>
-            <img class="user-journey" src="/images/Cuisines-Around-Us/user-journey map.png" alt="User journey map for Cuisine Around Us" loading="lazy" decoding="async">
+            <img class="user-journey" src="/images/Cuisines-Around-Us/user-journey map.png"
+                alt="User journey map for Cuisine Around Us" loading="lazy" decoding="async">
         </div>
     </section>
 
@@ -78,7 +82,8 @@
         <div class="grid-system-container">
             <h1 class="limelight-regular">Grid System</h1>
             <hr>
-            <img src="/images/Cuisines-Around-Us/grid-system.png" alt="Responsive grid system for Cuisine Around Us" loading="lazy" decoding="async">
+            <img src="/images/Cuisines-Around-Us/grid-system.png" alt="Responsive grid system for Cuisine Around Us"
+                loading="lazy" decoding="async">
         </div>
     </section>
     <section class="improvements">
@@ -108,8 +113,9 @@
 </main>
 <dialog #personaDialog class="persona-dialog" aria-label="Persona details" (close)="selectedPersona.set(null)"
     (click)="closeOnBackdrop($event, personaDialog)">
-    <button type="button" class="close-persona" autofocus (click)="personaDialog.close()" aria-label="Close persona">Close ×</button>
+    <button type="button" class="close-persona" autofocus (click)="personaDialog.close()"
+        aria-label="Close persona">Close ×</button>
     @if (selectedPersona(); as persona) {
-        <img [src]="persona.image" [alt]="'Detailed research profile for persona ' + persona.id">
+    <img [src]="persona.image" [alt]="'Detailed research profile for persona ' + persona.id">
     }
 </dialog>
