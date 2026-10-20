@@ -119,3 +119,18 @@ li {
     z-index: -1000;
     margin: 0 auto;
 }
+/* Shared Projects/About scroll reveals, matching the old AOS 1000ms fades. */
+[data-scroll-reveal].scroll-reveal-ready {
+    transition: opacity 1000ms ease, transform 1000ms ease;
+}
+[data-scroll-reveal].scroll-reveal-pending { opacity: 0; }
+[data-scroll-reveal="left"].scroll-reveal-pending { transform: translate3d(100px, 0, 0); }
+[data-scroll-reveal="right"].scroll-reveal-pending { transform: translate3d(-100px, 0, 0); }
+[data-scroll-reveal="up"].scroll-reveal-pending { transform: translate3d(0, 100px, 0); }
+@media (prefers-reduced-motion: reduce) {
+    [data-scroll-reveal].scroll-reveal-ready { transition: none; }
+    [data-scroll-reveal].scroll-reveal-pending { opacity: 1; transform: none; }
+}
+
+/* Prevent off-screen reveal positions from creating a horizontal scrollbar. */
+.projects, .about { overflow-x: clip; }
