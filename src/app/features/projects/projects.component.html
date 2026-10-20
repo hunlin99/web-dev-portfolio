@@ -28,11 +28,11 @@
             <!-- Image Left -->
             <div class="col-container-1" *ngIf="i % 2 === 0">
 
-                <div class="img-block">
+                <div class="img-block" appScrollReveal="right">
                     <img [src]="project.image" [alt]="project.title">
                 </div>
 
-                <div class="content-block">
+                <div class="content-block" appScrollReveal="left">
 
                     <h3 class="limelight-regular">
                         {{ project.title }}
@@ -66,7 +66,7 @@
 
             <div class="col-container-2" *ngIf="i % 2 !== 0">
 
-                <div class="content-block">
+                <div class="content-block" appScrollReveal="left">
 
                     <h3 class="limelight-regular">
                         {{ project.title }}
@@ -93,7 +93,7 @@
 
                 </div>
 
-                <div class="img-block">
+                <div class="img-block" appScrollReveal="right">
                     <img [src]="project.image" [alt]="project.title">
                 </div>
 
@@ -121,11 +121,11 @@
 
             <div class="col-container-1" *ngIf="i % 2 === 0">
 
-                <div class="img-block">
+                <div class="img-block" appScrollReveal="left">
                     <img [src]="project.image" [alt]="project.title">
                 </div>
 
-                <div class="content-block">
+                <div class="content-block" appScrollReveal="right">
 
                     <h3 class="limelight-regular">
                         {{ project.title }}
@@ -162,7 +162,7 @@
 
             <div class="col-container-2" *ngIf="i % 2 !== 0">
 
-                <div class="content-block">
+                <div class="content-block" appScrollReveal="right">
 
                     <h3 class="limelight-regular">
                         {{ project.title }}
@@ -195,7 +195,7 @@
 
                 </div>
 
-                <div class="img-block">
+                <div class="img-block" appScrollReveal="left">
                     <img [src]="project.image" [alt]="project.title">
                 </div>
 
