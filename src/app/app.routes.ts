@@ -3,7 +3,6 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './features/home/home.component';
 import { AboutComponent } from './features/about/about.component';
 import { ProjectsComponent } from './features/projects/projects.component';
-import { ContactComponent } from './features/contact/contact.component';
 import { DC3ViralMenaceComponent } from './features/dc3-viral-menace/dc3-viral-menace.component';
 import { CuisinesAroundUsComponent } from './features/cuisines-around-us/cuisines-around-us.component';
 
@@ -22,7 +21,18 @@ export const routes: Routes = [
     },
     {
         path: 'contact',
-        component: ContactComponent,
+        redirectTo: 'blog',
+        pathMatch: 'full',
+    },
+    {
+        path: 'blog',
+        title: 'Blog | Ling Chang',
+        loadComponent: () => import('./features/blog/pages/blog-list/blog-list.component').then(m => m.BlogListComponent),
+    },
+    {
+        path: 'blog/:slug',
+        loadComponent: () => import('./features/blog/pages/blog-post/blog-post.component').then(m => m.BlogPostComponent),
+        title: 'Article | Ling Chang',
     },
     {
         path: 'dc3-viral-menace',

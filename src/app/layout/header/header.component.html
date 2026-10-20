@@ -24,9 +24,9 @@
                 <span>ABOUT</span>
             </a>
 
-            <a routerLink="/contact">
-                <i class="material-icons">mail</i>
-                <span>CONTACT</span>
+            <a routerLink="/blog" aria-label="Blog" (click)="closeMenu()">
+                <i class="material-icons" aria-hidden="true">article</i>
+                <span>BLOG</span>
             </a>
         </div>
     </div>
@@ -45,8 +45,8 @@
                 <i class="material-icons">perm_contact_calendar</i>
             </a>
 
-            <a routerLink="/contact" routerLinkActive="active">
-                <i class="material-icons">mail</i>
+            <a routerLink="/blog" aria-label="Blog" (click)="closeMenu()" routerLinkActive="active">
+                <i class="material-icons" aria-hidden="true">article</i>
             </a>
         </nav>
     </header>

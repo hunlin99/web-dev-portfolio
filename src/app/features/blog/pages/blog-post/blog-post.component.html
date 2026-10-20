@@ -1,0 +1,37 @@
+<app-header></app-header>
+<main class="blog-shell article-shell">
+    <a routerLink="/blog" class="back-link">← All articles</a>
+    @if (post(); as article) {
+        <article>
+            <header class="blog-intro">
+                <time [attr.datetime]="article.publishedAt">{{ article.publishedAt | date:'longDate':'UTC' }}</time>
+                <h1 class="limelight-regular">{{ article.title }}</h1>
+                <p>{{ article.excerpt }}</p>
+                <ul class="tags" aria-label="Topics">
+                    @for (tag of article.tags; track tag) { <li>{{ tag }}</li> }
+                </ul>
+            </header>
+            <div class="article-body">
+                @for (block of article.blocks; track $index) {
+                    @switch (block.type) {
+                        @case ('paragraph') { <p>{{ block.text }}</p> }
+                        @case ('heading') { <h2>{{ block.text }}</h2> }
+                        @case ('list') { <ul>@for (item of block.items; track $index) { <li>{{ item }}</li> }</ul> }
+                        @case ('image') {
+                            <figure>
+                                <img [src]="block.src" [alt]="block.alt" loading="lazy" decoding="async">
+                                @if (block.caption) { <figcaption>{{ block.caption }}</figcaption> }
+                            </figure>
+                        }
+                        @case ('code') { <pre><code>{{ block.text }}</code></pre> }
+                    }
+                }
+            </div>
+        </article>
+    } @else {
+        <section class="empty-state">
+            <h1 class="limelight-regular">Article not found</h1>
+            <p>This article may be unavailable. Browse the blog for published stories.</p>
+        </section>
+    }
+</main>

@@ -1,0 +1,27 @@
+<app-header></app-header>
+<main class="blog-shell">
+    <header class="blog-intro">
+        <p class="eyebrow">THE JOURNAL</p>
+        <h1 class="limelight-regular">Ideas, process &amp; discoveries.</h1>
+        <p>Notes on design, development, and creating human-centered experiences.</p>
+    </header>
+    <section aria-label="Articles" class="post-grid">
+        @for (post of posts; track post.slug) {
+            <article class="post-card">
+                <time [attr.datetime]="post.publishedAt">{{ post.publishedAt | date:'longDate':'UTC' }}</time>
+                <h2><a [routerLink]="['/blog', post.slug]">{{ post.title }}</a></h2>
+                <p>{{ post.excerpt }}</p>
+                <ul class="tags" aria-label="Topics">
+                    @for (tag of post.tags; track tag) { <li>{{ tag }}</li> }
+                </ul>
+                <a [routerLink]="['/blog', post.slug]" [attr.aria-label]="'Read ' + post.title">Read article <span aria-hidden="true">↗</span></a>
+            </article>
+        } @empty {
+            <div class="empty-state">
+                <h2>New stories are on the way.</h2>
+                <p>Check back for articles about design, development, and the work behind the projects.</p>
+                <a routerLink="/projects">Explore my projects <span aria-hidden="true">→</span></a>
+            </div>
+        }
+    </section>
+</main>
