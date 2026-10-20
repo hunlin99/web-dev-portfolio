@@ -45,7 +45,7 @@
 
         <hr>
 
-        <div class="background-holder" *ngFor="let edu of education">
+        <div class="background-holder" appScrollReveal="left" *ngFor="let edu of education">
 
             <div class="time-line">
 
@@ -96,7 +96,7 @@
 
         <hr>
 
-        <div class="background-holder" *ngFor="let work of workExperience">
+        <div class="background-holder" appScrollReveal="left" *ngFor="let work of workExperience">
             <div class="time-line">
                 <p>
                     {{ work.period }}
@@ -133,7 +133,7 @@
 
         <hr>
 
-        <div class="background-holder" *ngFor="let activity of activities">
+        <div class="background-holder" appScrollReveal="left" *ngFor="let activity of activities">
             <div class="time-line">
                 <p>
                     {{ activity.period }}
