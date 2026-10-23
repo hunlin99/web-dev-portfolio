@@ -1,4 +1,5 @@
 import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.directive';
+import { RouterLink } from '@angular/router';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from '../../layout/header/header.component';
@@ -14,7 +15,7 @@ import {
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [ScrollRevealDirective, CommonModule, HeaderComponent],
+  imports: [RouterLink, ScrollRevealDirective, CommonModule, HeaderComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
