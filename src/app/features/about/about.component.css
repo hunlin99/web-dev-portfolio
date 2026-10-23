@@ -80,9 +80,23 @@ main {
     transition: box-shadow 150ms ease-in-out;
 }
 
-.profile-link--linkedin { background-color: #0077b5; }
-.profile-link--github { background-color: #333; }
-.profile-link svg { width: 1rem; height: 1rem; fill: currentColor; }
+.profile-link--linkedin {
+    background-color: #0077b5;
+}
+
+.profile-link--github {
+    background-color: #333;
+}
+
+.profile-link--gmail {
+    background-color: #EA4335;
+}
+
+.profile-link svg {
+    width: 1rem;
+    height: 1rem;
+    fill: currentColor;
+}
 
 .profile-link:hover,
 .profile-link:focus-visible,
@@ -96,7 +110,9 @@ main {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .profile-link { transition: none; }
+    .profile-link {
+        transition: none;
+    }
 }
 
 .skill-block-holder {

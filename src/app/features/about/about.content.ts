@@ -40,7 +40,8 @@ export const intro: Intro = {
 
 export const aboutLinks: AboutLink[] = [
     { linkTo: "LinkedIn", link: "https://linkedin.com/" },
-    { linkTo: "GitHub", link: "https://github.com/" }
+    { linkTo: "GitHub", link: "https://github.com/" },
+    { linkTo: "Gmail", link: "mailto:christine.chang00226@gmail.com" }
 ];
 
 export const education: Education[] = [
