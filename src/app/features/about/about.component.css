@@ -68,23 +68,35 @@ main {
 .profile-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.75rem;
+    justify-content: center;
+    min-width: 64px;
     min-height: 44px;
-    padding: 0.4rem 1rem;
-    border: 1px solid currentColor;
-    border-radius: 0.4rem;
-    color: var(--text-color);
-    background: transparent;
+    padding: 0.625rem 1.5rem;
+    border: 0;
+    border-radius: 0.25rem;
+    color: #fff;
     text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    transition: box-shadow 150ms ease-in-out;
 }
 
-.profile-link:hover {
-    background: var(--nav-bg-color);
+.profile-link--linkedin { background-color: #0077b5; }
+.profile-link--github { background-color: #333; }
+.profile-link svg { width: 1rem; height: 1rem; fill: currentColor; }
+
+.profile-link:hover,
+.profile-link:focus-visible,
+.profile-link:active {
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 .profile-link:focus-visible {
     outline: 3px solid #0074e1;
     outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .profile-link { transition: none; }
 }
 
 .skill-block-holder {
