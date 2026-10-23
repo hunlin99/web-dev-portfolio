@@ -18,11 +18,12 @@
                 {{ intro.content }}
             </p>
 
-            <br>
-
-            <a class="roboto-regular" *ngFor="let item of aboutLinks" [href]="item.link" target="_blank">
-                {{ item.linkTo }}
-            </a>
+            <nav class="about-links" aria-label="Social profiles">
+                <a class="profile-link roboto-regular" *ngFor="let item of aboutLinks"
+                    [href]="item.link" target="_blank" rel="noopener noreferrer">
+                    {{ item.linkTo }} <span aria-hidden="true">↗</span>
+                </a>
+            </nav>
 
         </div>
 
