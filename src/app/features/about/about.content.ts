@@ -17,11 +17,18 @@ export interface Education {
     gpa?: string; // Optional since not all entries have a GPA
 }
 
+export interface WorkHighlightPart {
+    text: string;
+    bold?: boolean;
+    href?: string;
+}
+
 export interface WorkExperience {
     period: string;
     jobTitle: string;
     company: string;
-    highlights: string[];
+    highlights: WorkHighlightPart[][];
+    project?: { url: string; external: boolean };
 }
 
 export interface Activity {
@@ -71,32 +78,35 @@ export const workExperience: WorkExperience[] = [
     {
         period: "May 2026 - August 2026",
         jobTitle: "Co-op Web Developer",
+        project: { url: "https://dc3-viral-menace-web-dev.web.app/", external: true },
         company: "S-Qubed Entertainment Inc. | Toronto, Canada",
         highlights: [
-            "Built and maintained responsive production web interfaces and a custom CMS, implementing authentication, article CRUD, publishing workflows, image uploads, and data-driven UI using Firebase services.",
-            "Debugged frontend and integration issues across development and production environments, troubleshooting application behavior, responsive layouts, Firebase data flows, authentication, and deployment issues.",
-            "Translated UI/UX requirements into responsive, implementation-ready interfaces, maintaining usability, visual consistency, and reliable behavior across screen sizes.",
-            "Managed Firebase Authentication, Firestore, Cloud Storage, hosting, security rules, and production deployments, supporting end-to-end delivery of web features."
+            [{"text": "Built and maintained responsive production web interfaces and a "}, {"text": "custom CMS", "bold": true}, {"text": ", implementing "}, {"text": "authentication, article CRUD, publishing workflows, image uploads", "bold": true}, {"text": ", and data-driven UI using Firebase services."}],
+            [{"text": "Debugged "}, {"text": "frontend and integration issues", "bold": true}, {"text": " across "}, {"text": "development and production environments", "bold": true}, {"text": ", troubleshooting application behavior, responsive layouts, Firebase data flows, authentication, and deployment issues."}],
+            [{"text": "Translated UI/UX requirements into "}, {"text": "responsive, implementation-ready interfaces", "bold": true}, {"text": ", maintaining usability, visual consistency, and reliable behavior across screen sizes."}],
+            [{"text": "Managed "}, {"text": "Firebase Authentication, Firestore, Cloud Storage", "bold": true}, {"text": ", hosting, security rules, and "}, {"text": "production deployments", "bold": true}, {"text": ", supporting end-to-end delivery of web features."}]
         ]
     },
     {
         period: "May 2025 - Present",
         jobTitle: "UX Designer",
+        project: { url: "https://afroidentity.com/", external: true },
         company: "Afroidentity Inc. | Toronto, Canada",
         highlights: [
-            "Translated product requirements and user research into end-to-end user flows, responsive interfaces, and interactive Figma prototypes for web and mobile experiences.",
-            "Evaluated interface accessibility and usability using WCAG criteria, identifying issues involving color contrast, typography, component behavior, and responsive presentation.",
-            "Developed and maintained reusable UI patterns and design-system guidance, improving consistency between design specifications and implemented interfaces."
+            [{"text": "Translated product requirements and user research into "}, {"text": "end-to-end user flows", "bold": true}, {"text": ", responsive interfaces, and "}, {"text": "interactive Figma prototypes", "bold": true}, {"text": " for web and mobile experiences."}],
+            [{"text": "Evaluated interface accessibility and usability using "}, {"text": "WCAG criteria", "bold": true}, {"text": ", identifying issues involving color contrast, typography, component behavior, and responsive presentation."}],
+            [{"text": "Developed and maintained "}, {"text": "reusable UI patterns and design-system guidance", "bold": true}, {"text": ", improving consistency between design specifications and implemented interfaces."}]
         ]
     },
     {
         period: "May 2025 - August 2025",
         jobTitle: "Co-op Web Designer",
+        project: { url: "/dc3-viral-menace", external: false },
         company: "S-Qubed Entertainment Inc. | Toronto, Canada",
         highlights: [
-            "Created responsive web layouts and reusable UI components, accounting for content behavior across different screen sizes and interface states.",
-            "Prototyped and tested interface concepts to identify usability, navigation, responsive-layout, and interaction issues before implementation.",
-            "Translated design requirements into structured, development-ready specifications, supporting efficient implementation and UI consistency."
+            [{"text": "Created "}, {"text": "responsive web layouts and reusable UI components", "bold": true}, {"text": ", accounting for content behavior across different screen sizes and interface states."}],
+            [{"text": "Prototyped and tested interface concepts", "bold": true}, {"text": " to identify usability, navigation, responsive-layout, and interaction issues before implementation."}],
+            [{"text": "Translated design requirements into structured, "}, {"text": "development-ready specifications", "bold": true}, {"text": ", supporting efficient implementation and UI consistency."}]
         ]
     },
     {
@@ -104,10 +114,10 @@ export const workExperience: WorkExperience[] = [
         jobTitle: "Industrial Design Engineer", // Removed the duplicate string repetition
         company: "Create Electronic Optical Co., Ltd, New Taipei, Taiwan",
         highlights: [
-            "Conducted market research to identify trends, leading to the initiation of a motorcycle dash-cam project.",
-            "Designed UI and icons for product models, improving user experience and branding.",
-            "Developed a product concept selected as the company’s sole entry for the iF Design Award, advancing to the Berlin finals.",
-            "Edited and updated website content, ensuring accurate and engaging user experiences."
+            [{"text": "Conducted "}, {"text": "market research", "bold": true}, {"text": " to identify trends, leading to the initiation of a motorcycle dash-cam project."}],
+            [{"text": "Designed "}, {"text": "UI and icons", "bold": true}, {"text": " for product models, improving user experience and branding."}],
+            [{"text": "Developed a product concept selected as the company’s sole entry for the "}, {"text": "iF Design Award", "bold": true}, {"text": ", advancing to the "}, {"text": "Berlin finals", "bold": true}, {"text": "."}],
+            [{"text": "Edited and updated "}, {"text": "website content", "href": "https://www.create-eop.com.tw/en/"}, {"text": ", ensuring accurate and engaging user experiences."}]
         ]
     }
 ];

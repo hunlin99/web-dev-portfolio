@@ -280,3 +280,20 @@ progress::-webkit-progress-value {
         display: none;
     }
 }
+.bg-content strong { font-weight: 700; }
+.experience-inline-link { color: #005da6; text-underline-offset: 0.2em; }
+.experience-project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 44px;
+    margin-top: 1.25rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid currentColor;
+    border-radius: 0.4rem;
+    color: var(--text-color);
+    text-decoration: none;
+}
+.experience-project-link:hover { background: var(--nav-bg-color); }
+.experience-project-link:focus-visible,
+.experience-inline-link:focus-visible { outline: 3px solid #0074e1; outline-offset: 4px; }
