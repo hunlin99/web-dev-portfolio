@@ -39,14 +39,13 @@ export const intro: Intro = {
 };
 
 export const aboutLinks: AboutLink[] = [
-    { linkTo: "LinkedIn", link: "https://linkedin.com" },
-    { linkTo: "GitHub", link: "https://github.com" },
-    { linkTo: "Download Resume", link: "assets/your-resume.pdf" }
+    { linkTo: "LinkedIn", link: "https://linkedin.com/" },
+    { linkTo: "GitHub", link: "https://github.com/" }
 ];
 
 export const education: Education[] = [
     {
-        period: "Expected 2025",
+        period: "2025 - 2026",
         college: "George Brown College",
         major: "Postgraduate Certificate in Mobile Application Development and Strategy",
         focus: "Server-side scripting/Object-oriented programming",
@@ -69,23 +68,34 @@ export const education: Education[] = [
 
 export const workExperience: WorkExperience[] = [
     {
-        period: "2025 - Current",
-        jobTitle: "UX Designer (Freelance)",
-        company: "Afroidentity Inc, Toronto, ON",
+        period: "May 2026 - August 2026",
+        jobTitle: "Co-op Web Developer",
+        company: "S-Qubed Entertainment Inc. | Toronto, Canada",
         highlights: [
-            "Developed intuitive user flows and wireframes, improving navigation efficiency.",
-            "Conducted accessibility testing and usability reviews to ensure WCAG compliance and inclusive design practices.",
-            "Created app interface prototypes and pre-load website design, accelerating development timelines and aligning product vision with stakeholder requirements.",
-            "Designed and implemented branding assets (logo systems, color palettes, typography) to create a consistent visual identity across digital platforms."
+            "Built and maintained responsive production web interfaces and a custom CMS, implementing authentication, article CRUD, publishing workflows, image uploads, and data-driven UI using Firebase services.",
+            "Debugged frontend and integration issues across development and production environments, troubleshooting application behavior, responsive layouts, Firebase data flows, authentication, and deployment issues.",
+            "Translated UI/UX requirements into responsive, implementation-ready interfaces, maintaining usability, visual consistency, and reliable behavior across screen sizes.",
+            "Managed Firebase Authentication, Firestore, Cloud Storage, hosting, security rules, and production deployments, supporting end-to-end delivery of web features."
         ]
     },
     {
-        period: "2024 - 2025", // Fixed typo from 2025 in text to match your previous timeline alignment
-        jobTitle: "Web Designer (Co-op)",
-        company: "S-Qubed Entertainment Inc., Toronto, ON",
+        period: "May 2025 - Present",
+        jobTitle: "UX Designer",
+        company: "Afroidentity Inc. | Toronto, Canada",
         highlights: [
-            "Designed responsive website layouts, delivering visually engaging and user-friendly experiences.",
-            "Collaborated with cross-functional teams to refine web architecture, aligning design execution with entertainment brand objectives."
+            "Translated product requirements and user research into end-to-end user flows, responsive interfaces, and interactive Figma prototypes for web and mobile experiences.",
+            "Evaluated interface accessibility and usability using WCAG criteria, identifying issues involving color contrast, typography, component behavior, and responsive presentation.",
+            "Developed and maintained reusable UI patterns and design-system guidance, improving consistency between design specifications and implemented interfaces."
+        ]
+    },
+    {
+        period: "May 2025 - August 2025",
+        jobTitle: "Co-op Web Designer",
+        company: "S-Qubed Entertainment Inc. | Toronto, Canada",
+        highlights: [
+            "Created responsive web layouts and reusable UI components, accounting for content behavior across different screen sizes and interface states.",
+            "Prototyped and tested interface concepts to identify usability, navigation, responsive-layout, and interaction issues before implementation.",
+            "Translated design requirements into structured, development-ready specifications, supporting efficient implementation and UI consistency."
         ]
     },
     {
