@@ -4,8 +4,8 @@ The page follows the updated AMPA layout: shared project header, two-column hero
 
 ## Editing
 
-- `dc3-viral-menace.content.ts`: hero metadata, the table-of-contents entries, and palette values.
-- `dc3-viral-menace.component.html`: 10 individually editable sections with their own headings, paragraphs, lists, images, and silent implementation videos. Edit each section directly by its `id`; there is no shared section-rendering loop.
+- `dc3-viral-menace.content.ts`: `dc3Content` holds text grouped by goals, responsibilities, architecture, visualDesign, highFidelity, iteration, development, cms, outcome, and reflection. `dc3Project` holds hero metadata, navigation labels, palette values, and contents entries (titles reference the section copy).
+- `dc3-viral-menace.component.html`: 10 individually editable sections with their own layout, headings, paragraphs, lists, images, and silent implementation videos. Text binds to its named `content` category; arrays follow the explicit HTML binding order. Edit layout by section `id`, and copy in the content file; there is no shared section-rendering loop.
 - `dc3-viral-menace.component.css`: scoped layout, game-inspired navy/light-blue palette, typography, and mobile styles.
 - `/public/images/DC3-Viral-Menace/`: media assets.
 
