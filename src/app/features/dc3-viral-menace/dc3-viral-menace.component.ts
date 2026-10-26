@@ -1,24 +1,16 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { HeaderComponent } from '../../layout/header/header.component';
-import { dc3Project } from './dc3-viral-menace.content';
 import { ProjectDetailPageHeaderComponent } from '../../shared/components/project-detail-page-header/project-detail-page-header.component';
+import { dc3Content, dc3Project } from './dc3-viral-menace.content';
 
 @Component({
   selector: 'app-dc3-viral-menace',
-  standalone: true,
-  imports: [
-    CommonModule,
-    RouterLink,
-    HeaderComponent,
-    ProjectDetailPageHeaderComponent
-  ],
+  imports: [RouterLink, ProjectDetailPageHeaderComponent],
   templateUrl: './dc3-viral-menace.component.html',
-  styleUrl: './dc3-viral-menace.component.css'
+  styleUrl: './dc3-viral-menace.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DC3ViralMenaceComponent {
-
-  project = dc3Project;
-
+  readonly project = dc3Project;
+  readonly content = dc3Content;
 }
