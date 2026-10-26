@@ -8,8 +8,8 @@
                     <h1>{{ project.title }}</h1>
                     <p class="lead">{{ project.summary }}</p>
                     <div class="button-border">
-                        <a class="learn-more" [attr.aria-label]="project.visitAriaLabel"
-                            [href]="project.website" target="_blank" rel="noopener noreferrer">
+                        <a class="learn-more" [attr.aria-label]="project.visitAriaLabel" [href]="project.website"
+                            target="_blank" rel="noopener noreferrer">
                             <span class="circle">
                                 <i class="fa fa-link icon icon-link"></i>
                                 <i class="fa fa-arrow-right icon icon-arrow"></i>
@@ -62,9 +62,8 @@
                 <p>{{ content.goals.paragraphs[6] }}</p>
             </div>
             <figure class="case-image">
-                <img src="/images/DC3-Viral-Menace/landing-showcase.png"
-                    [alt]="content.goals.images[0].alt" loading="lazy" decoding="async" width="1542"
-                    height="1601">
+                <img src="/images/DC3-Viral-Menace/landing-showcase.png" [alt]="content.goals.images[0].alt"
+                    loading="lazy" decoding="async" width="1542" height="1601">
             </figure>
         </div>
     </section>
@@ -105,6 +104,7 @@
             </div>
         </div>
     </section>
+
     <section id="architecture" class="section">
         <div class="container">
             <div class="section-copy">
@@ -124,8 +124,8 @@
             </div>
             <figure class="case-image">
                 <img src="/images/DC3-Viral-Menace/dc3-viral-menace-sitemap.png"
-                    [alt]="content.architecture.images[0].alt" loading="lazy"
-                    decoding="async" width="1709" height="1758">
+                    [alt]="content.architecture.images[0].alt" loading="lazy" decoding="async" width="1709"
+                    height="1758">
             </figure>
         </div>
     </section>
@@ -162,8 +162,7 @@
                 <p>{{ content.highFidelity.paragraphs[0] }}</p>
             </div>
             <figure class="case-image">
-                <img src="/images/DC3-Viral-Menace/hi-fi.png"
-                    [alt]="content.highFidelity.images[0].alt" loading="lazy"
+                <img src="/images/DC3-Viral-Menace/hi-fi.png" [alt]="content.highFidelity.images[0].alt" loading="lazy"
                     decoding="async" width="3453" height="2909">
             </figure>
         </div>
@@ -202,9 +201,8 @@
                 </div>
             </div>
             <figure class="case-image">
-                <img src="/images/DC3-Viral-Menace/Design-iteration.png"
-                    [alt]="content.iteration.images[0].alt" loading="lazy"
-                    decoding="async" width="3103" height="2273">
+                <img src="/images/DC3-Viral-Menace/Design-iteration.png" [alt]="content.iteration.images[0].alt"
+                    loading="lazy" decoding="async" width="3103" height="2273">
             </figure>
         </div>
     </section>
@@ -260,13 +258,11 @@
             <div class="cms-gallery">
                 <figure class="case-image">
                     <img src="/images/DC3-Viral-Menace/dc3-viral-menace-web-admin-1.png"
-                        [alt]="content.cms.images[0].alt" loading="lazy" decoding="async"
-                        width="2521" height="4207">
+                        [alt]="content.cms.images[0].alt" loading="lazy" decoding="async" width="2521" height="4207">
                 </figure>
                 <figure class="case-image">
                     <img src="/images/DC3-Viral-Menace/dc3-viral-menace-web-admin-2.png"
-                        [alt]="content.cms.images[1].alt" loading="lazy" decoding="async"
-                        width="2522" height="5427">
+                        [alt]="content.cms.images[1].alt" loading="lazy" decoding="async" width="2522" height="5427">
                 </figure>
             </div>
         </div>
@@ -319,5 +315,6 @@
             </div>
         </div>
     </section>
-    <div class="container page-end"><a class="project-button" routerLink="/projects">{{ project.moreProjectsLabel }}</a></div>
+    <div class="container page-end"><a class="project-button" routerLink="/projects">{{ project.moreProjectsLabel }}</a>
+    </div>
 </main>

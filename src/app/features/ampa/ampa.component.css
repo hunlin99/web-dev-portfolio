@@ -294,6 +294,18 @@ blockquote {
     margin-bottom: 1rem;
 }
 
+.brand-image-container {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 1fr);
+    gap: 1.5em;
+    padding: 0 10%;
+}
+
+.brand-idea-container {
+    height: 100%;
+}
+
+
 .palette {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
