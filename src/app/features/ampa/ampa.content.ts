@@ -5,7 +5,7 @@ export const ampaProject = {
   platform: 'Mobile App · Responsive Web',
   tools: 'Figma · Illustrator',
   website: 'https://afroidentity.com/',
-  image: '/images/AMPA/AMPA-project-img.jpg',
+  image: '/images/AMPA/AMPA_w_device.png',
   sections: [
     { id: 'overview', title: 'Project Overview' },
     { id: 'challenge', title: 'The Challenge' },
@@ -63,8 +63,8 @@ export const ampaProject = {
     }
   ],
   journeys: [
-    { title: 'Consumer experience', steps: ['Discover & search', 'Explore vendor profiles', 'Compare & save', 'Checkout'], text: 'Organize discovery, saved items, vendor communication, and checkout around a clear shopping journey.' },
-    { title: 'Vendor experience', steps: ['Register', 'Create listings', 'Manage orders', 'Review analytics'], text: 'Connect onboarding, inventory, fulfillment, and analytics in a practical operational workflow.' }
+    { title: 'Consumer experience', steps: ['Discover & search', 'Explore vendor profiles', 'Compare & save', 'Checkout'], text: 'Organize discovery, saved items, vendor communication, and checkout around a clear shopping journey.', image: '/images/AMPA/Consumer-experience.png' },
+    { title: 'Vendor experience', steps: ['Register', 'Create listings', 'Manage orders', 'Review analytics'], text: 'Connect onboarding, inventory, fulfillment, and analytics in a practical operational workflow.', image: '/images/AMPA/Vendor-experience.png' }
   ],
   deliverables: [
     'Brand direction: cultural rationale, logo exploration, color, and typography.',

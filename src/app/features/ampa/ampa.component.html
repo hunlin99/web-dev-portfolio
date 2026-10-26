@@ -1,135 +1,219 @@
-<app-header></app-header>
 <main>
+    <app-project-detail-page-header></app-project-detail-page-header>
+
     <section class="hero">
         <div class="container">
-            <a routerLink="/projects" class="back-link">← Back to projects</a>
             <div class="hero-grid">
                 <div>
-                    <p class="eyebrow">AFROIDENTITY / AMPA · UX/UI + BRANDING</p>
                     <h1>{{ project.title }}</h1>
                     <p class="lead">{{ project.subtitle }}</p>
-                    <a class="project-button" [href]="project.website" target="_blank" rel="noopener noreferrer">Visit Afroidentity <span aria-hidden="true">↗</span></a>
+                    <!-- Updated button style to  consistent with portfolio style-->
+                    <a [href]="project.website" target="_blank">
+                        <button class="learn-more">
+                            <span class="circle">
+                                <i class="fa fa-link icon icon-link"></i>
+                                <i class="fa fa-arrow-right icon icon-arrow"></i>
+                            </span>
+
+                            <span class="button-text">
+                                Visit Afroidentity </span>
+                        </button>
+                    </a>
                 </div>
                 <figure>
                     <img [src]="project.image" alt="AMPA project visual from the portfolio" fetchpriority="high">
-                    <figcaption>AMPA / Afroidentity</figcaption>
                 </figure>
             </div>
             <dl class="metadata">
-                <div><dt>Role</dt><dd>{{ project.role }}</dd></div>
-                <div><dt>Platform</dt><dd>{{ project.platform }}</dd></div>
-                <div><dt>Tools</dt><dd>{{ project.tools }}</dd></div>
+                <div>
+                    <dt>Role</dt>
+                    <dd>{{ project.role }}</dd>
+                </div>
+                <div>
+                    <dt>Platform</dt>
+                    <dd>{{ project.platform }}</dd>
+                </div>
+                <div>
+                    <dt>Tools</dt>
+                    <dd>{{ project.tools }}</dd>
+                </div>
             </dl>
         </div>
     </section>
 
     <nav class="contents container" aria-label="Case study sections">
         @for (section of project.sections; track section.id; let i = $index) {
-            <a [href]="'/ampa#' + section.id"><span>0{{ i + 1 }}</span> {{ section.title }}</a>
+        <a [href]="'/ampa#' + section.id"><span>0{{ i + 1 }}</span> {{ section.title }}</a>
         }
     </nav>
 
+    <!-- Project Overview section: content left, image right, add proper gap-->
     <section id="overview" class="section container">
-        <p class="eyebrow">01 / CONTEXT</p><h2>Project Overview</h2>
-        <p class="section-lead">Connecting cultural identity with a functional digital product.</p>
-        <p>AMPA is a marketplace concept for the Afro-diaspora, bringing culturally relevant discovery and digital commerce together. The design scope spans brand identity, consumer and vendor journeys, mobile interfaces, and responsive web experiences.</p>
-        <p>The central design question is how a recognizable brand can support practical workflows for two different user groups, rather than existing only as a visual layer.</p>
+        <div>
+            <p class="eyebrow">01 / CONTEXT</p>
+            <h2>Project Overview</h2>
+            <p class="section-lead">Connecting cultural identity with a functional digital product.</p>
+            <p>AMPA is a marketplace concept for the Afro-diaspora, bringing culturally relevant discovery and digital
+                commerce together. The design scope spans brand identity, consumer and vendor journeys, mobile
+                interfaces,
+                and responsive web experiences.</p>
+            <p>The central design question is how a recognizable brand can support practical workflows for two different
+                user groups, rather than existing only as a visual layer.</p>
+        </div>
+        <div>
+            <img src="/images/AMPA/APP Mockup.jpg" alt="User-flow-image">
+        </div>
+
     </section>
 
+    <!-- THE CHALLENGE section: Added app flow image. if mobile size active=User flow-crop-01.png+User flow-crop-02.png-->
     <section id="challenge" class="section warm">
         <div class="container">
-            <p class="eyebrow">02 / THE CHALLENGE</p><h2>One community. Two sets of needs.</h2>
-            <p>Afro-diaspora consumers need accessible ways to discover culturally relevant products, services, and businesses. Independent vendors need practical tools to reach customers and manage their operations.</p>
-            <blockquote>How might we create a marketplace that feels culturally authentic while remaining intuitive, scalable, and useful for both consumers and vendors?</blockquote>
+            <p class="eyebrow">02 / THE CHALLENGE</p>
+            <h2>One community. Two sets of needs.</h2>
+            <p>Afro-diaspora consumers need accessible ways to discover culturally relevant products, services, and
+                businesses. Independent vendors need practical tools to reach customers and manage their operations.</p>
+            <blockquote>How might we create a marketplace that feels culturally authentic while remaining intuitive,
+                scalable, and useful for both consumers and vendors?</blockquote>
             <div class="two-column">
                 @for (audience of project.audiences; track audience.title) {
-                    <article class="card"><h3>{{ audience.title }}</h3><p>{{ audience.text }}</p></article>
+                <article class="card">
+                    <h3>{{ audience.title }}</h3>
+                    <p>{{ audience.text }}</p>
+                </article>
                 }
             </div>
+        </div>
+        <div>
+            <img src="/images/AMPA/User-flow.png" alt="User-flow-image">
         </div>
     </section>
 
     <section id="strategy" class="section container">
-        <p class="eyebrow">03 / DISCOVERY &amp; STRATEGY</p><h2>A shared direction before individual screens.</h2>
-        <p>The following goals describe project requirements and design assumptions. They are not presented as findings from validated user interviews or usability studies.</p>
+        <p class="eyebrow">03 / DISCOVERY &amp; STRATEGY</p>
+        <h2>A shared direction before individual screens.</h2>
+        <p>The following goals describe project requirements and design assumptions. They are not presented as findings
+            from validated user interviews or usability studies.</p>
         <ul class="goal-list">@for (goal of project.goals; track goal) { <li>{{ goal }}</li> }</ul>
     </section>
 
     <section id="identity" class="section dark">
         <div class="container">
-            <p class="eyebrow">04 / BRAND IDENTITY</p><h2>From cultural meaning to visual identity.</h2>
-            <p class="section-lead">Community and interdependence form the thread between the brand and the marketplace.</p>
+            <p class="eyebrow">04 / BRAND IDENTITY</p>
+            <h2>From cultural meaning to visual identity.</h2>
+            <p class="section-lead">Community and interdependence form the thread between the brand and the marketplace.
+            </p>
             <div class="two-column">
                 @for (stage of project.brandStages; track stage.title; let i = $index) {
-                    <article class="brand-stage"><span class="stage-number">0{{ i + 1 }}</span><h3>{{ stage.title }}</h3><p>{{ stage.text }}</p></article>
+                <article class="brand-stage"><span class="stage-number">0{{ i + 1 }}</span>
+                    <h3>{{ stage.title }}</h3>
+                    <p>{{ stage.text }}</p>
+                </article>
                 }
             </div>
         </div>
     </section>
 
     <section id="system" class="section container">
-        <p class="eyebrow">05 / DESIGN SYSTEM</p><h2>A warm palette. A clear product language.</h2>
+        <p class="eyebrow">05 / DESIGN SYSTEM</p>
+        <h2>A warm palette. A clear product language.</h2>
         <div class="palette">
             @for (color of project.colors; track color.hex) {
-                <div class="swatch" [style.background-color]="color.hex" [style.color]="color.ink"><strong>{{ color.name }}</strong><span>{{ color.hex }}</span></div>
+            <div class="swatch" [style.background-color]="color.hex" [style.color]="color.ink"><strong>{{ color.name
+                    }}</strong><span>{{ color.hex }}</span></div>
             }
         </div>
         <div class="two-column typography">
-            <div><h3>Sora</h3><p>Headings and display typography in the AMPA design direction.</p></div>
-            <div><h3>DM Sans</h3><p>Body text and functional interface labels in the AMPA design direction.</p></div>
+            <div>
+                <h3>Sora</h3>
+                <p>Headings and display typography in the AMPA design direction.</p>
+            </div>
+            <div>
+                <h3>DM Sans</h3>
+                <p>Body text and functional interface labels in the AMPA design direction.</p>
+            </div>
         </div>
-        <p>Expressive patterns belong in brand moments; simpler backgrounds support form-heavy tasks. Small-size logo legibility, contrast, spacing, clear labels, and component states are important checks when turning this direction into product UI.</p>
+        <p>Expressive patterns belong in brand moments; simpler backgrounds support form-heavy tasks. Small-size logo
+            legibility, contrast, spacing, clear labels, and component states are important checks when turning this
+            direction into product UI.</p>
     </section>
 
+    <!-- added App-Switch-interface-flow.png, add proper space-->
     <section id="architecture" class="section warm">
         <div class="container">
-            <p class="eyebrow">06 / UX ARCHITECTURE</p><h2>Two roles, with a clear way between them.</h2>
+            <p class="eyebrow">06 / UX ARCHITECTURE</p>
+            <h2>Two roles, with a clear way between them.</h2>
             <p>A profile-level switch connects the consumer experience to the appropriate vendor flow.</p>
             <div class="role-flow" aria-label="Vendor role switching flow">
                 <div class="flow-start">User profile → Switch interface</div>
                 <div class="two-column">
-                    <div class="card"><h3>Existing vendor</h3><p>→ Vendor dashboard</p></div>
-                    <div class="card"><h3>Not yet a vendor</h3><p>→ Vendor registration</p></div>
+                    <div class="card">
+                        <h3>Existing vendor</h3>
+                        <p>→ Vendor dashboard</p>
+                    </div>
+                    <div class="card">
+                        <h3>Not yet a vendor</h3>
+                        <p>→ Vendor registration</p>
+                    </div>
                 </div>
             </div>
+            <img src="/images/AMPA/App-Switch-interface-flow.png" alt="Switch interface flow image">
         </div>
     </section>
 
     <section id="decisions" class="section container">
-        <p class="eyebrow">07 / KEY UX DECISIONS</p><h2>Designing for the work behind the marketplace.</h2>
+        <p class="eyebrow">07 / KEY UX DECISIONS</p>
+        <h2>Designing for the work behind the marketplace.</h2>
         @for (decision of project.decisions; track decision.title; let i = $index) {
-            <article class="decision">
-                <div><p class="eyebrow">CASE 0{{ i + 1 }} / {{ decision.discipline }}</p><h3>{{ decision.title }}</h3></div>
-                <dl>
-                    <dt>Problem</dt><dd>{{ decision.problem }}</dd>
-                    <dt>Constraint</dt><dd>{{ decision.constraint }}</dd>
-                    <dt>Design response</dt><dd>{{ decision.decision }}</dd>
-                    <dt>Expected benefit</dt><dd>{{ decision.benefit }}</dd>
-                </dl>
-            </article>
+        <article class="decision">
+            <div>
+                <p class="eyebrow">CASE 0{{ i + 1 }} / {{ decision.discipline }}</p>
+                <h3>{{ decision.title }}</h3>
+            </div>
+            <dl>
+                <dt>Problem</dt>
+                <dd>{{ decision.problem }}</dd>
+                <dt>Constraint</dt>
+                <dd>{{ decision.constraint }}</dd>
+                <dt>Design response</dt>
+                <dd>{{ decision.decision }}</dd>
+                <dt>Expected benefit</dt>
+                <dd>{{ decision.benefit }}</dd>
+            </dl>
+        </article>
         }
-        <p class="note">These are intended benefits, not measured usability or business outcomes. No illustrative revenue, order, or follower figures are presented as actual performance.</p>
+        <p class="note">These are intended benefits, not measured usability or business outcomes. No illustrative
+            revenue, order, or follower figures are presented as actual performance.</p>
     </section>
 
     <section id="experience" class="section dark">
         <div class="container">
-            <p class="eyebrow">08 / UI &amp; PROTOTYPE DIRECTION</p><h2>Organized around journeys, not isolated screens.</h2>
+            <p class="eyebrow">08 / UI &amp; PROTOTYPE DIRECTION</p>
+            <h2>Organized around journeys, not isolated screens.</h2>
             <div class="two-column">
                 @for (journey of project.journeys; track journey.title) {
-                    <article class="journey"><h3>{{ journey.title }}</h3><p>{{ journey.text }}</p>
-                        <ol>@for (step of journey.steps; track step) { <li>{{ step }}</li> }</ol>
-                    </article>
+                <article class="journey">
+                    <h3>{{ journey.title }}</h3>
+                    <p>{{ journey.text }}</p>
+                    <ol>@for (step of journey.steps; track step) { <li>{{ step }}</li> }</ol>
+                    <img [src]="journey.image" alt="AMPA interface difference betewwn two roles">
+                </article>
                 }
             </div>
-            <p>These flows describe the product design direction; they do not imply that every feature is released on the company website.</p>
+            <p>These flows describe the product design direction; they do not imply that every feature is released on
+                the company website.</p>
         </div>
     </section>
 
     <section id="reflection" class="section container">
-        <p class="eyebrow">09 / OUTCOME &amp; REFLECTION</p><h2>Connecting identity and functionality.</h2>
+        <p class="eyebrow">09 / OUTCOME &amp; REFLECTION</p>
+        <h2>Connecting identity and functionality.</h2>
         <ul class="goal-list">@for (item of project.deliverables; track item) { <li>{{ item }}</li> }</ul>
-        <p>This case study documents design direction and intended behavior. Launch status, adoption, and usability improvements require separate evidence; no unverified business impact is claimed here.</p>
-        <blockquote>This project challenged me to connect cultural storytelling with functional product design. The most important lesson was learning how to preserve a distinctive brand identity while designing practical workflows for users with very different needs.</blockquote>
+        <p>This case study documents design direction and intended behavior. Launch status, adoption, and usability
+            improvements require separate evidence; no unverified business impact is claimed here.</p>
+        <blockquote>This project challenged me to connect cultural storytelling with functional product design. The most
+            important lesson was learning how to preserve a distinctive brand identity while designing practical
+            workflows for users with very different needs.</blockquote>
         <a class="project-button" routerLink="/projects">← Explore more projects</a>
     </section>
 </main>
