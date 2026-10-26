@@ -1,0 +1,56 @@
+:host { display: block; color: #1e1a1b; background: #faf7f0; }
+.container { width: min(1200px, 86%); margin-inline: auto; }
+a { color: inherit; text-underline-offset: .25em; }
+a:focus-visible { outline: 3px solid #0074e1; outline-offset: 5px; }
+.hero { padding-block: max(7rem, 15vh) 3rem; background: #f1e8da; }
+.back-link { display: inline-block; margin-bottom: 3rem; }
+.hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 3rem; align-items: center; }
+h1 { padding: 0; font-size: clamp(2.2rem, 4.5vw, 4rem); line-height: 1.12; letter-spacing: -.035em; margin-block: 1rem 1.5rem; }
+h2 { font-size: clamp(1.8rem, 3vw, 2.7rem); line-height: 1.2; margin-bottom: 1.5rem; max-width: 850px; }
+h3 { font-size: 1.3rem; margin-bottom: .75rem; line-height: 1.4; }
+p, li, dd { line-height: 1.8; }
+p + p { margin-top: 1rem; }
+.eyebrow { font-size: .75rem; font-weight: 700; letter-spacing: .12em; margin-bottom: 1rem; }
+.lead, .section-lead { font-size: 1.15rem; }
+img { display: block; width: 100%; height: auto; border-radius: 1rem; }
+figcaption { font-size: .8rem; margin-top: .75rem; }
+.project-button { display: inline-flex; align-items: center; gap: 1rem; margin-top: 1.75rem; padding: .8rem 1.25rem; min-height: 44px; border: 1px solid currentColor; border-radius: .35rem; text-decoration: none; font-weight: 600; }
+.project-button:hover { background: #1e1a1b; color: #faf7f0; }
+.metadata { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; border-top: 1px solid #c9bdae; padding-top: 2rem; margin-top: 3rem; }
+dt { font-size: .8rem; font-weight: 700; margin-bottom: .5rem; }
+dd { margin: 0; }
+.contents { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem 2rem; padding-block: 2.5rem; border-bottom: 1px solid #d4c9bb; }
+.contents a { text-decoration: none; font-size: .9rem; padding-block: .5rem; }
+.contents a:hover { text-decoration: underline; }
+.contents span { color: #a14429; margin-right: .5rem; }
+.section { padding-block: 5rem; scroll-margin-top: 7rem; }
+.warm { background: #efe8da; }
+.dark { background: #1e1a1b; color: #faf7f0; }
+.dark .eyebrow, .stage-number { color: #eeae43; }
+.two-column { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; margin-top: 2rem; }
+.card { background: #faf7f0; padding: 2rem; border: 1px solid #d4c9bb; border-radius: .75rem; }
+blockquote { border-left: 3px solid #b65031; padding-left: 1.5rem; font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.6; margin-block: 2rem; }
+.goal-list { padding-left: 1.25rem; margin-block: 1.5rem; }
+.goal-list li + li { margin-top: .75rem; }
+.brand-stage { border-top: 1px solid #625756; padding-top: 1.5rem; }
+.stage-number { display: block; margin-bottom: 1rem; }
+.palette { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-block: 2rem; }
+.swatch { display: flex; flex-direction: column; justify-content: end; min-height: 180px; padding: 1.5rem; border: 1px solid #d4c9bb; border-radius: .75rem; }
+.swatch span { font-size: .85rem; margin-top: .5rem; }
+.typography { margin-bottom: 2rem; }
+.flow-start { background: #1e1a1b; color: #faf7f0; padding: 1.5rem; border-radius: .75rem; }
+.decision { display: grid; grid-template-columns: 1fr 1.6fr; gap: 3rem; padding-block: 2.5rem; border-top: 1px solid #d4c9bb; }
+.decision:first-of-type { margin-top: 2rem; }
+.decision dd + dt { margin-top: 1.25rem; }
+.note { padding: 1.5rem; border-left: 3px solid #b65031; background: #efe8da; }
+.journey ol { padding-left: 1.5rem; margin-top: 1.5rem; }
+.journey li { padding-block: .5rem; border-bottom: 1px solid #625756; }
+.dark .two-column + p { margin-top: 2rem; }
+@media (max-width: 750px) {
+ .hero-grid, .metadata, .two-column, .decision { grid-template-columns: 1fr; }
+ .hero-grid, .decision { gap: 2rem; }
+ .contents, .palette { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .section { padding-block: 3rem; }
+ .swatch { padding: 1rem; min-height: 140px; }
+}
+@media (max-width: 400px) { .contents { grid-template-columns: 1fr; } }

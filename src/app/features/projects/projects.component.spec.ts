@@ -19,14 +19,9 @@ describe('ProjectsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('uses a native external link for AMPA and a router link for Organic Care', () => {
+  it('links AMPA and Organic Care to their Angular case studies', () => {
     const page: HTMLElement = fixture.nativeElement;
-    const ampa = Array.from(page.querySelectorAll('a')).find(a => a.href === 'https://afroidentity.com/');
-    expect(ampa).toBeDefined();
-    expect(ampa?.target).toBe('_blank');
-    expect(ampa?.rel).toBe('noopener noreferrer');
-    expect(ampa?.hasAttribute('routerLink')).toBeFalse();
-    expect(ampa?.querySelector('button')).toBeNull();
+    expect(page.querySelector('a[href="/ampa"]')).not.toBeNull();
     expect(page.querySelector('a[href="/organic-care"]')).not.toBeNull();
   });
   it('links both app projects to their Angular case studies', () => {
