@@ -12,18 +12,18 @@
     <app-header></app-header>
 
     <!-- ========================= -->
-    <!-- Web Development & Design -->
+    <!-- Featured Case Studies -->
     <!-- ========================= -->
 
     <section class="webDesign">
 
         <h1 class="limelight-regular">
-            Web Development & Design
+            Featured Case Studies
         </h1>
 
         <hr>
 
-        <ng-container *ngFor="let project of webProjects; let i = index">
+        <ng-container *ngFor="let project of featuredProjects; let i = index">
 
             <!-- Image Left -->
             <div class="col-container-1" *ngIf="i % 2 === 0">
@@ -106,18 +106,18 @@
     </section>
 
     <!-- ========================= -->
-    <!-- APP Development & Design -->
+    <!-- Web & App Experiences -->
     <!-- ========================= -->
 
     <section class="APP">
 
         <h1 class="limelight-regular">
-            APP Development & Design
+            Web & App Experiences
         </h1>
 
         <hr>
 
-        <ng-container *ngFor="let project of appProjects; let i = index">
+        <ng-container *ngFor="let project of experienceProjects; let i = index">
 
             <div class="col-container-1" *ngIf="i % 2 === 0">
 
