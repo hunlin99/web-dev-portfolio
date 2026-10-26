@@ -3,18 +3,18 @@
     <section class="hero">
         <div class="container">
             <div class="hero-grid">
-                <div>
+                <div class="hero-copy">
                     <p class="eyebrow">{{ project.eyebrow }}</p>
                     <h1>{{ project.title }}</h1>
                     <p class="lead">{{ project.summary }}</p>
-                    <app-project-website-button class="hero-website-button"
-                        [href]="project.website" [label]="project.visitLabel"
-                        [ariaLabel]="project.visitAriaLabel"></app-project-website-button>
                 </div>
                 <figure>
                     <img [src]="project.coverImage" [width]="project.coverWidth" [height]="project.coverHeight"
                         [alt]="project.coverAlt" fetchpriority="high">
                 </figure>
+                <app-project-website-button class="hero-website-button"
+                    [href]="project.website" [label]="project.visitLabel"
+                    [ariaLabel]="project.visitAriaLabel"></app-project-website-button>
             </div>
             <dl class="metadata">
                 @for (item of project.metadata; track item.label) {

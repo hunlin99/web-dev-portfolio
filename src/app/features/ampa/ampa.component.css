@@ -451,3 +451,18 @@ blockquote {
     --project-button-font: "Limelight", sans-serif;
     --project-button-font-size: 1.2em;
 }
+
+.hero-grid {
+    grid-template-areas: "copy image" "action image";
+    row-gap: 0;
+}
+.hero-copy { grid-area: copy; align-self: end; min-width: 0; }
+.hero-grid > figure { grid-area: image; margin: 0; }
+.hero-grid > .hero-website-button { grid-area: action; align-self: start; }
+@media (max-width: 750px) {
+    .hero-grid {
+        grid-template-areas: "copy" "image" "action";
+        gap: 1.5rem;
+    }
+    .hero-grid > .hero-website-button { justify-self: center; margin-top: 0; }
+}
