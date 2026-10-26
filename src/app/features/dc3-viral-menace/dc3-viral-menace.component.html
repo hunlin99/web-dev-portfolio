@@ -106,7 +106,7 @@
     </section>
 
     <section id="architecture" class="section">
-        <div class="container">
+        <div class="container architecture-grid">
             <div class="section-copy">
                 <p class="eyebrow">{{ content.architecture.eyebrow }}</p>
                 <h2>{{ content.architecture.title }}</h2>
@@ -129,6 +129,20 @@
             </figure>
         </div>
     </section>
+    <section id="low-fidelity" class="section warm">
+        <div class="container">
+            <div class="section-copy">
+                <p class="eyebrow">{{ content.lowFidelity.eyebrow }}</p>
+                <h2>{{ content.lowFidelity.title }}</h2>
+                <p>{{ content.lowFidelity.brief }}</p>
+            </div>
+            <figure class="case-image">
+                <img src="/images/DC3-Viral-Menace/lofi.png" [alt]="content.lowFidelity.imageAlt"
+                    width="3295" height="2753" loading="lazy" decoding="async">
+            </figure>
+        </div>
+    </section>
+
     <section id="visual-design" class="section dark">
         <div class="container">
             <div class="section-copy">
