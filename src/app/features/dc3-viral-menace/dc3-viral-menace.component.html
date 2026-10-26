@@ -6,7 +6,6 @@
                 <div>
                     <p class="eyebrow">S-QUBED ENTERTAINMENT · DESIGN &amp; DEVELOPMENT</p>
                     <h1>{{ project.title }}</h1>
-                    <!-- <p class="subtitle">{{ project.subtitle }}</p> -->
                     <p class="lead">{{ project.summary }}</p>
                     <a class="learn-more" [href]="project.website" target="_blank" rel="noopener noreferrer"
                         aria-label="Visit DC3: Viral Menace website (opens in a new tab)">
@@ -40,44 +39,10 @@
         </a>
         }
     </nav>
-
-    <!--Project Overview: Remove this section since most of information are duplicate from other section-->
-    <!-- <section id="overview" class="section">
-        <div class="container overview-grid">
-            <div class="section-copy">
-                <p class="eyebrow">01 / THE CASE STUDY</p>
-                <h2>Project Overview</h2>
-                <p>Company: S-Qubed Entertainment Inc. Project Type: Professional Co-op Project Timeline: May–August
-                    2025 &amp; May–August 2026 Roles: Web Designer (2025), Web Developer (2026) Location: Toronto,
-                    Canada</p>
-                <h4>Tools &amp; Technologies:</h4>
-                <ul>
-                    <li>Design: Figma</li>
-                    <li>Front-end: Angular, TypeScript, Tailwind CSS</li>
-                    <li>Back-end &amp; CMS: Firebase Authentication, Firestore, Cloud Storage</li>
-                    <li>Deployment: Firebase Hosting</li>
-                    <li>Other: Git, Responsive Testing, Google PageSpeed Insights</li>
-                </ul>
-                <h3>About the Project</h3>
-                <p>S-Qubed Entertainment is a game development studio.</p>
-                <p>The project focused on creating a responsive website to showcase the studio&#x27;s games, share
-                    updates, and encourage visitors to explore its titles on Steam.</p>
-                <p>I worked on this project during two co-op placements.</p>
-                <p>In 2025, I worked as a Web Designer, contributing to the website&#x27;s structure, visual design, and
-                    responsive layouts.</p>
-                <p>In 2026, I returned as a Web Developer to complete the website, develop a custom content management
-                    system (CMS), and deploy the project.</p>
-                <p>This experience allowed me to participate in both the design and development stages of a real company
-                    website.</p>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- 02. Project Goals -->
     <section id="goals" class="section warm">
         <div class="container overview-grid">
             <div class="section-copy">
-                <p class="eyebrow">02 / THE CASE STUDY</p>
+                <p class="eyebrow">01 / THE CASE STUDY</p>
                 <h2>Project Goals</h2>
                 <p>The website needed to introduce S-Qubed Entertainment&#x27;s games while supporting the studio&#x27;s
                     promotional and communication goals.</p>
@@ -94,50 +59,52 @@
             </div>
             <figure class="case-image">
                 <img src="/images/DC3-Viral-Menace/landing-showcase.png"
-                    alt="DC3: Viral Menace website project showcase" width="5693" height="3201" loading="lazy"
-                    decoding="async">
+                    alt="DC3: Viral Menace website project showcase" loading="lazy"
+                    decoding="async" width="1542" height="1601">
             </figure>
         </div>
     </section>
-
-    <!--My Responsibilities: make it two column layout, Phase 1-left, Phase 2-right-->
     <section id="responsibilities" class="section dark">
         <div class="container">
-            <div class="section-copy">
-                <p class="eyebrow">03 / THE CASE STUDY</p>
+            <div class="section-copy full-width">
+                <p class="eyebrow">02 / THE CASE STUDY</p>
                 <h2>My Responsibilities</h2>
-                <h3>Phase 1 — Website Design (2025)</h3>
-                <p>During my first co-op placement, I contributed to the design process.</p>
-                <p>My responsibilities included:</p>
-                <ul>
-                    <li>Participating in brainstorming and design discussions.</li>
-                    <li>Contributing to the website sitemap and information architecture.</li>
-                    <li>Creating wireframes and visual mockups.</li>
-                    <li>Designing the website&#x27;s visual style.</li>
-                    <li>Creating responsive layouts.</li>
-                    <li>Translating UI designs into front-end interfaces.</li>
-                </ul>
-                <h3>Phase 2 — Website Development (2026)</h3>
-                <p>I returned to S-Qubed Entertainment in 2026 as a Web Developer.</p>
-                <p>My responsibilities included:</p>
-                <ul>
-                    <li>Completing the responsive website.</li>
-                    <li>Developing a custom CMS for managing articles.</li>
-                    <li>Implementing administrator authentication.</li>
-                    <li>Connecting the website to Firebase services.</li>
-                    <li>Managing hosting, security rules, and deployment.</li>
-                    <li>Improving SEO and optimizing images.</li>
-                </ul>
+                <div class="phase-grid">
+                    <article class="phase-card">
+                        <h3>Phase 1 — Website Design (2025)</h3>
+                        <p>During my first co-op placement, I contributed to the design process.</p>
+                        <p>My responsibilities included:</p>
+                        <ul>
+                            <li>Participating in brainstorming and design discussions.</li>
+                            <li>Contributing to the website sitemap and information architecture.</li>
+                            <li>Creating wireframes and visual mockups.</li>
+                            <li>Designing the website&#x27;s visual style.</li>
+                            <li>Creating responsive layouts.</li>
+                            <li>Translating UI designs into front-end interfaces.</li>
+                        </ul>
+                    </article>
+                    <article class="phase-card">
+                        <h3>Phase 2 — Website Development (2026)</h3>
+                        <p>I returned to S-Qubed Entertainment in 2026 as a Web Developer.</p>
+                        <p>My responsibilities included:</p>
+                        <ul>
+                            <li>Completing the responsive website.</li>
+                            <li>Developing a custom CMS for managing articles.</li>
+                            <li>Implementing administrator authentication.</li>
+                            <li>Connecting the website to Firebase services.</li>
+                            <li>Managing hosting, security rules, and deployment.</li>
+                            <li>Improving SEO and optimizing images.</li>
+                        </ul>
+                    </article>
+                </div>
                 <p>The two placements helped me understand how design decisions connect to technical implementation.</p>
             </div>
         </div>
     </section>
-
-    <!-- 04. Information Architecture -->
     <section id="architecture" class="section">
         <div class="container">
             <div class="section-copy">
-                <p class="eyebrow">04 / THE CASE STUDY</p>
+                <p class="eyebrow">03 / THE CASE STUDY</p>
                 <h2>Information Architecture</h2>
                 <h3>Organizing the Website Content</h3>
                 <p>Before working on detailed visuals, I contributed to the website&#x27;s sitemap.</p>
@@ -155,48 +122,18 @@
             </div>
             <figure class="case-image">
                 <img src="/images/DC3-Viral-Menace/dc3-viral-menace-sitemap.png"
-                    alt="S-Qubed website sitemap with Home, Products, About, and Blog sections" width="1709"
-                    height="1758" loading="lazy" decoding="async">
+                    alt="S-Qubed website sitemap with Home, Products, About, and Blog sections"
+                    loading="lazy" decoding="async" width="1709" height="1758">
             </figure>
         </div>
     </section>
-
-    <!-- 05. remove Wireframing since duplicate from iteration
-    <section id="wireframing" class="section warm">
-        <div class="container">
-            <div class="section-copy">
-                <p class="eyebrow">05 / THE CASE STUDY</p>
-                <h2>Wireframing</h2>
-                <h3>Exploring the Page Layout</h3>
-                <p>I worked on low-fidelity wireframes to organize content before applying detailed visual styles.</p>
-                <p>The early layouts explored how to present the featured game, gameplay information, character artwork,
-                    and promotional content.</p>
-                <p>The design included several key sections:</p>
-                <h4>Hero Section</h4>
-                <p>Placed the featured game and Steam call to action near the top of the page.</p>
-                <h4>Game Trailer</h4>
-                <p>Provided a video section to introduce the game.</p>
-                <h4>Gameplay Showcase</h4>
-                <p>Used screenshots and short descriptions to explain gameplay features.</p>
-                <h4>Character Artwork</h4>
-                <p>Introduced the game&#x27;s characters and visual identity.</p>
-                <h4>Additional Content</h4>
-                <p>Included artwork, music samples, newsletter registration, and social media links.</p>
-                <p>The wireframes helped establish the order of the content and the overall page structure.</p>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- 06. Visual Design -->
     <section id="visual-design" class="section dark">
         <div class="container">
             <div class="section-copy">
-                <p class="eyebrow">06 / THE CASE STUDY</p>
+                <p class="eyebrow">04 / THE CASE STUDY</p>
                 <h2>Visual Design</h2>
                 <h3>Creating a Visual Style Inspired by the Game</h3>
                 <p>The website needed to showcase the game&#x27;s artwork while keeping its content readable.</p>
-                <!-- <p>I developed a visual direction using dark blue backgrounds, bright yellow highlights, and
-                    comic-inspired shapes.</p> -->
                 <p>The visual style included:</p>
                 <ul>
                     <li>Dark backgrounds to support the game&#x27;s visual identity.</li>
@@ -215,117 +152,94 @@
             </div>
         </div>
     </section>
-
-    <!--High-Fidelity Design: make content concise, the main point in this section is image, not descrictions-->
     <section id="high-fidelity" class="section">
         <div class="container">
             <div class="section-copy">
-                <p class="eyebrow">07 / THE CASE STUDY</p>
+                <p class="eyebrow">05 / THE CASE STUDY</p>
                 <h2>High-Fidelity Design</h2>
-                <h3>Bringing the Layout and Visual Style Together</h3>
-                <p>After establishing the page structure and visual direction, I developed high-fidelity designs.</p>
-                <p>The designs combined game artwork, typography, colored panels, and interactive elements.</p>
-                <h3>Hero and Trailer Sections</h3>
-                <p>The hero section used the featured game&#x27;s artwork and a prominent Steam wishlist button.</p>
-                <p>The trailer section appeared directly below, allowing visitors to explore the game through video.</p>
-                <h3>Gameplay Showcase</h3>
-                <p>Gameplay screenshots were paired with short descriptions to introduce the game&#x27;s features.</p>
-                <p>Angled dividers and alternating layouts helped separate each gameplay section.</p>
-                <h3>Character and Artwork Sections</h3>
-                <p>The character section highlighted the game&#x27;s artwork and included smaller character selections.
-                </p>
-                <p>The artwork section explored a comic-book-inspired presentation.</p>
-                <h3>Newsletter and Social Links</h3>
-                <p>The lower part of the page included a newsletter registration section and links to the studio&#x27;s
-                    social channels.</p>
+                <p>The high-fidelity design brings together game artwork, a prominent Steam wishlist action, gameplay panels, character selections, and newsletter and social links in a comic-inspired layout.</p>
             </div>
             <figure class="case-image">
-                <img src="/images/DC3-Viral-Menace/hi-fi.png" alt="High-Fidelity Design" width="1709" height="1758"
-                    loading="lazy" decoding="async">
+                <img src="/images/DC3-Viral-Menace/hi-fi.png" alt="DC3 high-fidelity website design with game artwork and promotional sections"
+                    loading="lazy" decoding="async" width="3453" height="2909">
             </figure>
         </div>
     </section>
-
-    <!-- Design Iteration: make four point into 4-blocker layout -->
     <section id="iteration" class="section warm">
         <div class="container">
-            <div class="section-copy">
-                <p class="eyebrow">08 / THE CASE STUDY</p>
+            <div class="section-copy full-width">
+                <p class="eyebrow">06 / THE CASE STUDY</p>
                 <h2>Design Iteration</h2>
                 <h3>Refining the Interface</h3>
                 <p>As the design developed, I made changes to improve the clarity and consistency of the interface.</p>
                 <p>The main changes focused on calls to action, readability, and visual organization.</p>
-                <h3>01 — Making the Steam Button Clearer</h3>
-                <p>The earlier hero design included two smaller buttons: &quot;Wishlist&quot; and &quot;Learn
-                    More.&quot;</p>
-                <p>In a later iteration, I changed the main button to a wider, more noticeable call to action labeled
-                    &quot;Wishlist on Steam Now.&quot;</p>
-                <p>This made the intended action more explicit and gave it greater visual emphasis.</p>
-                <h3>02 — Improving Text Readability</h3>
-                <p>The gameplay sections originally used several divided content areas.</p>
-                <p>I reduced the number of visual splits and introduced dark gradients behind text.</p>
-                <p>This was intended to improve readability while keeping the gameplay screenshots visible.</p>
-                <h3>03 — Strengthening Section Hierarchy</h3>
-                <p>I used bright section headings to distinguish content areas.</p>
-                <p>For example, the Character Art section received a yellow title block, making it easier to identify
-                    within the long page.</p>
-                <h3>04 — Refining the Color Balance</h3>
-                <p>I adjusted the use of blue, yellow, and light-colored panels to create a more consistent visual
-                    style.</p>
-                <p>The goal was to keep the website visually connected to the game&#x27;s artwork without making the
-                    content difficult to read.</p>
+                <div class="iteration-grid">
+                    <article class="iteration-card">
+                        <h3>01 — Making the Steam Button Clearer</h3>
+                        <p>The earlier hero design included two smaller buttons: &quot;Wishlist&quot; and &quot;Learn
+                            More.&quot;</p>
+                        <p>In a later iteration, I changed the main button to a wider, more noticeable call to action labeled
+                            &quot;Wishlist on Steam Now.&quot;</p>
+                        <p>This made the intended action more explicit and gave it greater visual emphasis.</p>
+                    </article>
+                    <article class="iteration-card">
+                        <h3>02 — Improving Text Readability</h3>
+                        <p>The gameplay sections originally used several divided content areas.</p>
+                        <p>I reduced the number of visual splits and introduced dark gradients behind text.</p>
+                        <p>This was intended to improve readability while keeping the gameplay screenshots visible.</p>
+                    </article>
+                    <article class="iteration-card">
+                        <h3>03 — Strengthening Section Hierarchy</h3>
+                        <p>I used bright section headings to distinguish content areas.</p>
+                        <p>For example, the Character Art section received a yellow title block, making it easier to identify
+                            within the long page.</p>
+                    </article>
+                    <article class="iteration-card">
+                        <h3>04 — Refining the Color Balance</h3>
+                        <p>I adjusted the use of blue, yellow, and light-colored panels to create a more consistent visual
+                            style.</p>
+                        <p>The goal was to keep the website visually connected to the game&#x27;s artwork without making the
+                            content difficult to read.</p>
+                    </article>
+                </div>
             </div>
             <figure class="case-image">
                 <img src="/images/DC3-Viral-Menace/Design-iteration.png"
-                    alt="Progression from initial wireframe to refined DC3 visual design" width="3103" height="2273"
-                    loading="lazy" decoding="async">
+                    alt="Progression from initial wireframe to refined DC3 visual design"
+                    loading="lazy" decoding="async" width="3103" height="2273">
             </figure>
         </div>
     </section>
-
-    <!-- Responsive Website Development: Rewrite this section and make sure it concise. It's about :1.Interactice section:select charactor thumbnail to show detail and illustration of charactor.
-     2. showcase of I used CSS Clip-Path Layout for custamiz comicbook lauout.-->
     <section id="development" class="section dark">
         <div class="container">
             <div class="section-copy">
-                <p class="eyebrow">09 / THE CASE STUDY</p>
+                <p class="eyebrow">07 / THE CASE STUDY</p>
                 <h2>Responsive Website Development</h2>
-                <h3>Turning the Designs into a Functional Website</h3>
-                <p>During my co-op placements, I translated the visual designs into responsive interfaces.</p>
-                <p>The website was developed using Angular, TypeScript, and Tailwind CSS.</p>
-                <p>I worked on:</p>
-                <ul>
-                    <li>Implementing page layouts and navigation.</li>
-                    <li>Creating reusable components.</li>
-                    <li>Supporting different screen sizes.</li>
-                    <li>Maintaining visual consistency between designs and implementation.</li>
-                    <li>Resolving layout and implementation issues.</li>
-                </ul>
-                <p>Working on the front end helped me understand how design decisions affect development.</p>
-                <p>It also gave me experience adjusting interfaces to work across different devices.</p>
+                <p>I translated the game-inspired designs into responsive Angular interfaces, focusing on character interactions and custom comic-book layouts.</p>
             </div>
             <div class="video-grid">
-                <figure>
-                    <video autoplay muted [muted]="true" loop playsinline preload="metadata"
-                        aria-label="Silent demonstration of the DC3 interactive interface">
+                <article class="implementation-card">
+                    <h3>Interactive character showcase</h3>
+                    <p>Selecting a character thumbnail updates the featured illustration and character details, letting visitors explore the cast without leaving the section.</p>
+                    <video autoplay muted [muted]="true" loop playsinline preload="metadata" aria-label="Silent demonstration of selecting character thumbnails">
                         <source src="/images/DC3-Viral-Menace/interactive.mp4" type="video/mp4">
                     </video>
-                </figure>
-                <figure>
-                    <video autoplay muted [muted]="true" loop playsinline preload="metadata"
-                        aria-label="Silent demonstration of the DC3 clip-path layouts">
+                </article>
+                <article class="implementation-card">
+                    <h3>Comic-book layouts with CSS clip-path</h3>
+                    <p>I used CSS clip-path to shape angled panels and custom dividers, bringing the comic-book visual direction into layouts that adapt to different screen sizes.</p>
+                    <video autoplay muted [muted]="true" loop playsinline preload="metadata" aria-label="Silent demonstration of comic-book layouts using CSS clip-path">
                         <source src="/images/DC3-Viral-Menace/clip-path.mp4" type="video/mp4">
                     </video>
-                </figure>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Custom Content Management System: Add admin screenshot, make this section reorganize with proper layout-->
     <section id="cms" class="section">
         <div class="container cms-grid">
             <div class="section-copy">
-                <p class="eyebrow">10 / THE CASE STUDY</p>
+                <p class="eyebrow">08 / THE CASE STUDY</p>
                 <h2>Custom Content Management System</h2>
                 <h3>Making Website Content Easier to Manage</h3>
                 <p>During my second co-op placement in 2026, I developed a custom CMS for S-Qubed Entertainment.</p>
@@ -346,24 +260,24 @@
                 <p>The CMS became an important part of the completed website by supporting ongoing content management.
                 </p>
             </div>
-            <figure class="case-image">
-                <img src="/images/DC3-Viral-Menace/dc3-viral-menace-web-admin-1.png"
-                    alt="DC3: Viral Menace website project showcase" width="5693" height="3201" loading="lazy"
-                    decoding="async">
-            </figure>
-            <figure class="case-image">
-                <img src="/images/DC3-Viral-Menace/dc3-viral-menace-web-admin-2.png"
-                    alt="DC3: Viral Menace website project showcase" width="5693" height="3201" loading="lazy"
-                    decoding="async">
-            </figure>
+            <div class="cms-gallery">
+                <figure class="case-image">
+                    <img src="/images/DC3-Viral-Menace/dc3-viral-menace-web-admin-1.png"
+                        alt="S-Qubed custom CMS administration interface, first view" loading="lazy"
+                        decoding="async" width="2521" height="4207">
+                </figure>
+                <figure class="case-image">
+                    <img src="/images/DC3-Viral-Menace/dc3-viral-menace-web-admin-2.png"
+                        alt="S-Qubed custom CMS administration interface, second view" loading="lazy"
+                        decoding="async" width="2522" height="5427">
+                </figure>
+            </div>
         </div>
     </section>
-
-    <!-- 11. Deployment and SEO -->
     <section id="deployment" class="section warm">
         <div class="container">
             <div class="section-copy">
-                <p class="eyebrow">11 / THE CASE STUDY</p>
+                <p class="eyebrow">09 / THE CASE STUDY</p>
                 <h2>Deployment and SEO</h2>
                 <h3>Preparing the Website for Production</h3>
                 <p>Beyond the interface and CMS, I also worked on the website&#x27;s production setup.</p>
@@ -390,12 +304,10 @@
             </div>
         </div>
     </section>
-
-    <!-- 12. Final Outcome -->
     <section id="outcome" class="section dark">
         <div class="container">
             <div class="section-copy">
-                <p class="eyebrow">12 / THE CASE STUDY</p>
+                <p class="eyebrow">10 / THE CASE STUDY</p>
                 <h2>Final Outcome</h2>
                 <h3>From Website Design to a Completed Product</h3>
                 <p>The project developed across two co-op placements.</p>
@@ -417,12 +329,10 @@
             </div>
         </div>
     </section>
-
-    <!-- 13. Reflection -->
     <section id="reflection" class="section">
         <div class="container">
             <div class="section-copy">
-                <p class="eyebrow">13 / THE CASE STUDY</p>
+                <p class="eyebrow">11 / THE CASE STUDY</p>
                 <h2>Reflection</h2>
                 <h3>What I Learned</h3>
                 <h4>01 — Design and Development Are Connected</h4>

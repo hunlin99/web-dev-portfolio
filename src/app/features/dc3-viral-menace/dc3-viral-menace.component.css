@@ -351,3 +351,31 @@ video {
         transition: none;
     }
 }
+
+.full-width { max-width: none; }
+.phase-grid, .iteration-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    margin-block: 2rem;
+}
+.phase-card, .iteration-card {
+    padding: 1.5rem;
+    border: 1px solid #99b6c2;
+    border-radius: .75rem;
+}
+.phase-card h3, .iteration-card h3, .implementation-card h3 { margin-top: 0; }
+.implementation-card { min-width: 0; }
+.implementation-card video { margin-top: 1.5rem; }
+.cms-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+}
+.cms-grid > * { min-width: 0; }
+.cms-gallery { display: grid; gap: 2rem; }
+.cms-gallery .case-image { margin: 0; }
+@media (max-width: 750px) {
+    .phase-grid, .iteration-grid, .cms-grid { grid-template-columns: 1fr; }
+}

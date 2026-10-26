@@ -72,10 +72,6 @@ export const dc3Project: Dc3CaseStudy = {
   ],
   "sections": [
     {
-      "id": "overview",
-      "title": "Project Overview"
-    },
-    {
       "id": "goals",
       "title": "Project Goals"
     },
@@ -86,10 +82,6 @@ export const dc3Project: Dc3CaseStudy = {
     {
       "id": "architecture",
       "title": "Information Architecture"
-    },
-    {
-      "id": "wireframing",
-      "title": "Wireframing"
     },
     {
       "id": "visual-design",
