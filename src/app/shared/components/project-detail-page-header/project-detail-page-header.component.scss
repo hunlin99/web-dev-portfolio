@@ -1,10 +1,10 @@
 .header {
     width: 100%;
-    position: absolute;
-    top: 2vh;
-    padding: 0 10%;
+    height: 5em;
+    // position: absolute;
+    top: 1.2em;
+    padding: 0 6%;
     position: fixed;
-
 }
 
 /*header*/
@@ -37,8 +37,9 @@ $speed: 0.5s;
     letter-spacing: 1px;
     display: inline-block;
     text-decoration: none;
-    font-family: 'Open Sans';
+    font-family: "Limelight", sans-serif;
     text-transform: uppercase;
+    margin-top: 0.5em;
 
     &:hover {
 
@@ -81,5 +82,13 @@ $speed: 0.5s;
         opacity: 0.6;
         content: attr(data-front);
         transform: translateY(0) rotateX(0);
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+    .back-color {
+        display: none;
     }
 }

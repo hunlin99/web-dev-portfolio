@@ -12,8 +12,8 @@
                     <img [src]="project.image" alt="AMPA project visual from the portfolio" fetchpriority="high"
                         width="2703" height="1458">
                 </figure>
-                <app-project-website-button class="hero-website-button"
-                    [href]="project.website" label="Visit Afroidentity"
+                <app-project-website-button class="hero-website-button" [href]="project.website"
+                    label="Visit Afroidentity"
                     ariaLabel="Visit Afroidentity (opens in a new tab)"></app-project-website-button>
             </div>
             <dl class="metadata">
@@ -98,29 +98,40 @@
             <header class="identity-intro">
                 <p class="eyebrow">04 / BRAND IDENTITY</p>
                 <h2>From cultural meaning to visual identity.</h2>
-                <p class="section-lead">Community and interdependence form the thread between the brand and the marketplace.</p>
+                <p class="section-lead">Community and interdependence form the thread between the brand and the
+                    marketplace.</p>
             </header>
             <div class="identity-stages">
                 @for (stage of project.brandStages; track stage.title; let i = $index) {
-                    <article class="identity-stage">
-                        <span class="stage-number">0{{ i + 1 }}</span>
-                        <div><h3>{{ stage.title }}</h3><p>{{ stage.text }}</p></div>
-                    </article>
+                <article class="identity-stage">
+                    <span class="stage-number">0{{ i + 1 }}</span>
+                    <div>
+                        <h3>{{ stage.title }}</h3>
+                        <p>{{ stage.text }}</p>
+                    </div>
+                </article>
                 }
             </div>
             <div class="identity-gallery">
                 <figure class="identity-application">
-                    <img src="/images/AMPA/Brand-application.png" alt="AMPA brand identity applications and visual variations" loading="lazy" decoding="async" width="2001" height="1404">
-                    <figcaption><strong>Brand application</strong> · Bringing the visual identity into real brand touchpoints.</figcaption>
+                    <img src="/images/AMPA/Brand-application.png"
+                        alt="AMPA brand identity applications and visual variations" loading="lazy" decoding="async"
+                        width="2001" height="1404">
+                    <figcaption><strong>Brand application</strong> · Bringing the visual identity into real brand
+                        touchpoints.</figcaption>
                 </figure>
                 <div class="identity-exploration">
                     <figure>
-                        <img src="/images/AMPA/Logo-ideation.png" alt="AMPA logo sketches and concept exploration" loading="lazy" decoding="async" width="682" height="682">
+                        <img src="/images/AMPA/Logo-ideation.png" alt="AMPA logo sketches and concept exploration"
+                            loading="lazy" decoding="async" width="682" height="682">
                         <figcaption><strong>Logo ideation</strong> · Exploring community and connection.</figcaption>
                     </figure>
                     <figure>
-                        <img src="/images/AMPA/Ndebele-inspired geometry.png" alt="Ndebele-inspired geometric references for AMPA’s visual identity" loading="lazy" decoding="async" width="682" height="683">
-                        <figcaption><strong>Cultural references</strong> · Geometry informing the visual language.</figcaption>
+                        <img src="/images/AMPA/Ndebele-inspired geometry.png"
+                            alt="Ndebele-inspired geometric references for AMPA’s visual identity" loading="lazy"
+                            decoding="async" width="682" height="683">
+                        <figcaption><strong>Cultural references</strong> · Geometry informing the visual language.
+                        </figcaption>
                     </figure>
                 </div>
             </div>

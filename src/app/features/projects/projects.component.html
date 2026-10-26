@@ -47,13 +47,13 @@
                     <div class="container">
 
                         @if (project.link.startsWith('https://')) {
-                            <a class="learn-more" [href]="project.link" target="_blank" rel="noopener noreferrer">
-                                <ng-container *ngTemplateOutlet="projectAction"></ng-container>
-                            </a>
+                        <a class="learn-more" [href]="project.link" target="_blank" rel="noopener noreferrer">
+                            <ng-container *ngTemplateOutlet="projectAction"></ng-container>
+                        </a>
                         } @else {
-                            <a class="learn-more" [routerLink]="project.link">
-                                <ng-container *ngTemplateOutlet="projectAction"></ng-container>
-                            </a>
+                        <a class="learn-more" [routerLink]="project.link">
+                            <ng-container *ngTemplateOutlet="projectAction"></ng-container>
+                        </a>
                         }
 
                     </div>
@@ -81,13 +81,13 @@
                     <div class="container">
 
                         @if (project.link.startsWith('https://')) {
-                            <a class="learn-more" [href]="project.link" target="_blank" rel="noopener noreferrer">
-                                <ng-container *ngTemplateOutlet="projectAction"></ng-container>
-                            </a>
+                        <a class="learn-more" [href]="project.link" target="_blank" rel="noopener noreferrer">
+                            <ng-container *ngTemplateOutlet="projectAction"></ng-container>
+                        </a>
                         } @else {
-                            <a class="learn-more" [routerLink]="project.link">
-                                <ng-container *ngTemplateOutlet="projectAction"></ng-container>
-                            </a>
+                        <a class="learn-more" [routerLink]="project.link">
+                            <ng-container *ngTemplateOutlet="projectAction"></ng-container>
+                        </a>
                         }
                     </div>
 

@@ -144,29 +144,30 @@
                 <ul>
                     <li *ngFor="let item of work.highlights">
                         @for (part of item; track $index) {
-                            @if (part.href) {
-                                <a class="experience-inline-link" [href]="part.href" target="_blank" rel="noopener noreferrer">{{ part.text }}</a>
-                            } @else if (part.bold) {
-                                <strong>{{ part.text }}</strong>
-                            } @else {
-                                <span>{{ part.text }}</span>
-                            }
+                        @if (part.href) {
+                        <a class="experience-inline-link" [href]="part.href" target="_blank"
+                            rel="noopener noreferrer">{{ part.text }}</a>
+                        } @else if (part.bold) {
+                        <strong>{{ part.text }}</strong>
+                        } @else {
+                        <span>{{ part.text }}</span>
+                        }
                         }
                     </li>
                 </ul>
 
                 @if (work.project; as project) {
-                    @if (project.external) {
-                        <a class="experience-project-link" [href]="project.url" target="_blank" rel="noopener noreferrer"
-                            [attr.aria-label]="'View project for ' + work.jobTitle + ' (opens in a new tab)'">
-                            View project <span aria-hidden="true">↗</span>
-                        </a>
-                    } @else {
-                        <a class="experience-project-link" [routerLink]="project.url"
-                            [attr.aria-label]="'View project for ' + work.jobTitle">
-                            View project <span aria-hidden="true">→</span>
-                        </a>
-                    }
+                @if (project.external) {
+                <a class="experience-project-link" [href]="project.url" target="_blank" rel="noopener noreferrer"
+                    [attr.aria-label]="'View project for ' + work.jobTitle + ' (opens in a new tab)'">
+                    View project <span aria-hidden="true">↗</span>
+                </a>
+                } @else {
+                <a class="experience-project-link" [routerLink]="project.url"
+                    [attr.aria-label]="'View project for ' + work.jobTitle">
+                    View project <span aria-hidden="true">→</span>
+                </a>
+                }
                 }
             </div>
         </div>

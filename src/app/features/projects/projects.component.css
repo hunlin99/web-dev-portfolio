@@ -40,7 +40,7 @@ h1 {
 
 .img-block {
     background-color: var(--text-color);
-    height: 20em;
+    height: 22em;
     border-radius: 1em;
 }
 
@@ -53,7 +53,7 @@ img {
 
 .content-block {
     background-color: rgb(255, 255, 255, 0.7);
-    height: 20em;
+    height: 22em;
     border-radius: 1em;
     padding: 2em;
     display: flex;
@@ -259,8 +259,7 @@ button {
     }
 
     .content-block {
-        height: 15em;
-
+        height: 16em;
     }
 
     .content-block .empty-block {
@@ -299,5 +298,16 @@ button {
         display: none;
     }
 }
-a.learn-more { display: inline-block; width: 13rem; height: 3rem; text-decoration: none; cursor: pointer; }
-a.learn-more:focus-visible { outline: 3px solid #0074e1; outline-offset: 4px; }
+
+a.learn-more {
+    display: inline-block;
+    width: 13rem;
+    height: 3rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a.learn-more:focus-visible {
+    outline: 3px solid #0074e1;
+    outline-offset: 4px;
+}

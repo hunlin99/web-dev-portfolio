@@ -280,8 +280,16 @@ progress::-webkit-progress-value {
         display: none;
     }
 }
-.bg-content strong { font-weight: 700; }
-.experience-inline-link { color: #005da6; text-underline-offset: 0.2em; }
+
+.bg-content strong {
+    font-weight: 700;
+}
+
+.experience-inline-link {
+    color: #005da6;
+    text-underline-offset: 0.2em;
+}
+
 .experience-project-link {
     display: inline-flex;
     align-items: center;
@@ -294,6 +302,13 @@ progress::-webkit-progress-value {
     color: var(--text-color);
     text-decoration: none;
 }
-.experience-project-link:hover { background: var(--nav-bg-color); }
+
+.experience-project-link:hover {
+    background: var(--nav-bg-color);
+}
+
 .experience-project-link:focus-visible,
-.experience-inline-link:focus-visible { outline: 3px solid #0074e1; outline-offset: 4px; }
+.experience-inline-link:focus-visible {
+    outline: 3px solid #0074e1;
+    outline-offset: 4px;
+}
