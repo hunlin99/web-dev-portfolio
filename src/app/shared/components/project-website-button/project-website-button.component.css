@@ -1,0 +1,12 @@
+:host { display: inline-block; width: var(--project-button-width, 18.25rem); max-width: 100%; }
+.button-border { width: 100%; box-sizing: border-box; border: 2px solid var(--project-button-border, currentColor); border-radius: 8rem; }
+.learn-more { position: relative; display: block; width: 100%; height: 3rem; color: var(--project-button-color, inherit); text-decoration: none; border-radius: inherit; }
+.circle { position: relative; display: block; width: 3rem; height: 3rem; background: var(--project-button-fill, #021b2e); border-radius: 1.625rem; overflow: hidden; transition: width .45s cubic-bezier(.65, 0, .076, 1); }
+.icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; font-size: 1.2rem; transition: opacity .3s ease; }
+.icon-arrow { opacity: 0; }
+.button-text { position: absolute; inset: 0; display: flex; align-items: center; margin-left: 3.5rem; padding-right: .75rem; font-family: var(--project-button-font, "Roboto", sans-serif); font-size: var(--project-button-font-size, 1rem); line-height: 1.4; transition: opacity .15s ease; }
+.learn-more:hover .circle, .learn-more:focus-visible .circle { width: 100%; }
+.learn-more:hover .icon-link, .learn-more:focus-visible .icon-link, .learn-more:hover .button-text, .learn-more:focus-visible .button-text { opacity: 0; }
+.learn-more:hover .icon-arrow, .learn-more:focus-visible .icon-arrow { opacity: 1; }
+.learn-more:focus-visible { outline: 3px solid var(--project-button-focus, #0074e1); outline-offset: 5px; }
+@media (prefers-reduced-motion: reduce) { .circle, .icon, .button-text { transition: none; } }

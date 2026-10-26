@@ -19,83 +19,6 @@ a:focus-visible {
     outline-offset: 5px;
 }
 
-.button-border {
-    border: 2px solid #412C2B;
-    width: 16.25rem;
-    border-radius: 8rem;
-    height: 3.25rem;
-}
-
-.learn-more {
-    text-decoration: none;
-    cursor: pointer;
-    position: relative;
-    width: 16rem;
-    height: 3rem;
-}
-
-.learn-more {
-    position: relative;
-    display: inline-block;
-}
-
-.circle {
-    position: relative;
-    display: block;
-    width: 3rem;
-    height: 3rem;
-    background: #412C2B;
-    border-radius: 1.625rem;
-    transition: width 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    overflow: hidden;
-}
-
-.icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 1.2rem;
-    transition: opacity 0.3s ease;
-}
-
-.icon-arrow {
-    opacity: 0;
-}
-
-.button-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin-left: 3.5rem;
-    padding: 0.75rem 0;
-    color: #412C2B;
-    text-align: left;
-    transition: color 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    font-family: "Limelight", sans-serif;
-    font-size: 1.2em;
-}
-
-.learn-more:hover .circle {
-    width: 100%;
-}
-
-.learn-more:hover .icon-link {
-    opacity: 0;
-}
-
-.learn-more:hover .icon-arrow {
-    opacity: 1;
-}
-
-.learn-more:hover .button-text {
-    display: none;
-}
-
-
 .hero {
     padding-block: max(7rem, 15vh) 3rem;
     background: #f1e8da;
@@ -305,7 +228,6 @@ blockquote {
     height: 100%;
 }
 
-
 .palette {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -433,10 +355,6 @@ blockquote {
     margin-top: 1.5rem;
 }
 
-.learn-more:focus-visible .circle {
-    width: 100%;
-}
-
 @media (max-width: 750px) {
     .overview-grid {
         grid-template-columns: 1fr;
@@ -449,15 +367,6 @@ blockquote {
 
     .flow-illustration {
         margin-top: 2rem;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-    .learn-more .circle,
-    .learn-more .icon,
-    .learn-more .button-text {
-        transition: none;
     }
 }
 
@@ -533,4 +442,12 @@ blockquote {
     .identity-stages {
         margin-bottom: 2rem;
     }
+}
+.hero-website-button {
+    --project-button-width: 16.25rem;
+    --project-button-border: #412c2b;
+    --project-button-color: #412c2b;
+    --project-button-fill: #412c2b;
+    --project-button-font: "Limelight", sans-serif;
+    --project-button-font-size: 1.2em;
 }

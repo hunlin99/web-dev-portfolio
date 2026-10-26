@@ -1,3 +1,4 @@
+import { ProjectWebsiteButtonComponent } from '../../shared/components/project-website-button/project-website-button.component';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ProjectDetailPageHeaderComponent } from '../../shared/components/project-detail-page-header/project-detail-page-header.component';
@@ -5,7 +6,7 @@ import { dc3Content, dc3Project } from './dc3-viral-menace.content';
 
 @Component({
   selector: 'app-dc3-viral-menace',
-  imports: [RouterLink, ProjectDetailPageHeaderComponent],
+  imports: [ProjectWebsiteButtonComponent, RouterLink, ProjectDetailPageHeaderComponent],
   templateUrl: './dc3-viral-menace.component.html',
   styleUrl: './dc3-viral-menace.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush
