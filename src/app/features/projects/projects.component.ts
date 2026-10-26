@@ -14,8 +14,8 @@ export class ProjectsComponent {
 
   // Featured case studies are intentionally ordered, independent of date.
   featuredProjects = [
-    { title: "DC3: Viral Menace", type: "Website Design & Full-Stack Development", Skills: "Figma, Responsive UI Design, Angular, TypeScript, Tailwind CSS, Firebase, Custom CMS, SEO", year: "2025–2026", image: "images/DC3-Viral-Menace/DC3-Viral-Menace-project-img.jpg", link: "/dc3-viral-menace" },
-    { title: "AMPA Project", type: "Product Design & Brand Identity", Skills: "Figma, Illustrator, Brand Identity, UX Architecture, Design Systems, Interaction Design, Prototyping", year: "2025", image: "images/AMPA/AMPA-project-img.jpg", link: "/ampa" }
+    { title: "DC3: Viral Menace", type: "Website Design & Full-Stack Development", Skills: "Responsive UI Design, Angular, TypeScript, Tailwind CSS, Firebase, Custom CMS", year: "2025–2026", image: "images/DC3-Viral-Menace/DC3-Viral-Menace-project-img.jpg", link: "/dc3-viral-menace" },
+    { title: "AMPA Project", type: "Product Design & Brand Identity", Skills: "Brand Identity, UX Architecture, Design Systems, Interaction Design, Prototyping", year: "2025–2026", image: "images/AMPA/AMPA-project-img.jpg", link: "/ampa" }
   ];
 
   experienceProjects = [
