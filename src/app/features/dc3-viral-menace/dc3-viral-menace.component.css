@@ -1,5 +1,6 @@
 :host {
     display: block;
+    font-family: "Roboto", sans-serif;
     color: #021b2e;
     background: #f7f5e8;
 }
@@ -33,7 +34,7 @@ a:focus-visible {
 
 h1,
 h2 {
-    font-family: 'Limelight', sans-serif;
+    font-family: "Limelight", sans-serif;
 }
 
 h1 {
@@ -65,7 +66,7 @@ p,
 li,
 dd {
     line-height: 1.8;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 p+p {
@@ -268,7 +269,7 @@ video {
     margin-left: 3.5rem;
     padding: .75rem 0;
     line-height: 1.6;
-    font-family: 'Limelight', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .learn-more:hover .circle,
@@ -369,13 +370,19 @@ video {
 .implementation-card video { margin-top: 1.5rem; }
 .cms-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: clamp(2rem, 5vw, 4rem);
     align-items: start;
 }
 .cms-grid > * { min-width: 0; }
-.cms-gallery { display: grid; gap: 2rem; }
+.cms-gallery {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+}
 .cms-gallery .case-image { margin: 0; }
 @media (max-width: 750px) {
     .phase-grid, .iteration-grid, .cms-grid { grid-template-columns: 1fr; }
+    .cms-gallery { grid-template-rows: auto; }
 }

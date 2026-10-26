@@ -5,7 +5,7 @@ The page follows the updated AMPA layout: shared project header, two-column hero
 ## Editing
 
 - `dc3-viral-menace.content.ts`: hero metadata, the table-of-contents entries, and palette values.
-- `dc3-viral-menace.component.html`: 11 individually editable sections with their own headings, paragraphs, lists, images, and silent implementation videos. Edit each section directly by its `id`; there is no shared section-rendering loop.
+- `dc3-viral-menace.component.html`: 10 individually editable sections with their own headings, paragraphs, lists, images, and silent implementation videos. Edit each section directly by its `id`; there is no shared section-rendering loop.
 - `dc3-viral-menace.component.css`: scoped layout, game-inspired navy/light-blue palette, typography, and mobile styles.
 - `/public/images/DC3-Viral-Menace/`: media assets.
 
@@ -22,6 +22,8 @@ The attachment requests several screenshots not currently present in the reposit
 - A dedicated image-upload workflow screenshot, if available; both supplied CMS administration screenshots are displayed.
 - PageSpeed Insights evidence showing the reported 90+ SEO score.
 
-Overview and Wireframing were removed at the author’s request to avoid duplicate content; the contents and section numbering now cover 11 sections. Responsibilities use two phase cards, iteration uses four cards, and development pairs concise explanations with the two silent demos. Resolved review comments have been removed.
+Overview, Wireframing, and Deployment and SEO were removed at the author’s request to avoid duplicate content; the contents and section numbering now cover 10 sections. Responsibilities use two phase cards, iteration uses four cards, and development pairs concise explanations with the two silent demos. Resolved review comments have been removed.
 
 No broken placeholder images are rendered. Existing project showcase, sitemap, iteration comparison, hero mockup, and two silent implementation clips are used with captions. Add missing images and their real dimensions directly to the relevant HTML section when supplied; do not substitute unrelated imagery for CMS or audit evidence.
+
+CMS layout: equal text/gallery columns, with two equally sized screenshot rows on desktop and natural-height rows on mobile. H1/H2 use Limelight; other text uses Roboto. Icon fonts remain available for the link icons.

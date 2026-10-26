@@ -104,10 +104,6 @@ export const dc3Project: Dc3CaseStudy = {
       "title": "Custom Content Management System"
     },
     {
-      "id": "deployment",
-      "title": "Deployment and SEO"
-    },
-    {
       "id": "outcome",
       "title": "Final Outcome"
     },

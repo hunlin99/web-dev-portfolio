@@ -11,15 +11,17 @@ describe('DC3 case study', () => {
     return RouterTestingHarness.create('/dc3-viral-menace');
   }
 
-  it('renders the new two-placement narrative, all 11 sections, media, and silent videos', async () => {
+  it('renders the new two-placement narrative, all 10 sections, media, and silent videos', async () => {
     const harness = await openPage();
     const page = harness.routeNativeElement!;
     expect(page.querySelector('h1')?.textContent).toBe('DC3: Viral Menace');
-    expect(dc3Project.sections.length).toBe(11);
+    expect(dc3Project.sections.length).toBe(10);
     for (const section of dc3Project.sections) expect(page.querySelector(`#${section.id}`)).not.toBeNull();
     expect(page.textContent).toContain('Web Developer (2026)');
     expect(page.textContent).toContain('custom CMS');
-    expect(page.textContent).toContain('90+ SEO score');
+    expect(page.textContent).toContain('90+ PageSpeed Insights SEO score');
+    expect(page.querySelector('#deployment')).toBeNull();
+    expect(page.querySelector('a[href$="#deployment"]')).toBeNull();
     expect(page.textContent).not.toContain('Continuation Project');
     expect(page.textContent).not.toContain('[IMAGE:');
     expect(page.querySelector('#overview')).toBeNull();
