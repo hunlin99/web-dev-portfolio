@@ -1,174 +1,94 @@
-<main class="body">
+<main>
     <app-project-detail-page-header></app-project-detail-page-header>
-    <!-- <app-back-button></app-back-button>
-    <app-header></app-header> -->
-    <section class="cover">
-        <div class="cover-container">
-            <div class="cover-content">
-                <h1 class="limelight-regular">
-                    {{ project.title }}
-                </h1>
-
-                <p class="limelight-regular">
-                    {{ project.subtitle }}
-                </p>
-
-                <a [href]="project.website" target="_blank">
-                    <button class="learn-more">
-                        <span class="circle">
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div>
+                    <p class="eyebrow">S-QUBED ENTERTAINMENT · DESIGN &amp; DEVELOPMENT</p>
+                    <h1>{{ project.title }}</h1>
+                    <p class="subtitle">{{ project.subtitle }}</p>
+                    <p class="lead">{{ project.summary }}</p>
+                    <a class="learn-more" [href]="project.website" target="_blank" rel="noopener noreferrer"
+                        aria-label="Visit DC3: Viral Menace website (opens in a new tab)">
+                        <span class="circle" aria-hidden="true">
                             <i class="fa fa-link icon icon-link"></i>
                             <i class="fa fa-arrow-right icon icon-arrow"></i>
                         </span>
-
-                        <span class="button-text">
-                            Visit Website
-                        </span>
-                    </button>
-                </a>
-            </div>
-
-            <img [src]="project.coverImage" [alt]="project.title">
-
-        </div>
-
-    </section>
-
-    <!-- ================= Overview ================= -->
-
-    <section class="progress">
-
-        <div class="progress-container">
-
-            <h1 class="limelight-regular">
-                Project Overview
-            </h1>
-
-            <hr>
-
-            <div class="progress-grid">
-                <div class="progress-block" *ngFor="let phase of project.phases">
-                    <h3 class="limelight-regular">
-                        {{ phase.title }}
-                    </h3>
-
-                    <p>
-                        {{ phase.organization }}
-                    </p>
-
-                    <p>
-                        Timeline: {{ phase.timeline }}
-                    </p>
-
-                    <hr>
-
-                    <p>
-                        {{ phase.description }}
-                    </p>
-
-                    <h4 class="limelight-regular">
-                        My Role
-                    </h4>
-
-                    <ul>
-                        <li *ngFor="let role of phase.roles">
-                            {{ role }}
-                        </li>
-                    </ul>
+                        <span class="button-text">Visit Website</span>
+                    </a>
                 </div>
+                <figure>
+                    <img [src]="project.coverImage" [width]="project.coverWidth" [height]="project.coverHeight"
+                        alt="DC3: Viral Menace website design mockup" fetchpriority="high">
+                </figure>
             </div>
+            <dl class="metadata">
+                @for (item of project.metadata; track item.label) {
+                    <div><dt>{{ item.label }}</dt><dd>{{ item.value }}</dd></div>
+                }
+            </dl>
         </div>
     </section>
 
-    <!-- ================= Description ================= -->
+    <nav class="contents container" aria-label="Case study sections">
+        @for (section of project.sections; track section.id; let i = $index) {
+            <a routerLink="/dc3-viral-menace" [fragment]="section.id">
+                <span>{{ i + 1 < 10 ? '0' : '' }}{{ i + 1 }}</span> {{ section.title }}
+            </a>
+        }
+    </nav>
 
-    <section class="description">
-
-        <div class="description-container">
-
-            <h1 class="limelight-regular">
-                APP Main Pages
-            </h1>
-
-            <hr>
-
-            <img class="showcase-img" src="images/DC3-Viral-Menace/DC3-Viral-Menace-project-img.jpg">
-
-            <h1 class="limelight-regular">
-                Project Goals
-            </h1>
-
-            <hr>
-
-            <ul>
-                <li *ngFor="let goal of project.goals">
-                    {{ goal }}
-                </li>
-            </ul>
-
-            <h1 class="limelight-regular">
-                Technical Stack & Tools
-            </h1>
-
-            <hr>
-
-            <div *ngFor="let stack of project.techStack">
-                <h3>
-                    {{ stack.category }}
-                </h3>
-
-                <ul>
-                    <li *ngFor="let item of stack.items">
-                        {{ item }}
-                    </li>
-
-                </ul>
+    @for (section of project.sections; track section.id; let i = $index) {
+        <section [id]="section.id" class="section" [class.warm]="i % 3 === 1" [class.dark]="i % 3 === 2">
+            <div class="container" [class.overview-grid]="section.id === 'overview'">
+                <div class="section-copy">
+                    <p class="eyebrow">{{ i + 1 < 10 ? '0' : '' }}{{ i + 1 }} / THE CASE STUDY</p>
+                    <h2>{{ section.title }}</h2>
+                    @for (block of section.blocks; track $index) {
+                        @switch (block.type) {
+                            @case ('heading') { <h3>{{ block.text }}</h3> }
+                            @case ('subheading') { <h4>{{ block.text }}</h4> }
+                            @case ('paragraph') { <p>{{ block.text }}</p> }
+                            @case ('list') {
+                                <ul>@for (item of block.items; track $index) { <li>{{ item }}</li> }</ul>
+                            }
+                        }
+                    }
+                </div>
+                @for (image of section.images; track image.src) {
+                    <figure class="case-image">
+                        <img [src]="image.src" [alt]="image.alt" [width]="image.width" [height]="image.height"
+                            loading="lazy" decoding="async">
+                        <figcaption>{{ image.caption }}</figcaption>
+                    </figure>
+                }
+                @if (section.id === 'visual-design') {
+                    <div class="palette" aria-label="Website color palette">
+                        @for (color of project.colors; track color.hex) {
+                            <div class="swatch" [style.background-color]="color.hex" [style.color]="color.ink">
+                                <strong>{{ color.name }}</strong><span>{{ color.hex }}</span>
+                            </div>
+                        }
+                    </div>
+                }
+                @if (section.id === 'development') {
+                    <div class="video-grid">
+                        <figure>
+                            <video autoplay muted [muted]="true" loop playsinline preload="metadata" aria-label="Silent demonstration of the DC3 interactive interface">
+                                <source src="/images/DC3-Viral-Menace/interactive.mp4" type="video/mp4">
+                            </video>
+                            <figcaption>Interactive UI implementation · silent video</figcaption>
+                        </figure>
+                        <figure>
+                            <video autoplay muted [muted]="true" loop playsinline preload="metadata" aria-label="Silent demonstration of the DC3 clip-path layouts">
+                                <source src="/images/DC3-Viral-Menace/clip-path.mp4" type="video/mp4">
+                            </video>
+                            <figcaption>CSS clip-path layout implementation · silent video</figcaption>
+                        </figure>
+                    </div>
+                }
             </div>
-
-            <h1 class="limelight-regular">
-                Sitemap
-            </h1>
-
-            <hr>
-
-            <img class="showcase-img" src="images/DC3-Viral-Menace/dc3-viral-menace-sitemap.png">
-        </div>
-    </section>
-
-    <!-- ================= Design ================= -->
-
-    <section class="design-system">
-        <div class="design-system-container">
-            <h1 class="limelight-regular">
-                Design Iteration
-            </h1>
-
-            <hr>
-
-            <img class="showcase-img" src="images/DC3-Viral-Menace/Design-iteration.png">
-
-            <h1 class="limelight-regular">
-                Interactive UI
-            </h1>
-
-            <hr>
-
-            <div class="screen-video-container">
-                <video autoplay muted [muted]="true" loop playsinline>
-                    <source src="images/DC3-Viral-Menace/interactive.mp4" type="video/mp4">
-                </video>
-            </div>
-
-            <h1 class="limelight-regular">
-                CSS Clip-Path Layout
-            </h1>
-
-            <hr>
-
-            <div class="screen-video-container">
-                <video autoplay muted [muted]="true" loop playsinline>
-                    <source src="images/DC3-Viral-Menace/clip-path.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-    </section>
+        </section>
+    }
+    <div class="container page-end"><a class="project-button" routerLink="/projects">← Explore more projects</a></div>
 </main>
