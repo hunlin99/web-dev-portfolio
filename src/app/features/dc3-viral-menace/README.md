@@ -4,8 +4,8 @@ The page follows the updated AMPA layout: shared project header, two-column hero
 
 ## Editing
 
-- `dc3-viral-menace.content.ts`: all 13 case-study sections and their content blocks, metadata, palette, and image captions/dimensions.
-- `dc3-viral-menace.component.html`: shared rendering for sections plus the palette and silent implementation videos.
+- `dc3-viral-menace.content.ts`: hero metadata, the table-of-contents entries, and palette values.
+- `dc3-viral-menace.component.html`: 13 individually editable sections with their own headings, paragraphs, lists, images, and silent implementation videos. Edit each section directly by its `id`; there is no shared section-rendering loop.
 - `dc3-viral-menace.component.css`: scoped layout, game-inspired navy/light-blue palette, typography, and mobile styles.
 - `/public/images/DC3-Viral-Menace/`: media assets.
 
@@ -22,4 +22,4 @@ The attachment requests several screenshots not currently present in the reposit
 - CMS dashboard, article editor, image-upload, and final CMS screenshots.
 - PageSpeed Insights evidence showing the reported 90+ SEO score.
 
-No broken placeholder images are rendered. Existing project showcase, sitemap, iteration comparison, hero mockup, and two silent implementation clips are used with captions. Add missing images and their real dimensions to the relevant section's `images` array when supplied; do not substitute unrelated imagery for CMS or audit evidence.
+No broken placeholder images are rendered. Existing project showcase, sitemap, iteration comparison, hero mockup, and two silent implementation clips are used with captions. Add missing images and their real dimensions directly to the relevant HTML section when supplied; do not substitute unrelated imagery for CMS or audit evidence.
