@@ -19,10 +19,8 @@ a:focus-visible {
     outline-offset: 5px;
 }
 
-/*Website link btn*/
-/*Project detail button*/
-button {
-    all: unset;
+.learn-more {
+    text-decoration: none;
     cursor: pointer;
     position: relative;
     width: 13rem;
@@ -108,7 +106,6 @@ button {
     align-items: center;
 }
 
-/* update font-family to align with portfolio style*/
 h1 {
     padding: 0;
     font-size: clamp(2.2rem, 4.5vw, 4rem);
@@ -392,4 +389,23 @@ blockquote {
     .contents {
         grid-template-columns: 1fr;
     }
+}
+.overview-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+}
+.overview-grid > div { min-width: 0; }
+.flow-illustration { margin-top: 2.5rem; }
+.mobile-flow-continuation { display: none; }
+.journey img { margin-top: 1.5rem; }
+.learn-more:focus-visible .circle { width: 100%; }
+@media (max-width: 750px) {
+    .overview-grid { grid-template-columns: 1fr; }
+    .mobile-flow-continuation { display: block; margin-top: 1.5rem; }
+    .flow-illustration { margin-top: 2rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .learn-more .circle, .learn-more .icon, .learn-more .button-text { transition: none; }
 }

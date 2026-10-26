@@ -7,9 +7,7 @@
                 <div>
                     <h1>{{ project.title }}</h1>
                     <p class="lead">{{ project.subtitle }}</p>
-                    <!-- Updated button style to  consistent with portfolio style-->
-                    <a [href]="project.website" target="_blank">
-                        <button class="learn-more">
+                    <a class="learn-more" aria-label="Visit Afroidentity (opens in a new tab)" [href]="project.website" target="_blank" rel="noopener noreferrer">
                             <span class="circle">
                                 <i class="fa fa-link icon icon-link"></i>
                                 <i class="fa fa-arrow-right icon icon-arrow"></i>
@@ -17,11 +15,10 @@
 
                             <span class="button-text">
                                 Visit Afroidentity </span>
-                        </button>
                     </a>
                 </div>
                 <figure>
-                    <img [src]="project.image" alt="AMPA project visual from the portfolio" fetchpriority="high">
+                    <img [src]="project.image" alt="AMPA project visual from the portfolio" fetchpriority="high" width="2703" height="1458">
                 </figure>
             </div>
             <dl class="metadata">
@@ -43,12 +40,10 @@
 
     <nav class="contents container" aria-label="Case study sections">
         @for (section of project.sections; track section.id; let i = $index) {
-        <a [href]="'/ampa#' + section.id"><span>0{{ i + 1 }}</span> {{ section.title }}</a>
+        <a routerLink="/ampa" [fragment]="section.id"><span>0{{ i + 1 }}</span> {{ section.title }}</a>
         }
     </nav>
-
-    <!-- Project Overview section: content left, image right, add proper gap-->
-    <section id="overview" class="section container">
+    <section id="overview" class="section container overview-grid">
         <div>
             <p class="eyebrow">01 / CONTEXT</p>
             <h2>Project Overview</h2>
@@ -61,12 +56,10 @@
                 user groups, rather than existing only as a visual layer.</p>
         </div>
         <div>
-            <img src="/images/AMPA/APP Mockup.jpg" alt="User-flow-image">
+            <img src="/images/AMPA/APP Mockup.jpg" alt="AMPA mobile application mockup" loading="lazy" decoding="async" width="1600" height="2000">
         </div>
 
     </section>
-
-    <!-- THE CHALLENGE section: Added app flow image. if mobile size active=User flow-crop-01.png+User flow-crop-02.png-->
     <section id="challenge" class="section warm">
         <div class="container">
             <p class="eyebrow">02 / THE CHALLENGE</p>
@@ -84,8 +77,13 @@
                 }
             </div>
         </div>
-        <div>
-            <img src="/images/AMPA/User-flow.png" alt="User-flow-image">
+        <div class="container flow-illustration">
+            <picture>
+                <source media="(max-width: 750px)" srcset="/images/AMPA/User%20flow-crop-01.png" width="2001" height="835">
+                <img src="/images/AMPA/User-flow.png" alt="AMPA consumer and vendor user flow; first portion on mobile" loading="lazy" decoding="async" width="4001" height="758">
+            </picture>
+            <img class="mobile-flow-continuation" src="/images/AMPA/User%20flow-crop-02.png"
+                alt="AMPA user flow, continued" loading="lazy" decoding="async" width="2001" height="834">
         </div>
     </section>
 
@@ -137,8 +135,6 @@
             legibility, contrast, spacing, clear labels, and component states are important checks when turning this
             direction into product UI.</p>
     </section>
-
-    <!-- added App-Switch-interface-flow.png, add proper space-->
     <section id="architecture" class="section warm">
         <div class="container">
             <p class="eyebrow">06 / UX ARCHITECTURE</p>
@@ -157,7 +153,7 @@
                     </div>
                 </div>
             </div>
-            <img src="/images/AMPA/App-Switch-interface-flow.png" alt="Switch interface flow image">
+            <img class="flow-illustration" src="/images/AMPA/App-Switch-interface-flow.png" alt="AMPA flow from a consumer profile to vendor registration or an existing vendor dashboard" loading="lazy" decoding="async" width="4000" height="2250">
         </div>
     </section>
 
@@ -196,7 +192,7 @@
                     <h3>{{ journey.title }}</h3>
                     <p>{{ journey.text }}</p>
                     <ol>@for (step of journey.steps; track step) { <li>{{ step }}</li> }</ol>
-                    <img [src]="journey.image" alt="AMPA interface difference betewwn two roles">
+                    <img [src]="journey.image" [alt]="journey.title + ' interface screens'" loading="lazy" decoding="async">
                 </article>
                 }
             </div>
