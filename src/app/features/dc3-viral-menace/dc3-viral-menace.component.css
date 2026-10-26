@@ -32,6 +32,7 @@ a:focus-visible {
     align-items: center;
 }
 
+
 h1,
 h2 {
     font-family: "Limelight", sans-serif;
@@ -233,10 +234,17 @@ video {
 .learn-more {
     position: relative;
     display: inline-block;
-    width: 13rem;
+    width: 18rem;
     height: 3rem;
-    margin-top: 2rem;
     text-decoration: none;
+}
+
+.button-border {
+    border: 2px solid #412C2B;
+    width: 18.25rem;
+    border-radius: 8rem;
+    height: 3.25rem;
+    margin-top: 1rem;
 }
 
 .circle {
@@ -353,36 +361,71 @@ video {
     }
 }
 
-.full-width { max-width: none; }
-.phase-grid, .iteration-grid {
+.full-width {
+    max-width: none;
+}
+
+.phase-grid,
+.iteration-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 2rem;
     margin-block: 2rem;
 }
-.phase-card, .iteration-card {
+
+.phase-card,
+.iteration-card {
     padding: 1.5rem;
     border: 1px solid #99b6c2;
     border-radius: .75rem;
 }
-.phase-card h3, .iteration-card h3, .implementation-card h3 { margin-top: 0; }
-.implementation-card { min-width: 0; }
-.implementation-card video { margin-top: 1.5rem; }
+
+.phase-card h3,
+.iteration-card h3,
+.implementation-card h3 {
+    margin-top: 0;
+}
+
+.implementation-card {
+    min-width: 0;
+}
+
+.implementation-card video {
+    margin-top: 1.5rem;
+}
+
 .cms-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
     gap: clamp(2rem, 5vw, 4rem);
     align-items: start;
 }
-.cms-grid > * { min-width: 0; }
+
+.cms-grid>* {
+    min-width: 0;
+}
+
 .cms-gallery {
     display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    ;
+    /* grid-template-rows: repeat(2, minmax(0, 1fr)); */
     gap: 2rem;
 }
-.cms-gallery .case-image { margin: 0; }
+
+.cms-gallery .case-image {
+    margin: 0;
+}
+
 @media (max-width: 750px) {
-    .phase-grid, .iteration-grid, .cms-grid { grid-template-columns: 1fr; }
-    .cms-gallery { grid-template-rows: auto; }
+
+    .phase-grid,
+    .iteration-grid,
+    .cms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cms-gallery {
+        grid-template-rows: auto;
+    }
 }

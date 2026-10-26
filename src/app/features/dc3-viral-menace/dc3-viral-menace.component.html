@@ -7,14 +7,18 @@
                     <p class="eyebrow">S-QUBED ENTERTAINMENT · DESIGN &amp; DEVELOPMENT</p>
                     <h1>{{ project.title }}</h1>
                     <p class="lead">{{ project.summary }}</p>
-                    <a class="learn-more" [href]="project.website" target="_blank" rel="noopener noreferrer"
-                        aria-label="Visit DC3: Viral Menace website (opens in a new tab)">
-                        <span class="circle" aria-hidden="true">
-                            <i class="fa fa-link icon icon-link"></i>
-                            <i class="fa fa-arrow-right icon icon-arrow"></i>
-                        </span>
-                        <span class="button-text">Visit Website</span>
-                    </a>
+                    <div class="button-border">
+                        <a class="learn-more" aria-label="Visit Afroidentity (opens in a new tab)"
+                            [href]="project.website" target="_blank" rel="noopener noreferrer">
+                            <span class="circle">
+                                <i class="fa fa-link icon icon-link"></i>
+                                <i class="fa fa-arrow-right icon icon-arrow"></i>
+                            </span>
+
+                            <span class="button-text">
+                                Visit S-Qubed Entertainment </span>
+                        </a>
+                    </div>
                 </div>
                 <figure>
                     <img [src]="project.coverImage" [width]="project.coverWidth" [height]="project.coverHeight"
@@ -39,6 +43,7 @@
         </a>
         }
     </nav>
+
     <section id="goals" class="section warm">
         <div class="container overview-grid">
             <div class="section-copy">
@@ -59,8 +64,8 @@
             </div>
             <figure class="case-image">
                 <img src="/images/DC3-Viral-Menace/landing-showcase.png"
-                    alt="DC3: Viral Menace website project showcase" loading="lazy"
-                    decoding="async" width="1542" height="1601">
+                    alt="DC3: Viral Menace website project showcase" loading="lazy" decoding="async" width="1542"
+                    height="1601">
             </figure>
         </div>
     </section>
@@ -122,8 +127,8 @@
             </div>
             <figure class="case-image">
                 <img src="/images/DC3-Viral-Menace/dc3-viral-menace-sitemap.png"
-                    alt="S-Qubed website sitemap with Home, Products, About, and Blog sections"
-                    loading="lazy" decoding="async" width="1709" height="1758">
+                    alt="S-Qubed website sitemap with Home, Products, About, and Blog sections" loading="lazy"
+                    decoding="async" width="1709" height="1758">
             </figure>
         </div>
     </section>
@@ -157,11 +162,13 @@
             <div class="section-copy">
                 <p class="eyebrow">05 / THE CASE STUDY</p>
                 <h2>High-Fidelity Design</h2>
-                <p>The high-fidelity design brings together game artwork, a prominent Steam wishlist action, gameplay panels, character selections, and newsletter and social links in a comic-inspired layout.</p>
+                <p>The high-fidelity design brings together game artwork, a prominent Steam wishlist action, gameplay
+                    panels, character selections, and newsletter and social links in a comic-inspired layout.</p>
             </div>
             <figure class="case-image">
-                <img src="/images/DC3-Viral-Menace/hi-fi.png" alt="DC3 high-fidelity website design with game artwork and promotional sections"
-                    loading="lazy" decoding="async" width="3453" height="2909">
+                <img src="/images/DC3-Viral-Menace/hi-fi.png"
+                    alt="DC3 high-fidelity website design with game artwork and promotional sections" loading="lazy"
+                    decoding="async" width="3453" height="2909">
             </figure>
         </div>
     </section>
@@ -178,7 +185,8 @@
                         <h3>01 — Making the Steam Button Clearer</h3>
                         <p>The earlier hero design included two smaller buttons: &quot;Wishlist&quot; and &quot;Learn
                             More.&quot;</p>
-                        <p>In a later iteration, I changed the main button to a wider, more noticeable call to action labeled
+                        <p>In a later iteration, I changed the main button to a wider, more noticeable call to action
+                            labeled
                             &quot;Wishlist on Steam Now.&quot;</p>
                         <p>This made the intended action more explicit and gave it greater visual emphasis.</p>
                     </article>
@@ -191,22 +199,25 @@
                     <article class="iteration-card">
                         <h3>03 — Strengthening Section Hierarchy</h3>
                         <p>I used bright section headings to distinguish content areas.</p>
-                        <p>For example, the Character Art section received a yellow title block, making it easier to identify
+                        <p>For example, the Character Art section received a yellow title block, making it easier to
+                            identify
                             within the long page.</p>
                     </article>
                     <article class="iteration-card">
                         <h3>04 — Refining the Color Balance</h3>
-                        <p>I adjusted the use of blue, yellow, and light-colored panels to create a more consistent visual
+                        <p>I adjusted the use of blue, yellow, and light-colored panels to create a more consistent
+                            visual
                             style.</p>
-                        <p>The goal was to keep the website visually connected to the game&#x27;s artwork without making the
+                        <p>The goal was to keep the website visually connected to the game&#x27;s artwork without making
+                            the
                             content difficult to read.</p>
                     </article>
                 </div>
             </div>
             <figure class="case-image">
                 <img src="/images/DC3-Viral-Menace/Design-iteration.png"
-                    alt="Progression from initial wireframe to refined DC3 visual design"
-                    loading="lazy" decoding="async" width="3103" height="2273">
+                    alt="Progression from initial wireframe to refined DC3 visual design" loading="lazy"
+                    decoding="async" width="3103" height="2273">
             </figure>
         </div>
     </section>
@@ -215,20 +226,25 @@
             <div class="section-copy">
                 <p class="eyebrow">07 / THE CASE STUDY</p>
                 <h2>Responsive Website Development</h2>
-                <p>I translated the game-inspired designs into responsive Angular interfaces, focusing on character interactions and custom comic-book layouts.</p>
+                <p>I translated the game-inspired designs into responsive Angular interfaces, focusing on character
+                    interactions and custom comic-book layouts.</p>
             </div>
             <div class="video-grid">
                 <article class="implementation-card">
                     <h3>Interactive character showcase</h3>
-                    <p>Selecting a character thumbnail updates the featured illustration and character details, letting visitors explore the cast without leaving the section.</p>
-                    <video autoplay muted [muted]="true" loop playsinline preload="metadata" aria-label="Silent demonstration of selecting character thumbnails">
+                    <p>Selecting a character thumbnail updates the featured illustration and character details, letting
+                        visitors explore the cast without leaving the section.</p>
+                    <video autoplay muted [muted]="true" loop playsinline preload="metadata"
+                        aria-label="Silent demonstration of selecting character thumbnails">
                         <source src="/images/DC3-Viral-Menace/interactive.mp4" type="video/mp4">
                     </video>
                 </article>
                 <article class="implementation-card">
                     <h3>Comic-book layouts with CSS clip-path</h3>
-                    <p>I used CSS clip-path to shape angled panels and custom dividers, bringing the comic-book visual direction into layouts that adapt to different screen sizes.</p>
-                    <video autoplay muted [muted]="true" loop playsinline preload="metadata" aria-label="Silent demonstration of comic-book layouts using CSS clip-path">
+                    <p>I used CSS clip-path to shape angled panels and custom dividers, bringing the comic-book visual
+                        direction into layouts that adapt to different screen sizes.</p>
+                    <video autoplay muted [muted]="true" loop playsinline preload="metadata"
+                        aria-label="Silent demonstration of comic-book layouts using CSS clip-path">
                         <source src="/images/DC3-Viral-Menace/clip-path.mp4" type="video/mp4">
                     </video>
                 </article>
@@ -242,7 +258,7 @@
                 <p class="eyebrow">08 / THE CASE STUDY</p>
                 <h2>Custom Content Management System</h2>
                 <h3>Making Website Content Easier to Manage</h3>
-                <p>During my second co-op placement in 2026, I developed a custom CMS for S-Qubed Entertainment.</p>
+                <!-- <p>During my second co-op placement in 2026, I developed a custom CMS for S-Qubed Entertainment.</p> -->
                 <p>The CMS supports article management without requiring content to be edited directly in the
                     website&#x27;s source code.</p>
                 <p>It uses Firebase Authentication, Firestore, and Cloud Storage.</p>
@@ -263,13 +279,13 @@
             <div class="cms-gallery">
                 <figure class="case-image">
                     <img src="/images/DC3-Viral-Menace/dc3-viral-menace-web-admin-1.png"
-                        alt="S-Qubed custom CMS administration interface, first view" loading="lazy"
-                        decoding="async" width="2521" height="4207">
+                        alt="S-Qubed custom CMS administration interface, first view" loading="lazy" decoding="async"
+                        width="2521" height="4207">
                 </figure>
                 <figure class="case-image">
                     <img src="/images/DC3-Viral-Menace/dc3-viral-menace-web-admin-2.png"
-                        alt="S-Qubed custom CMS administration interface, second view" loading="lazy"
-                        decoding="async" width="2522" height="5427">
+                        alt="S-Qubed custom CMS administration interface, second view" loading="lazy" decoding="async"
+                        width="2522" height="5427">
                 </figure>
             </div>
         </div>
