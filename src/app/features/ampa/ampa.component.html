@@ -104,30 +104,34 @@
 
     <section id="identity" class="section dark">
         <div class="container">
-            <p class="eyebrow">04 / BRAND IDENTITY</p>
-            <h2>From cultural meaning to visual identity.</h2>
-            <p class="section-lead">Community and interdependence form the thread between the brand and the marketplace.
-            </p>
-            <div class="two-column">
+            <header class="identity-intro">
+                <p class="eyebrow">04 / BRAND IDENTITY</p>
+                <h2>From cultural meaning to visual identity.</h2>
+                <p class="section-lead">Community and interdependence form the thread between the brand and the marketplace.</p>
+            </header>
+            <div class="identity-stages">
                 @for (stage of project.brandStages; track stage.title; let i = $index) {
-                <article class="brand-stage"><span class="stage-number">0{{ i + 1 }}</span>
-                    <h3>{{ stage.title }}</h3>
-                    <p>{{ stage.text }}</p>
-                </article>
+                    <article class="identity-stage">
+                        <span class="stage-number">0{{ i + 1 }}</span>
+                        <div><h3>{{ stage.title }}</h3><p>{{ stage.text }}</p></div>
+                    </article>
                 }
             </div>
-        </div>
-        <div class="brand-image-container">
-            <img class="flow-illustration" src="/images/AMPA/Brand-application.png"
-                alt="AMPA flow from a consumer profile to vendor registration or an existing vendor dashboard"
-                loading="lazy" decoding="async" width="4000" height="2250">
-            <div class="brand-idea-container">
-                <img class="flow-illustration" src="/images/AMPA/Logo-ideation.png"
-                    alt="AMPA flow from a consumer profile to vendor registration or an existing vendor dashboard"
-                    loading="lazy" decoding="async" width="4000" height="2250">
-                <img class="flow-illustration" src="/images/AMPA/Ndebele-inspired geometry.png"
-                    alt="AMPA flow from a consumer profile to vendor registration or an existing vendor dashboard"
-                    loading="lazy" decoding="async" width="4000" height="2250">
+            <div class="identity-gallery">
+                <figure class="identity-application">
+                    <img src="/images/AMPA/Brand-application.png" alt="AMPA brand identity applications and visual variations" loading="lazy" decoding="async" width="2001" height="1404">
+                    <figcaption><strong>Brand application</strong> · Bringing the visual identity into real brand touchpoints.</figcaption>
+                </figure>
+                <div class="identity-exploration">
+                    <figure>
+                        <img src="/images/AMPA/Logo-ideation.png" alt="AMPA logo sketches and concept exploration" loading="lazy" decoding="async" width="682" height="682">
+                        <figcaption><strong>Logo ideation</strong> · Exploring community and connection.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/images/AMPA/Ndebele-inspired geometry.png" alt="Ndebele-inspired geometric references for AMPA’s visual identity" loading="lazy" decoding="async" width="682" height="683">
+                        <figcaption><strong>Cultural references</strong> · Geometry informing the visual language.</figcaption>
+                    </figure>
+                </div>
             </div>
         </div>
     </section>

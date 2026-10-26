@@ -429,3 +429,13 @@ video {
         grid-template-rows: auto;
     }
 }
+.hero {
+    color: #fff;
+    background: linear-gradient(90deg, rgb(2 27 46 / .92), rgb(2 27 46 / .65)), url('/images/DC3-Viral-Menace/dc3-viral-menace-cover-img.jpg') center / cover no-repeat;
+}
+.hero .button-border { border-color: #fff; }
+.hero .metadata { border-color: rgb(255 255 255 / .4); }
+.architecture-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+.architecture-grid > * { min-width: 0; }
+.architecture-grid .case-image { margin-top: 0; }
+@media (max-width: 750px) { .architecture-grid { grid-template-columns: 1fr; } }

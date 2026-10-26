@@ -12,6 +12,12 @@ export interface Dc3CaseStudy {
  * Arrays follow the order of the explicit bindings within that section.
  */
 export const dc3Content = {
+  lowFidelity: {
+    eyebrow: '04 / THE CASE STUDY',
+    title: 'Low-Fidelity Design',
+    brief: 'Early wireframes establish the content hierarchy and layout before adding game artwork and detailed visual styling.',
+    imageAlt: 'Low-fidelity wireframes for the S-Qubed website layout'
+  },
   "goals": {
     "eyebrow": "01 / THE CASE STUDY",
     "title": "Project Goals",
@@ -90,7 +96,7 @@ export const dc3Content = {
     ]
   },
   "visualDesign": {
-    "eyebrow": "04 / THE CASE STUDY",
+    "eyebrow": "05 / THE CASE STUDY",
     "title": "Visual Design",
     "headings": [
       "Creating a Visual Style Inspired by the Game"
@@ -108,7 +114,7 @@ export const dc3Content = {
     ]
   },
   "highFidelity": {
-    "eyebrow": "05 / THE CASE STUDY",
+    "eyebrow": "06 / THE CASE STUDY",
     "title": "High-Fidelity Design",
     "paragraphs": [
       "The high-fidelity design brings together game artwork, a prominent Steam wishlist action, gameplay panels, character selections, and newsletter and social links in a comic-inspired layout."
@@ -120,7 +126,7 @@ export const dc3Content = {
     ]
   },
   "iteration": {
-    "eyebrow": "06 / THE CASE STUDY",
+    "eyebrow": "07 / THE CASE STUDY",
     "title": "Design Iteration",
     "headings": [
       "Refining the Interface",
@@ -150,7 +156,7 @@ export const dc3Content = {
     ]
   },
   "development": {
-    "eyebrow": "07 / THE CASE STUDY",
+    "eyebrow": "08 / THE CASE STUDY",
     "title": "Responsive Website Development",
     "paragraphs": [
       "I translated the game-inspired designs into responsive Angular interfaces, focusing on character interactions and custom comic-book layouts.",
@@ -171,7 +177,7 @@ export const dc3Content = {
     ]
   },
   "cms": {
-    "eyebrow": "08 / THE CASE STUDY",
+    "eyebrow": "09 / THE CASE STUDY",
     "title": "Custom Content Management System",
     "headings": [
       "Making Website Content Easier to Manage",
@@ -204,7 +210,7 @@ export const dc3Content = {
     ]
   },
   "outcome": {
-    "eyebrow": "09 / THE CASE STUDY",
+    "eyebrow": "10 / THE CASE STUDY",
     "title": "Final Outcome",
     "headings": [
       "From Website Design to a Completed Product",
@@ -228,7 +234,7 @@ export const dc3Content = {
     ]
   },
   "reflection": {
-    "eyebrow": "10 / THE CASE STUDY",
+    "eyebrow": "11 / THE CASE STUDY",
     "title": "Reflection",
     "headings": [
       "What I Learned",
@@ -332,6 +338,7 @@ export const dc3Project: Dc3CaseStudy = {
       "id": "architecture",
       "title": dc3Content.architecture.title
     },
+    { "id": "low-fidelity", "title": dc3Content.lowFidelity.title },
     {
       "id": "visual-design",
       "title": dc3Content.visualDesign.title

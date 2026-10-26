@@ -460,3 +460,77 @@ blockquote {
         transition: none;
     }
 }
+
+.identity-intro {
+    max-width: 850px;
+}
+
+.identity-stages {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-block: 2.5rem 3.5rem;
+}
+
+.identity-stage {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 1.25rem;
+    padding: 1.5rem;
+    border: 1px solid #625756;
+    border-radius: .75rem;
+    background: #292325;
+}
+
+.identity-stage .stage-number {
+    margin: 0;
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.identity-stage h3 {
+    margin: 0 0 .75rem;
+}
+
+.identity-gallery {
+    display: grid;
+    gap: 2rem;
+}
+
+.identity-gallery figure {
+    margin: 0;
+    min-width: 0;
+}
+
+.identity-gallery img {
+    background: #faf7f0;
+}
+
+.identity-gallery figcaption {
+    color: #e3d7c7;
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+
+.identity-exploration {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (max-width: 750px) {
+
+    .identity-stages {
+        grid-template-columns: 1fr;
+    }
+
+    .identity-stage {
+        padding: 1.25rem;
+        gap: 1rem;
+    }
+
+    .identity-stages {
+        margin-bottom: 2rem;
+    }
+}
