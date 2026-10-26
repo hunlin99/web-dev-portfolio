@@ -16,7 +16,7 @@ export class ProjectsComponent {
   webProjects = [
     { title: "DC3: Viral Menace", type: "Full stack Development", Skills: "Figma, Angular,Tailwind, Firebase", year: "2026", image: "images/DC3-Viral-Menace/DC3-Viral-Menace-project-img.jpg", link: "/dc3-viral-menace" },
     { title: "Cuisines Around Us", type: "Full stack Development", Skills: "React,Bootstrap, SQL", year: "2024", image: "images/Cuisines-Around-Us/cuisines-around-us.png", link: "/cuisines-around-us" },
-    { title: "AMPA Project", type: "Landing Pages Web Design", Skills: "Prototyping, UX Design", year: "2025", image: "images/AMPA/AMPA-project-img.jpg", link: "https://afroidentity.com/" },
+    { title: "AMPA Project", type: "Product Design & Brand Identity", Skills: "Figma, Illustrator, UX/UI, Branding", year: "2025", image: "images/AMPA/AMPA-project-img.jpg", link: "/ampa" },
     { title: "Organic Care", type: "E-commers Web Design", Skills: "Figma, HTML, CSS", year: "2024", image: "images/Organic-Care/organic-care-img.jpg", link: "/organic-care" }
   ]
 
