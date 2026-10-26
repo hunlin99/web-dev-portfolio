@@ -1,6 +1,6 @@
 :host {
     display: block;
-    color: #1e1a1b;
+    color: #412C2B;
     background: #faf7f0;
 }
 
@@ -19,11 +19,18 @@ a:focus-visible {
     outline-offset: 5px;
 }
 
+.button-border {
+    border: 2px solid #412C2B;
+    width: 16.25rem;
+    border-radius: 8rem;
+    height: 3.25rem;
+}
+
 .learn-more {
     text-decoration: none;
     cursor: pointer;
     position: relative;
-    width: 13rem;
+    width: 16rem;
     height: 3rem;
 }
 
@@ -37,7 +44,7 @@ a:focus-visible {
     display: block;
     width: 3rem;
     height: 3rem;
-    background: #1E1A1B;
+    background: #412C2B;
     border-radius: 1.625rem;
     transition: width 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     overflow: hidden;
@@ -65,11 +72,11 @@ a:focus-visible {
     bottom: 0;
     margin-left: 3.5rem;
     padding: 0.75rem 0;
-    color: #1E1A1B;
+    color: #412C2B;
     text-align: left;
-    line-height: 1.6;
     transition: color 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     font-family: "Limelight", sans-serif;
+    font-size: 1.2em;
 }
 
 .learn-more:hover .circle {
@@ -108,7 +115,7 @@ a:focus-visible {
 
 h1 {
     padding: 0;
-    font-size: clamp(2.2rem, 4.5vw, 4rem);
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
     line-height: 1.12;
     letter-spacing: -.035em;
     margin-block: 1rem 1.5rem;
@@ -390,22 +397,54 @@ blockquote {
         grid-template-columns: 1fr;
     }
 }
+
 .overview-grid {
     display: grid;
     grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
     gap: clamp(2rem, 5vw, 4rem);
     align-items: center;
 }
-.overview-grid > div { min-width: 0; }
-.flow-illustration { margin-top: 2.5rem; }
-.mobile-flow-continuation { display: none; }
-.journey img { margin-top: 1.5rem; }
-.learn-more:focus-visible .circle { width: 100%; }
-@media (max-width: 750px) {
-    .overview-grid { grid-template-columns: 1fr; }
-    .mobile-flow-continuation { display: block; margin-top: 1.5rem; }
-    .flow-illustration { margin-top: 2rem; }
+
+.overview-grid>div {
+    min-width: 0;
 }
+
+.flow-illustration {
+    margin-top: 2.5rem;
+}
+
+.mobile-flow-continuation {
+    display: none;
+}
+
+.journey img {
+    margin-top: 1.5rem;
+}
+
+.learn-more:focus-visible .circle {
+    width: 100%;
+}
+
+@media (max-width: 750px) {
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mobile-flow-continuation {
+        display: block;
+        margin-top: 1.5rem;
+    }
+
+    .flow-illustration {
+        margin-top: 2rem;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
-    .learn-more .circle, .learn-more .icon, .learn-more .button-text { transition: none; }
+
+    .learn-more .circle,
+    .learn-more .icon,
+    .learn-more .button-text {
+        transition: none;
+    }
 }
