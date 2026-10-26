@@ -19,15 +19,20 @@ describe('ProjectsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('links AMPA and Organic Care to their Angular case studies', () => {
+  it('puts DC3 and AMPA first and links each visible project to its case study', () => {
     const page: HTMLElement = fixture.nativeElement;
-    expect(page.querySelector('a[href="/ampa"]')).not.toBeNull();
-    expect(page.querySelector('a[href="/organic-care"]')).not.toBeNull();
-  });
-  it('links both app projects to their Angular case studies', () => {
-    const page: HTMLElement = fixture.nativeElement;
-    expect(page.querySelector('a[href="/traclocal"]')).not.toBeNull();
-    expect(page.querySelector('a[href="/health-pocket"]')).not.toBeNull();
+    expect(Array.from(page.querySelectorAll('.content-block h3')).map(h => h.textContent?.trim()))
+      .toEqual(['DC3: Viral Menace', 'AMPA Project', 'Cuisines Around Us', 'TracLocal', 'Health Pocket']);
+    for (const path of ['/dc3-viral-menace', '/ampa', '/cuisines-around-us', '/traclocal', '/health-pocket']) {
+      expect(page.querySelector(`a[href="${path}"]`)).withContext(path).not.toBeNull();
+    }
+    expect(page.textContent).toContain('Featured Case Studies');
+    expect(page.textContent).toContain('Web & App Experiences');
+    expect(page.textContent).toContain('Custom CMS');
+    expect(page.textContent).toContain('Brand Identity, UX Architecture, Design Systems');
+    expect(page.textContent).not.toContain('Organic Care');
+    expect(page.querySelector('a[href="/organic-care"]')).toBeNull();
+    expect(component.hiddenProjects[0].link).toBe('/organic-care');
   });
 
 });
