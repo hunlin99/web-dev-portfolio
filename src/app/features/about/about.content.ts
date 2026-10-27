@@ -46,8 +46,8 @@ export const intro: Intro = {
 };
 
 export const aboutLinks: AboutLink[] = [
-    { linkTo: "LinkedIn", link: "https://linkedin.com/" },
-    { linkTo: "GitHub", link: "https://github.com/" },
+    { linkTo: "LinkedIn", link: "https://www.linkedin.com/in/ling-chang-a287621a7/" },
+    { linkTo: "GitHub", link: "https://github.com/hunlin99" },
     { linkTo: "Gmail", link: "mailto:christine.chang00226@gmail.com" }
 ];
 
@@ -81,10 +81,10 @@ export const workExperience: WorkExperience[] = [
         project: { url: "https://dc3-viral-menace-web-dev.web.app/", external: true },
         company: "S-Qubed Entertainment Inc. | Toronto, Canada",
         highlights: [
-            [{"text": "Built and maintained responsive production web interfaces and a "}, {"text": "custom CMS", "bold": true}, {"text": ", implementing "}, {"text": "authentication, article CRUD, publishing workflows, image uploads", "bold": true}, {"text": ", and data-driven UI using Firebase services."}],
-            [{"text": "Debugged "}, {"text": "frontend and integration issues", "bold": true}, {"text": " across "}, {"text": "development and production environments", "bold": true}, {"text": ", troubleshooting application behavior, responsive layouts, Firebase data flows, authentication, and deployment issues."}],
-            [{"text": "Translated UI/UX requirements into "}, {"text": "responsive, implementation-ready interfaces", "bold": true}, {"text": ", maintaining usability, visual consistency, and reliable behavior across screen sizes."}],
-            [{"text": "Managed "}, {"text": "Firebase Authentication, Firestore, Cloud Storage", "bold": true}, {"text": ", hosting, security rules, and "}, {"text": "production deployments", "bold": true}, {"text": ", supporting end-to-end delivery of web features."}]
+            [{ "text": "Built and maintained responsive production web interfaces and a " }, { "text": "custom CMS", "bold": true }, { "text": ", implementing " }, { "text": "authentication, article CRUD, publishing workflows, image uploads", "bold": true }, { "text": ", and data-driven UI using Firebase services." }],
+            [{ "text": "Debugged " }, { "text": "frontend and integration issues", "bold": true }, { "text": " across " }, { "text": "development and production environments", "bold": true }, { "text": ", troubleshooting application behavior, responsive layouts, Firebase data flows, authentication, and deployment issues." }],
+            [{ "text": "Translated UI/UX requirements into " }, { "text": "responsive, implementation-ready interfaces", "bold": true }, { "text": ", maintaining usability, visual consistency, and reliable behavior across screen sizes." }],
+            [{ "text": "Managed " }, { "text": "Firebase Authentication, Firestore, Cloud Storage", "bold": true }, { "text": ", hosting, security rules, and " }, { "text": "production deployments", "bold": true }, { "text": ", supporting end-to-end delivery of web features." }]
         ]
     },
     {
@@ -93,9 +93,9 @@ export const workExperience: WorkExperience[] = [
         project: { url: "https://afroidentity.com/", external: true },
         company: "Afroidentity Inc. | Toronto, Canada",
         highlights: [
-            [{"text": "Translated product requirements and user research into "}, {"text": "end-to-end user flows", "bold": true}, {"text": ", responsive interfaces, and "}, {"text": "interactive Figma prototypes", "bold": true}, {"text": " for web and mobile experiences."}],
-            [{"text": "Evaluated interface accessibility and usability using "}, {"text": "WCAG criteria", "bold": true}, {"text": ", identifying issues involving color contrast, typography, component behavior, and responsive presentation."}],
-            [{"text": "Developed and maintained "}, {"text": "reusable UI patterns and design-system guidance", "bold": true}, {"text": ", improving consistency between design specifications and implemented interfaces."}]
+            [{ "text": "Translated product requirements and user research into " }, { "text": "end-to-end user flows", "bold": true }, { "text": ", responsive interfaces, and " }, { "text": "interactive Figma prototypes", "bold": true }, { "text": " for web and mobile experiences." }],
+            [{ "text": "Evaluated interface accessibility and usability using " }, { "text": "WCAG criteria", "bold": true }, { "text": ", identifying issues involving color contrast, typography, component behavior, and responsive presentation." }],
+            [{ "text": "Developed and maintained " }, { "text": "reusable UI patterns and design-system guidance", "bold": true }, { "text": ", improving consistency between design specifications and implemented interfaces." }]
         ]
     },
     {
@@ -104,9 +104,9 @@ export const workExperience: WorkExperience[] = [
         project: { url: "/dc3-viral-menace", external: false },
         company: "S-Qubed Entertainment Inc. | Toronto, Canada",
         highlights: [
-            [{"text": "Created "}, {"text": "responsive web layouts and reusable UI components", "bold": true}, {"text": ", accounting for content behavior across different screen sizes and interface states."}],
-            [{"text": "Prototyped and tested interface concepts", "bold": true}, {"text": " to identify usability, navigation, responsive-layout, and interaction issues before implementation."}],
-            [{"text": "Translated design requirements into structured, "}, {"text": "development-ready specifications", "bold": true}, {"text": ", supporting efficient implementation and UI consistency."}]
+            [{ "text": "Created " }, { "text": "responsive web layouts and reusable UI components", "bold": true }, { "text": ", accounting for content behavior across different screen sizes and interface states." }],
+            [{ "text": "Prototyped and tested interface concepts", "bold": true }, { "text": " to identify usability, navigation, responsive-layout, and interaction issues before implementation." }],
+            [{ "text": "Translated design requirements into structured, " }, { "text": "development-ready specifications", "bold": true }, { "text": ", supporting efficient implementation and UI consistency." }]
         ]
     },
     {
@@ -114,10 +114,10 @@ export const workExperience: WorkExperience[] = [
         jobTitle: "Industrial Design Engineer", // Removed the duplicate string repetition
         company: "Create Electronic Optical Co., Ltd, New Taipei, Taiwan",
         highlights: [
-            [{"text": "Conducted "}, {"text": "market research", "bold": true}, {"text": " to identify trends, leading to the initiation of a motorcycle dash-cam project."}],
-            [{"text": "Designed "}, {"text": "UI and icons", "bold": true}, {"text": " for product models, improving user experience and branding."}],
-            [{"text": "Developed a product concept selected as the company’s sole entry for the "}, {"text": "iF Design Award", "bold": true}, {"text": ", advancing to the "}, {"text": "Berlin finals", "bold": true}, {"text": "."}],
-            [{"text": "Edited and updated "}, {"text": "website content", "href": "https://www.create-eop.com.tw/en/"}, {"text": ", ensuring accurate and engaging user experiences."}]
+            [{ "text": "Conducted " }, { "text": "market research", "bold": true }, { "text": " to identify trends, leading to the initiation of a motorcycle dash-cam project." }],
+            [{ "text": "Designed " }, { "text": "UI and icons", "bold": true }, { "text": " for product models, improving user experience and branding." }],
+            [{ "text": "Developed a product concept selected as the company’s sole entry for the " }, { "text": "iF Design Award", "bold": true }, { "text": ", advancing to the " }, { "text": "Berlin finals", "bold": true }, { "text": "." }],
+            [{ "text": "Edited and updated " }, { "text": "website content", "href": "https://www.create-eop.com.tw/en/" }, { "text": ", ensuring accurate and engaging user experiences." }]
         ]
     }
 ];
