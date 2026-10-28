@@ -1,0 +1,469 @@
+/** Editable copy grouped by section. Each section retains its own HTML layout. */
+export const travlocalContent = {
+  "overview": {
+    "eyebrow": "01 / THE CASE STUDY",
+    "title": "Project Overview",
+    "headings": [
+      "About the Project"
+    ],
+    "paragraphs": [
+      "TravLocal is a travel platform concept that connects travelers with local guides for personalized experiences.",
+      "Instead of paying for every tour, users can exchange their time and local knowledge through a ticket system. By guiding someone in their own city, they can earn a ticket to use when traveling elsewhere.",
+      "The idea is to make local travel experiences more accessible while encouraging cultural exchange between travelers and local communities.",
+      "Our project explored how this exchange model could work through a mobile app, including guide matching, tour booking, rewards, and safety features."
+    ]
+  },
+  "problem": {
+    "eyebrow": "02 / THE CASE STUDY",
+    "title": "The Problem",
+    "headings": [
+      "Finding Authentic Local Experiences Can Be Difficult",
+      "Our Design Challenge"
+    ],
+    "paragraphs": [
+      "Planning a trip to an unfamiliar city takes time. Travelers may struggle to find activities beyond popular tourist attractions.",
+      "Traditional guided tours can also feel commercialized, with limited opportunities to connect with local people or customize the experience.",
+      "We identified three main problems to address:",
+      "Travelers may have difficulty finding local people who share their interests and can introduce them to less familiar places.",
+      "Organized tours do not always match travelers' preferred activities, interests, or schedules.",
+      "Paying for guided tours can make it difficult for travelers to participate in multiple local experiences.",
+      "How might we help travelers discover personalized local experiences while creating a fair exchange between travelers and local guides?"
+    ],
+    "subheadings": [
+      "01 — Limited Local Connections",
+      "02 — Lack of Personalization",
+      "03 — Cost of Guided Experiences"
+    ]
+  },
+  "solution": {
+    "eyebrow": "03 / THE CASE STUDY",
+    "title": "The Solution",
+    "headings": [
+      "Travel Through a Reciprocal Exchange",
+      "How It Works"
+    ],
+    "paragraphs": [
+      "We proposed TravLocal, a platform where users can participate as both travelers and local guides.",
+      "The main idea is simple:",
+      "Rather than relying only on direct payments, TravLocal uses tickets to encourage users to contribute to the community.",
+      "New users receive a ticket when joining the platform.",
+      "Travelers search for a destination and match with a guide based on their interests and preferences.",
+      "The traveler meets the guide and participates in a personalized local experience.",
+      "Users can guide visitors in their own hometown to earn tickets for future trips.",
+      "This creates a cycle where users can benefit from the platform by sharing their local knowledge."
+    ],
+    "subheadings": [
+      "Explore a new city by sharing your knowledge of your own.",
+      "Step 1 — Sign Up",
+      "Step 2 — Find a Local Guide",
+      "Step 3 — Explore Together",
+      "Step 4 — Become a Guide"
+    ]
+  },
+  "audience": {
+    "eyebrow": "04 / THE CASE STUDY",
+    "title": "Understanding the Target Audience",
+    "headings": [
+      "Who Is TravLocal For?",
+      "User Needs"
+    ],
+    "paragraphs": [
+      "Our target audience focused on travelers who want to experience destinations beyond traditional tourist attractions.",
+      "The audience profile in our project emphasized people who:",
+      "Based on this audience direction, we identified four needs for the platform:",
+      "Find local experiences based on personal interests.",
+      "Understand who a guide is before agreeing to meet.",
+      "Choose activities and schedules that fit travel plans.",
+      "Access experiences through participation in the ticket exchange system.",
+      "These needs guided the features proposed for TravLocal.",
+      "This audience direction comes from the team’s project research. Interviews, surveys, and participant counts are not documented in the supplied materials."
+    ],
+    "items": [
+      "Enjoy discovering hidden or less familiar locations.",
+      "Prefer experiences connected to local culture.",
+      "Want recommendations from people who live in the destination.",
+      "Value shared interests and personal connections.",
+      "Consider ratings and reviews when choosing experiences."
+    ],
+    "subheadings": [
+      "Discovery",
+      "Trust",
+      "Flexibility",
+      "Affordability"
+    ],
+    "placeholder": {
+      "title": "Audience profile",
+      "description": "Add the team’s audience profile or supporting illustration from pitch deck page 9. No participant counts or interview findings should be invented."
+    }
+  },
+  "competitiveAnalysis": {
+    "eyebrow": "05 / THE CASE STUDY",
+    "title": "Competitive Analysis",
+    "headings": [
+      "Exploring Existing Travel Platforms",
+      "What Makes TravLocal Different?"
+    ],
+    "paragraphs": [
+      "We compared TravLocal with three travel-related platforms:",
+      "Our comparison considered features such as personalized tours, guide matching, rewards, safety tools, and support for local businesses.",
+      "From this comparison, we identified an opportunity to combine local guide experiences with a reciprocal ticket system.",
+      "Users can earn opportunities to travel by sharing their own local knowledge.",
+      "The concept includes matching based on interests, preferred activities, and languages.",
+      "Users can earn points through activities, referrals, and participation.",
+      "The platform concept includes partnerships with local businesses and attractions.",
+      "These features formed TravLocal's proposed value proposition.",
+      "This represents the team’s original project comparison, not an independently verified current feature audit."
+    ],
+    "items": [
+      "Withlocals",
+      "ShowAround",
+      "ToursByLocals"
+    ],
+    "subheadings": [
+      "Reciprocal Exchange",
+      "Personalized Matching",
+      "Rewards",
+      "Local Business Support"
+    ],
+    "placeholder": {
+      "title": "Original competitor comparison",
+      "description": "Add the team’s original feature comparison from pitch deck page 11, including its date. This is not a current verified competitor audit."
+    }
+  },
+  "journey": {
+    "eyebrow": "06 / THE CASE STUDY",
+    "title": "User Journey",
+    "headings": [
+      "From Discovering a City to Booking a Local Experience",
+      "Main Journey"
+    ],
+    "paragraphs": [
+      "We explored a traveler journey to connect the platform's main features into one experience.",
+      "The mobile design includes screens for discovering destinations, selecting dates, reviewing bookings, and preparing to meet a guide.",
+      "The traveler explores destinations and available local experiences.",
+      "The traveler selects a tour based on personal interests.",
+      "The traveler chooses a date for the experience.",
+      "The traveler reviews the guide's information, rating, tour details, and meeting location.",
+      "The app provides information related to meeting the guide, including a proposed verification-code feature.",
+      "After the tour, the user can view a tour recap and continue exploring the platform."
+    ],
+    "subheadings": [
+      "01 — Discover a Destination",
+      "02 — Choose an Experience",
+      "03 — Select Availability",
+      "04 — Review the Booking",
+      "05 — Prepare to Meet",
+      "06 — Complete the Experience"
+    ],
+    "placeholder": {
+      "title": "Annotated traveler journey",
+      "description": "Add a labeled journey showing discovery → experience selection → date selection → booking review → meeting verification → tour recap."
+    }
+  },
+  "features": {
+    "eyebrow": "07 / THE CASE STUDY",
+    "title": "Key Features",
+    "headings": [
+      "Feature 1 — Personalized Discovery",
+      "Feature 2 — Guide Matching and Booking",
+      "Feature 3 — Reciprocal Ticket System",
+      "Feature 4 — Rewards and Gamification",
+      "Feature 5 — Safety and Verification"
+    ],
+    "paragraphs": [
+      "TravLocal includes a discovery page where travelers can explore destinations and experiences.",
+      "The design uses destination images, category filters, and search to help users browse available options.",
+      "The goal is to provide a starting point for travelers who may not know exactly what activities they want to book.",
+      "TravLocal proposes matching travelers with local guides based on shared interests, activities, and languages.",
+      "The booking interface includes information such as:",
+      "The booking review screen gives travelers a place to check these details before confirming an experience.",
+      "The ticket system is the central idea behind TravLocal.",
+      "New users receive an initial ticket, while users who guide travelers can earn tickets for their own future trips.",
+      "This model encourages users to contribute to the platform rather than participate only as customers.",
+      "The proposed business model also includes the option to purchase additional tickets.",
+      "We proposed a rewards system to encourage users to continue participating.",
+      "Users could earn points through:",
+      "Points could be exchanged for tickets, coupons, or gift cards.",
+      "The UI concept includes a rewards dashboard displaying points, progress toward the next tier, and available rewards.",
+      "Because travelers and guides would meet in person, safety was an important consideration in our concept.",
+      "We proposed several safety features:",
+      "Verification using identification documents and selfies.",
+      "A verification code to help confirm that the correct people are meeting.",
+      "Allowing travelers and guides to share feedback after an experience.",
+      "Providing a way to report inappropriate behavior.",
+      "These were proposed features intended to support trust and accountability. Their effectiveness would need to be evaluated before a real launch."
+    ],
+    "items": [
+      "Guide profile",
+      "Guide rating",
+      "Tour name",
+      "Meeting location",
+      "Selected date",
+      "Travel achievements and challenges.",
+      "Visiting partner attractions.",
+      "Purchasing from partner businesses.",
+      "Referring friends or family."
+    ],
+    "subheadings": [
+      "Identity Verification",
+      "Meeting Verification",
+      "Ratings and Reviews",
+      "Reporting"
+    ],
+    "placeholder": {
+      "title": "Detailed booking sequence",
+      "description": "Add close-up date-selection and booking-review screens, annotated to show guide details, meeting location, and confirmation."
+    }
+  },
+  "uiDesign": {
+    "eyebrow": "08 / THE CASE STUDY",
+    "title": "UI Design",
+    "headings": [
+      "Creating a Friendly Travel Experience",
+      "Visual Elements",
+      "Logo Design"
+    ],
+    "paragraphs": [
+      "For the visual design, we used a combination of dark navy, light teal, white, and yellow.",
+      "The style was intended to feel friendly and approachable while keeping the main controls easy to identify.",
+      "Used for strong contrast, branding, and darker interface screens.",
+      "Used throughout the interface to create a softer background.",
+      "Used to highlight important buttons, selected navigation items, and rewards.",
+      "Used for cards, buttons, and navigation elements.",
+      "Used in onboarding and informational screens to reinforce the travel theme.",
+      "The TravLocal logo combines a person, a location-pin shape, and an airplane.",
+      "These elements represent the idea of people connecting through travel and local experiences.",
+      "The logo was explored in light and dark variations for different interface backgrounds."
+    ],
+    "subheadings": [
+      "Dark Navy",
+      "Light Teal",
+      "Yellow",
+      "Rounded Components",
+      "Travel Illustrations"
+    ]
+  },
+  "mobileInterface": {
+    "eyebrow": "09 / THE CASE STUDY",
+    "title": "Mobile App Interface",
+    "headings": [
+      "Organizing the Main Navigation",
+      "UI Components"
+    ],
+    "paragraphs": [
+      "The app design includes four main navigation areas:",
+      "Browse destinations, tours, and local experiences.",
+      "View points, available rewards, and ticket-related benefits.",
+      "Provide a space for communication between users.",
+      "View personal information, travel activity, tickets, and achievements.",
+      "The navigation design highlights the selected destination using a yellow circular background.",
+      "We also created interface components for:",
+      "Using repeated components helped establish a consistent visual style across the app concept."
+    ],
+    "subheadings": [
+      "Explore",
+      "Rewards",
+      "Chats",
+      "Profile"
+    ],
+    "items": [
+      "Navigation states.",
+      "Buttons and status messages.",
+      "Multi-step progress indicators.",
+      "Search and chat inputs.",
+      "Reward cards.",
+      "Achievement and challenge elements."
+    ]
+  },
+  "landingPage": {
+    "eyebrow": "10 / THE CASE STUDY",
+    "title": "Landing Page Design",
+    "headings": [
+      "Introducing TravLocal to New Users"
+    ],
+    "paragraphs": [
+      "Alongside the mobile app, we designed a promotional landing page.",
+      "The landing page introduces the idea of traveling with local guides and earning rewards through participation.",
+      "The hero section includes the message:",
+      "It also shows travel illustrations and app download buttons.",
+      "The purpose of the landing page design is to explain the product concept and encourage visitors to learn about the mobile app."
+    ],
+    "subheadings": [
+      "“Travel Like a Local. Guide Like a Pro.”"
+    ]
+  },
+  "businessModel": {
+    "eyebrow": "11 / THE CASE STUDY",
+    "title": "Business Model",
+    "headings": [
+      "Exploring How the Platform Could Be Supported"
+    ],
+    "paragraphs": [
+      "Our pitch also considered how TravLocal might generate revenue while maintaining its exchange-based concept.",
+      "We proposed four possible revenue sources.",
+      "Users could purchase extra tickets if they want to travel more often without guiding.",
+      "A paid membership could offer features such as priority matching, enhanced profile visibility, and exclusive discounts.",
+      "Businesses and attractions could participate through promotional opportunities and special offers.",
+      "Local guides could share partner codes with travelers.",
+      "These were business ideas included in the product concept, not established revenue streams."
+    ],
+    "subheadings": [
+      "Additional Ticket Purchases",
+      "Premium Membership",
+      "Local Partnerships",
+      "Affiliate Marketing"
+    ]
+  },
+  "outcome": {
+    "eyebrow": "12 / THE CASE STUDY",
+    "title": "Project Outcome",
+    "headings": [
+      "A Mobile App and Landing Page Concept",
+      "Project Deliverables"
+    ],
+    "paragraphs": [
+      "The final project brought together the reciprocal exchange model, mobile UI designs, branding, and promotional landing page concept.",
+      "The project demonstrated how TravLocal could connect travelers and local guides through a shared platform.",
+      "However, the provided materials document a design proposal rather than a launched product. They do not establish real-user adoption, completed usability testing, or measured business outcomes."
+    ],
+    "items": [
+      "Product concept and pitch deck.",
+      "Target audience definition.",
+      "Competitive feature analysis.",
+      "Reciprocal ticket model.",
+      "Mobile app interface designs.",
+      "Booking and discovery flow concepts.",
+      "Rewards and verification screen concepts.",
+      "UI components and branding.",
+      "Landing page design."
+    ]
+  },
+  "reflection": {
+    "eyebrow": "13 / THE CASE STUDY",
+    "title": "Reflection and Next Steps",
+    "headings": [
+      "What This Project Helped Us Explore",
+      "What Could Be Improved",
+      "Final Thoughts"
+    ],
+    "subheadings": [
+      "01 — Designing for Two User Roles",
+      "02 — Connecting Features to a Core Idea",
+      "03 — Considering Trust in the User Experience",
+      "04 — Thinking Beyond the Interface"
+    ],
+    "paragraphs": [
+      "TravLocal needed to support people acting as travelers and as guides.",
+      "This made it important to think about how each role participates in the same exchange system.",
+      "The ticket system was the central concept.",
+      "Matching, rewards, bookings, and user profiles were designed around supporting that exchange.",
+      "Meeting someone through a travel platform introduces safety concerns.",
+      "Including reviews, reporting, and verification in the proposal helped us consider those concerns early.",
+      "The project also involved possible partnerships, rewards, and revenue models.",
+      "This helped connect the mobile interface concept to broader product requirements.",
+      "The next step would be to validate the concept with potential users.",
+      "Important questions include:",
+      "We also proposed starting with a beta version in selected cities, collecting user feedback, and refining the matching and ticket systems.",
+      "TravLocal gave our team an opportunity to explore a travel platform built around community participation.",
+      "The project helped connect product strategy, user journeys, interface design, and business considerations into one concept.",
+      "The most important next step would be testing whether people understand and want to participate in the reciprocal exchange model."
+    ],
+    "items": [
+      "Would travelers feel comfortable meeting guides through the platform?",
+      "Would local residents be willing to guide others in exchange for future travel opportunities?",
+      "Is the ticket system easy to understand?",
+      "Does the proposed booking flow provide enough information?",
+      "What verification steps would make both travelers and guides feel more comfortable?"
+    ]
+  }
+} as const;
+
+export const travlocalProject = {
+  "title": "TravLocal — Travel Like a Local",
+  "summary": "A travel exchange platform connecting travelers with local guides through a ticket-based system.",
+  "website": "https://hunlin99.github.io/TravLocal/",
+  "visitLabel": "View landing-page prototype",
+  "heroImage": "/images/TravLocal/product-showcase.webp",
+  "metadata": [
+    {
+      "label": "Project type",
+      "value": "Student UX/UI Design Concept"
+    },
+    {
+      "label": "Course",
+      "value": "Studio Practice 2"
+    },
+    {
+      "label": "Date",
+      "value": "April 2025"
+    },
+    {
+      "label": "Team",
+      "value": "Ling Chang & Nancy Huang"
+    },
+    {
+      "label": "Deliverables",
+      "value": "Mobile App UI · Landing Page Design · Product Pitch"
+    },
+    {
+      "label": "Status",
+      "value": "Design proposal · not launched"
+    }
+  ],
+  "sections": [
+    {
+      "id": "overview",
+      "title": travlocalContent.overview.title
+    },
+    {
+      "id": "problem",
+      "title": travlocalContent.problem.title
+    },
+    {
+      "id": "solution",
+      "title": travlocalContent.solution.title
+    },
+    {
+      "id": "audience",
+      "title": travlocalContent.audience.title
+    },
+    {
+      "id": "competitive-analysis",
+      "title": travlocalContent.competitiveAnalysis.title
+    },
+    {
+      "id": "journey",
+      "title": travlocalContent.journey.title
+    },
+    {
+      "id": "features",
+      "title": travlocalContent.features.title
+    },
+    {
+      "id": "ui-design",
+      "title": travlocalContent.uiDesign.title
+    },
+    {
+      "id": "mobile-interface",
+      "title": travlocalContent.mobileInterface.title
+    },
+    {
+      "id": "landing-page",
+      "title": travlocalContent.landingPage.title
+    },
+    {
+      "id": "business-model",
+      "title": travlocalContent.businessModel.title
+    },
+    {
+      "id": "outcome",
+      "title": travlocalContent.outcome.title
+    },
+    {
+      "id": "reflection",
+      "title": travlocalContent.reflection.title
+    }
+  ],
+  "heroWidth": 2200,
+  "heroHeight": 1237
+} as const;
