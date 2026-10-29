@@ -17,14 +17,18 @@
             </div>
             <dl class="metadata">
                 @for (item of project.metadata; track item.label) {
-                    <div><dt>{{ item.label }}</dt><dd>{{ item.value }}</dd></div>
+                <div>
+                    <dt>{{ item.label }}</dt>
+                    <dd>{{ item.value }}</dd>
+                </div>
                 }
             </dl>
         </div>
     </section>
     <nav class="contents container" aria-label="Case study sections">
         @for (section of project.sections; track section.id; let i = $index) {
-            <a routerLink="/traclocal" [fragment]="section.id"><span>{{ i + 1 < 10 ? '0' : '' }}{{ i + 1 }}</span> {{ section.title }}</a>
+        <a routerLink="/traclocal" [fragment]="section.id"><span>{{ i + 1 < 10 ? '0' : '' }}{{ i + 1 }}</span> {{
+                    section.title }}</a>
         }
     </nav>
     <section id="overview" class="section">
@@ -39,7 +43,9 @@
                 <p>{{ content.overview.paragraphs[3] }}</p>
             </div>
             <figure class="case-image">
-                <img src="/images/TravLocal/mobile-interface.webp" alt="TravLocal concept screens for sign-in, rewards, discovery, booking, chats, and profile" width="2200" height="2071" loading="lazy" decoding="async">
+                <img src="/images/TravLocal/mobile-interface.webp"
+                    alt="TravLocal concept screens for sign-in, rewards, discovery, booking, chats, and profile"
+                    width="2200" height="2071" loading="lazy" decoding="async">
                 <figcaption>Selected mobile interface concepts.</figcaption>
             </figure>
         </div>
@@ -77,22 +83,30 @@
                 <h4>{{ content.solution.subheadings[0] }}</h4>
                 <p>{{ content.solution.paragraphs[2] }}</p>
                 <h3>{{ content.solution.headings[1] }}</h3>
-                <h4>{{ content.solution.subheadings[1] }}</h4>
-                <p>{{ content.solution.paragraphs[3] }}</p>
-                <h4>{{ content.solution.subheadings[2] }}</h4>
-                <p>{{ content.solution.paragraphs[4] }}</p>
-                <h4>{{ content.solution.subheadings[3] }}</h4>
-                <p>{{ content.solution.paragraphs[5] }}</p>
-                <h4>{{ content.solution.subheadings[4] }}</h4>
-                <p>{{ content.solution.paragraphs[6] }}</p>
-                <p>{{ content.solution.paragraphs[7] }}</p>
+
+
+
+
             </div>
             <ol class="exchange-flow" aria-label="How the proposed ticket exchange works">
-                <li>Sign up &amp; receive a ticket</li>
-                <li>Find a local guide</li>
-                <li>Explore together</li>
-                <li>Guide at home &amp; earn tickets</li>
+                <li>
+                    <h4>{{ content.solution.subheadings[1] }}</h4>
+                    <p>{{ content.solution.paragraphs[3] }}</p>
+                </li>
+                <li>
+                    <h4>{{ content.solution.subheadings[2] }}</h4>
+                    <p>{{ content.solution.paragraphs[4] }}</p>
+                </li>
+                <li>
+                    <h4>{{ content.solution.subheadings[3] }}</h4>
+                    <p>{{ content.solution.paragraphs[5] }}</p>
+                </li>
+                <li>
+                    <h4>{{ content.solution.subheadings[4] }}</h4>
+                    <p>{{ content.solution.paragraphs[6] }}</p>
+                </li>
             </ol>
+            <p>{{ content.solution.paragraphs[7] }}</p>
         </div>
     </section>
 
@@ -102,8 +116,8 @@
                 <p class="eyebrow">{{ content.audience.eyebrow }}</p>
                 <h2>{{ content.audience.title }}</h2>
                 <h3>{{ content.audience.headings[0] }}</h3>
-                <p>{{ content.audience.paragraphs[0] }}</p>
-                <p>{{ content.audience.paragraphs[1] }}</p>
+                <!-- <p>{{ content.audience.paragraphs[0] }}</p> -->
+                <!-- <p>{{ content.audience.paragraphs[1] }}</p> -->
                 <ul>
                     <li>{{ content.audience.items[0] }}</li>
                     <li>{{ content.audience.items[1] }}</li>
@@ -113,6 +127,7 @@
                 </ul>
                 <h3>{{ content.audience.headings[1] }}</h3>
                 <p>{{ content.audience.paragraphs[2] }}</p>
+                <!-- Make four user needs to be a 4-block layout -->
                 <h4>{{ content.audience.subheadings[0] }}</h4>
                 <p>{{ content.audience.paragraphs[3] }}</p>
                 <h4>{{ content.audience.subheadings[1] }}</h4>
@@ -121,13 +136,19 @@
                 <p>{{ content.audience.paragraphs[5] }}</p>
                 <h4>{{ content.audience.subheadings[3] }}</h4>
                 <p>{{ content.audience.paragraphs[6] }}</p>
-                <p>{{ content.audience.paragraphs[7] }}</p>
-                <p>{{ content.audience.paragraphs[8] }}</p>
+                <!-- <p>{{ content.audience.paragraphs[7] }}</p>
+                <p>{{ content.audience.paragraphs[8] }}</p> -->
             </div>
-            <figure class="image-placeholder" data-placeholder="audience-profile" aria-labelledby="audience-profile-title">
-                <p class="placeholder-label">IMAGE PLACEHOLDER</p>
-                <h3 id="audience-profile-title">{{ content.audience.placeholder.title }}</h3>
-                <figcaption>{{ content.audience.placeholder.description }}</figcaption>
+            <!-- Make two persona show as a thumbnail and click for full profile. -->
+            <figure class="image">
+                <img src="/images/TravLocal/user1.png" alt="TravLocal target user 1" width="2200" height="2071"
+                    loading="lazy" decoding="async">
+                <!-- <figcaption>{{ content.audience.placeholder.description }}</figcaption> -->
+            </figure>
+            <figure class="image">
+                <img src="/images/TravLocal/user2.png" alt="TravLocal target user 2" width="2200" height="2071"
+                    loading="lazy" decoding="async">
+                <!-- <figcaption>{{ content.audience.placeholder.description }}</figcaption> -->
             </figure>
         </div>
     </section>
@@ -144,9 +165,8 @@
                     <li>{{ content.competitiveAnalysis.items[1] }}</li>
                     <li>{{ content.competitiveAnalysis.items[2] }}</li>
                 </ul>
-                <p>{{ content.competitiveAnalysis.paragraphs[1] }}</p>
-                <p>{{ content.competitiveAnalysis.paragraphs[2] }}</p>
                 <h3>{{ content.competitiveAnalysis.headings[1] }}</h3>
+                <!-- Make four pifferent point into 4-block layout -->
                 <h4>{{ content.competitiveAnalysis.subheadings[0] }}</h4>
                 <p>{{ content.competitiveAnalysis.paragraphs[3] }}</p>
                 <h4>{{ content.competitiveAnalysis.subheadings[1] }}</h4>
@@ -158,7 +178,8 @@
                 <p>{{ content.competitiveAnalysis.paragraphs[7] }}</p>
                 <p>{{ content.competitiveAnalysis.paragraphs[8] }}</p>
             </div>
-            <figure class="image-placeholder" data-placeholder="competitive-comparison" aria-labelledby="competitive-comparison-title">
+            <figure class="image-placeholder" data-placeholder="competitive-comparison"
+                aria-labelledby="competitive-comparison-title">
                 <p class="placeholder-label">IMAGE PLACEHOLDER</p>
                 <h3 id="competitive-comparison-title">{{ content.competitiveAnalysis.placeholder.title }}</h3>
                 <figcaption>{{ content.competitiveAnalysis.placeholder.description }}</figcaption>
@@ -175,7 +196,8 @@
                 <p>{{ content.journey.paragraphs[0] }}</p>
                 <p>{{ content.journey.paragraphs[1] }}</p>
                 <h3>{{ content.journey.headings[1] }}</h3>
-                <h4>{{ content.journey.subheadings[0] }}</h4>
+                <!-- Would create visual user journey to express -->
+                <!-- <h4>{{ content.journey.subheadings[0] }}</h4>
                 <p>{{ content.journey.paragraphs[2] }}</p>
                 <h4>{{ content.journey.subheadings[1] }}</h4>
                 <p>{{ content.journey.paragraphs[3] }}</p>
@@ -186,9 +208,10 @@
                 <h4>{{ content.journey.subheadings[4] }}</h4>
                 <p>{{ content.journey.paragraphs[6] }}</p>
                 <h4>{{ content.journey.subheadings[5] }}</h4>
-                <p>{{ content.journey.paragraphs[7] }}</p>
+                <p>{{ content.journey.paragraphs[7] }}</p> -->
             </div>
-            <figure class="image-placeholder" data-placeholder="annotated-journey" aria-labelledby="annotated-journey-title">
+            <figure class="image-placeholder" data-placeholder="annotated-journey"
+                aria-labelledby="annotated-journey-title">
                 <p class="placeholder-label">IMAGE PLACEHOLDER</p>
                 <h3 id="annotated-journey-title">{{ content.journey.placeholder.title }}</h3>
                 <figcaption>{{ content.journey.placeholder.description }}</figcaption>
@@ -196,6 +219,7 @@
         </div>
     </section>
 
+    <!-- Remove Feature 1. Import image for each feature. Four pucture are in public/TravLocal-->
     <section id="features" class="section">
         <div class="container">
             <div class="section-copy">
@@ -245,7 +269,8 @@
                 <p>{{ content.features.paragraphs[19] }}</p>
                 <p>{{ content.features.paragraphs[20] }}</p>
             </div>
-            <figure class="image-placeholder" data-placeholder="booking-sequence" aria-labelledby="booking-sequence-title">
+            <figure class="image-placeholder" data-placeholder="booking-sequence"
+                aria-labelledby="booking-sequence-title">
                 <p class="placeholder-label">IMAGE PLACEHOLDER</p>
                 <h3 id="booking-sequence-title">{{ content.features.placeholder.title }}</h3>
                 <figcaption>{{ content.features.placeholder.description }}</figcaption>
@@ -259,10 +284,16 @@
                 <p class="eyebrow">{{ content.uiDesign.eyebrow }}</p>
                 <h2>{{ content.uiDesign.title }}</h2>
                 <h3>{{ content.uiDesign.headings[0] }}</h3>
-                <p>{{ content.uiDesign.paragraphs[0] }}</p>
+                <!-- <p>{{ content.uiDesign.paragraphs[0] }}</p> -->
                 <p>{{ content.uiDesign.paragraphs[1] }}</p>
                 <h3>{{ content.uiDesign.headings[1] }}</h3>
-                <h4>{{ content.uiDesign.subheadings[0] }}</h4>
+                <figure class="case-image">
+                    <img src="/images/TravLocal/UI.jpg"
+                        alt="TravLocal UI components including navigation states, progress indicators, buttons, and reward cards"
+                        width="2084" height="865" loading="lazy" decoding="async">
+                    <figcaption>Reusable navigation, inputs, progress indicators, and status treatments.</figcaption>
+                </figure>
+                <!-- <h4>{{ content.uiDesign.subheadings[0] }}</h4>
                 <p>{{ content.uiDesign.paragraphs[2] }}</p>
                 <h4>{{ content.uiDesign.subheadings[1] }}</h4>
                 <p>{{ content.uiDesign.paragraphs[3] }}</p>
@@ -271,20 +302,22 @@
                 <h4>{{ content.uiDesign.subheadings[3] }}</h4>
                 <p>{{ content.uiDesign.paragraphs[5] }}</p>
                 <h4>{{ content.uiDesign.subheadings[4] }}</h4>
-                <p>{{ content.uiDesign.paragraphs[6] }}</p>
+                <p>{{ content.uiDesign.paragraphs[6] }}</p> -->
                 <h3>{{ content.uiDesign.headings[2] }}</h3>
-                <p>{{ content.uiDesign.paragraphs[7] }}</p>
+                <!-- <p>{{ content.uiDesign.paragraphs[7] }}</p> -->
                 <p>{{ content.uiDesign.paragraphs[8] }}</p>
-                <p>{{ content.uiDesign.paragraphs[9] }}</p>
+                <!-- <p>{{ content.uiDesign.paragraphs[9] }}</p> -->
             </div>
             <figure class="case-image">
-                <img src="/images/TravLocal/logo.jpg" alt="TravLocal logo and wordmark variations with light and dark mobile branding" width="2084" height="865" loading="lazy" decoding="async">
+                <img src="/images/TravLocal/logo.jpg"
+                    alt="TravLocal logo and wordmark variations with light and dark mobile branding" width="2084"
+                    height="865" loading="lazy" decoding="async">
                 <figcaption>Identity exploration: a person, location pin, and airplane.</figcaption>
             </figure>
         </div>
     </section>
 
-    <section id="mobile-interface" class="section dark">
+    <!-- <section id="mobile-interface" class="section dark">
         <div class="container">
             <div class="section-copy">
                 <p class="eyebrow">{{ content.mobileInterface.eyebrow }}</p>
@@ -312,12 +345,9 @@
                 </ul>
                 <p>{{ content.mobileInterface.paragraphs[7] }}</p>
             </div>
-            <figure class="case-image">
-                <img src="/images/TravLocal/UI.jpg" alt="TravLocal UI components including navigation states, progress indicators, buttons, and reward cards" width="2084" height="865" loading="lazy" decoding="async">
-                <figcaption>Reusable navigation, inputs, progress indicators, and status treatments.</figcaption>
-            </figure>
+            
         </div>
-    </section>
+    </section> -->
 
     <section id="landing-page" class="section">
         <div class="container">
@@ -333,8 +363,11 @@
                 <p>{{ content.landingPage.paragraphs[4] }}</p>
             </div>
             <figure class="case-image">
-                <img src="/images/TravLocal/landing-page.webp" alt="TravLocal landing-page concept shown on a laptop mockup" width="2200" height="1252" loading="lazy" decoding="async">
-                <figcaption>Promotional landing-page concept; app download badges are part of the mockup, not released apps.</figcaption>
+                <img src="/images/TravLocal/landing-page.webp"
+                    alt="TravLocal landing-page concept shown on a laptop mockup" width="2200" height="1252"
+                    loading="lazy" decoding="async">
+                <figcaption>Promotional landing-page concept; app download badges are part of the mockup, not released
+                    apps.</figcaption>
             </figure>
         </div>
     </section>
@@ -383,7 +416,9 @@
                 <p>{{ content.outcome.paragraphs[2] }}</p>
             </div>
             <figure class="case-image">
-                <img src="/images/TravLocal/product-showcase.webp" alt="TravLocal mobile and landing-page concept presentation" width="2200" height="1237" loading="lazy" decoding="async">
+                <img src="/images/TravLocal/product-showcase.webp"
+                    alt="TravLocal mobile and landing-page concept presentation" width="2200" height="1237"
+                    loading="lazy" decoding="async">
                 <figcaption>Student design concept, not a launched travel platform.</figcaption>
             </figure>
         </div>

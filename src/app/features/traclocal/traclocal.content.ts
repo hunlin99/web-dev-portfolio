@@ -231,8 +231,7 @@ export const travlocalContent = {
       "Used to highlight important buttons, selected navigation items, and rewards.",
       "Used for cards, buttons, and navigation elements.",
       "Used in onboarding and informational screens to reinforce the travel theme.",
-      "The TravLocal logo combines a person, a location-pin shape, and an airplane.",
-      "These elements represent the idea of people connecting through travel and local experiences.",
+      "A person, a location-pin shape, and an airplane represent the idea of people connecting through travel and local experiences.",
       "The logo was explored in light and dark variations for different interface backgrounds."
     ],
     "subheadings": [
