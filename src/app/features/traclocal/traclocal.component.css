@@ -33,9 +33,6 @@ dd { margin: 0; }
 .dark { background: #002b39; color: #f7faf9; }
 .dark .eyebrow { color: #ffbf22; }
 .case-image { margin-top: 2.5rem; }
-.image-placeholder { margin-top: 2.5rem; padding: clamp(1.5rem, 4vw, 3rem); border: 2px dashed currentColor; border-radius: 1rem; background: rgb(127 170 170 / .08); }
-.image-placeholder h3 { margin: .5rem 0; }
-.placeholder-label { font-size: .75rem; letter-spacing: .15em; font-weight: 700; }
 .exchange-flow { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; padding: 0; margin-top: 2rem; list-style-position: inside; }
 .exchange-flow li { margin: 0; padding: 1.25rem; border: 1px solid currentColor; border-radius: .75rem; }
 .project-button { display: inline-flex; min-height: 44px; align-items: center; border: 1px solid currentColor; border-radius: .4rem; padding: .75rem 1.25rem; text-decoration: none; }
@@ -75,3 +72,30 @@ dd { margin: 0; }
 .feature-row h3 { margin-top: 0; }
 .feature-image { margin: 0; }
 @media (max-width: 750px) { .needs-grid, .difference-grid, .persona-grid, .feature-row { grid-template-columns: 1fr; } .journey-flow { grid-template-columns: 1fr; } .persona-preview img { height: 14rem; } }
+
+.hero { background: url('/images/TravLocal/traclocal-coverimg.jpg') center / cover no-repeat; }
+.hero-copy {
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid rgb(255 255 255 / .7);
+    border-radius: 1rem;
+    background: rgb(255 255 255 / .86);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 24px rgb(0 43 57 / .08);
+}
+.hero .metadata { padding: 1.5rem; border: 1px solid rgb(255 255 255 / .7); border-radius: 1rem; background: rgb(255 255 255 / .9); }
+.hero-website-button { border-radius: 8rem; background: rgb(255 255 255 / .9); }
+.comparison-hint { margin-top: 2.5rem; font-size: .9rem; }
+.comparison-scroll { overflow-x: auto; margin-top: 1rem; border: 1px solid #83afaf; border-radius: .75rem; }
+.comparison-scroll:focus-visible { outline: 3px solid #0074e1; outline-offset: 4px; }
+.comparison-table { width: 100%; min-width: 780px; border-collapse: collapse; background: #fff; color: #002b39; }
+.comparison-table caption { text-align: left; padding: 1.25rem; font-size: .9rem; line-height: 1.7; background: #f7faf9; }
+.comparison-table th, .comparison-table td { border: 1px solid #aacaca; padding: 1.25rem 1rem; line-height: 1.5; }
+.comparison-table thead th { background: #dceeed; text-align: center; }
+.comparison-table thead th:first-child { background: #ffbf22; }
+.comparison-table tbody th { text-align: left; width: 25%; background: #edf6f5; }
+.comparison-table td { text-align: center; font-weight: 600; }
+.comparison-status { display: inline-flex; justify-content: center; align-items: center; width: 2.25rem; height: 2.25rem; border-radius: 50%; color: #fff; font-size: 1.5rem; }
+.comparison-status.included { background: #247639; }
+.comparison-status.excluded { background: #b52b33; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }

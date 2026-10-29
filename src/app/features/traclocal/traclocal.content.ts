@@ -121,9 +121,97 @@ export const travlocalContent = {
       "Rewards",
       "Local Business Support"
     ],
-    "placeholder": {
-      "title": "Original competitor comparison",
-      "description": "Add the team’s original feature comparison from pitch deck page 11, including its date. This is not a current verified competitor audit."
+    "table": {
+      "caption": "Feature comparison from the team’s original TravLocal project analysis. TravLocal entries describe proposed features; competitor entries reproduce the supplied comparison and are not a current independently verified audit.",
+      "columns": [
+        "TravLocal",
+        "WithLocals",
+        "ShowAround",
+        "ToursByLocals"
+      ],
+      "rows": [
+        {
+          "feature": "Ticket System",
+          "values": [
+            true,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "feature": "Gamification (Badges, Points)",
+          "values": [
+            true,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "feature": "Referral & Partner Rewards",
+          "values": [
+            true,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "feature": "Guide & Traveler Matching",
+          "values": [
+            "Automated",
+            "Manual",
+            "Manual",
+            "Manual"
+          ]
+        },
+        {
+          "feature": "Safety Verification Feature",
+          "values": [
+            true,
+            true,
+            true,
+            true
+          ]
+        },
+        {
+          "feature": "Emergency & Safety Tools",
+          "values": [
+            true,
+            false,
+            false,
+            true
+          ]
+        },
+        {
+          "feature": "Support Local Businesses",
+          "values": [
+            true,
+            true,
+            false,
+            true
+          ]
+        },
+        {
+          "feature": "Tour Photo Gallery",
+          "values": [
+            true,
+            false,
+            false,
+            false
+          ]
+        },
+        {
+          "feature": "Personalized Tours",
+          "values": [
+            true,
+            true,
+            true,
+            true
+          ]
+        }
+      ]
     }
   },
   "journey": {

@@ -189,12 +189,39 @@
                 <p>{{ content.competitiveAnalysis.paragraphs[7] }}</p>
                 <p>{{ content.competitiveAnalysis.paragraphs[8] }}</p>
             </div>
-            <figure class="image-placeholder" data-placeholder="competitive-comparison"
-                aria-labelledby="competitive-comparison-title">
-                <p class="placeholder-label">IMAGE PLACEHOLDER</p>
-                <h3 id="competitive-comparison-title">{{ content.competitiveAnalysis.placeholder.title }}</h3>
-                <figcaption>{{ content.competitiveAnalysis.placeholder.description }}</figcaption>
-            </figure>
+            <p class="comparison-hint" id="comparison-scroll-hint">Scroll horizontally on smaller screens to compare all four platforms.</p>
+            <div class="comparison-scroll" role="region" aria-label="Competitive analysis table"
+                aria-describedby="comparison-scroll-hint" tabindex="0">
+                <table class="comparison-table">
+                    <caption>{{ content.competitiveAnalysis.table.caption }}</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Features</th>
+                            @for (platform of content.competitiveAnalysis.table.columns; track platform) {
+                                <th scope="col">{{ platform }}</th>
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (row of content.competitiveAnalysis.table.rows; track row.feature) {
+                            <tr>
+                                <th scope="row">{{ row.feature }}</th>
+                                @for (value of row.values; track $index) {
+                                    <td>
+                                        @if (value === true) {
+                                            <span class="comparison-status included"><span aria-hidden="true">✓</span><span class="sr-only">Included</span></span>
+                                        } @else if (value === false) {
+                                            <span class="comparison-status excluded"><span aria-hidden="true">×</span><span class="sr-only">Not included</span></span>
+                                        } @else {
+                                            {{ value }}
+                                        }
+                                    </td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 

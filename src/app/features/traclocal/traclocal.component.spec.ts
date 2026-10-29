@@ -11,7 +11,7 @@ describe('TravLocal case study', () => {
     return RouterTestingHarness.create('/traclocal');
   }
 
-  it('renders the 12-section student concept, supplied artwork, and remaining comparison slot', async () => {
+  it('renders the 12-section student concept, supplied artwork, and competitive comparison table', async () => {
     const harness = await openPage();
     const page = harness.routeNativeElement!;
     expect(page.querySelector('h1')?.textContent).toBe('TravLocal — Travel Like a Local');
@@ -25,7 +25,16 @@ describe('TravLocal case study', () => {
     expect(page.textContent).not.toContain('React.js');
     expect(page.textContent).not.toContain('Codex may');
     expect(page.textContent).not.toContain('[IMAGE:');
-    expect(page.querySelectorAll('[data-placeholder]').length).toBe(1);
+    expect(page.querySelectorAll('[data-placeholder]').length).toBe(0);
+    expect(page.querySelectorAll('.comparison-table thead th').length).toBe(5);
+    expect(page.querySelectorAll('.comparison-table tbody tr').length).toBe(9);
+    expect(page.querySelectorAll('.comparison-table tbody td').length).toBe(36);
+    expect(page.querySelectorAll('.comparison-status.included').length).toBe(17);
+    expect(page.querySelectorAll('.comparison-status.excluded').length).toBe(15);
+    expect(page.querySelector('.comparison-table caption')?.textContent).toContain('proposed features');
+    const matching = page.querySelectorAll('.comparison-table tbody tr')[3];
+    expect(matching.textContent).toContain('Automated');
+    expect(matching.querySelectorAll('td')[1].textContent?.trim()).toBe('Manual');
     expect(page.querySelectorAll('.exchange-flow li').length).toBe(4);
     expect(page.querySelectorAll('.needs-grid .insight-card').length).toBe(4);
     expect(page.querySelectorAll('.difference-grid .insight-card').length).toBe(4);

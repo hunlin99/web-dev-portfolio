@@ -15,15 +15,11 @@ The uploaded Illustrator file is PDF-compatible and contains four artboards. Art
 
 Hero and closing presentation use the product showcase; Overview uses the mobile screens; UI Design uses the logo variants; Mobile App Interface uses the component board; Landing Page uses the laptop artboard. Intrinsic dimensions reserve layout space and below-fold images are lazy-loaded.
 
-## Image placeholders to replace
+## Competitive analysis and hero
 
-The remaining comparison slot is visibly labeled **IMAGE PLACEHOLDER**. No broken image requests or invented research graphics are used.
+The final comparison placeholder is replaced by a semantic HTML table transcribed from the supplied comparison image. It includes nine feature rows and four platform columns. Its caption identifies TravLocal features as proposed and competitor entries as the team's original comparison, not a current verified audit. Change the cells in `competitiveAnalysis.table` in the content file. Boolean cells render labeled check/cross indicators; matching cells render text. The table is keyboard-focusable and horizontally scrollable on narrow screens.
 
-| Section | Slot ID | Suggested replacement | Priority |
-| --- | --- | --- | --- |
-| Competitive Analysis | `competitive-comparison` | Original team comparison table from pitch-deck page 11, with date and source context | Needed to show comparison evidence |
-
-Add images to `/public/images/TravLocal/` and replace the corresponding `<figure data-placeholder="…">` in HTML with a real image and caption. Use accurate width/height and meaningful alt text; keep accompanying copy in its content category. The audience placeholder has been replaced by the supplied `user1.png` and `user2.png`, opened from lightweight thumbnails in a native modal dialog. The journey placeholder has been replaced with a six-step HTML flow. Key Features now displays four supplied feature images; Personalized Discovery is omitted per the author's comment. A separate booking-detail slot is no longer shown because the four illustrated features now carry that section. Only the original competitive comparison remains missing.
+There are no image placeholders left. The audience profiles, HTML journey, and illustrated features replace their earlier slots. The hero uses `traclocal-coverimg.jpg`; the title area has a semi-transparent white panel and backdrop blur, with a readable opaque fallback when blur is unsupported.
 
 ## Review updates
 
