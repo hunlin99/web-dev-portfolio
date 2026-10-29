@@ -73,18 +73,16 @@ dd { margin: 0; }
 .feature-image { margin: 0; }
 @media (max-width: 750px) { .needs-grid, .difference-grid, .persona-grid, .feature-row { grid-template-columns: 1fr; } .journey-flow { grid-template-columns: 1fr; } .persona-preview img { height: 14rem; } }
 
-.hero { background: url('/images/TravLocal/traclocal-coverimg.jpg') center / cover no-repeat; }
-.hero-copy {
-    padding: clamp(1.25rem, 3vw, 2rem);
-    border: 1px solid rgb(255 255 255 / .7);
-    border-radius: 1rem;
-    background: rgb(255 255 255 / .86);
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 8px 24px rgb(0 43 57 / .08);
+.hero { position: relative; isolation: isolate; background: #dceeed; }
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: url('/images/TravLocal/traclocal-coverimg.jpg') center / cover no-repeat;
+    opacity: 0.25;
+    pointer-events: none;
 }
-.hero .metadata { padding: 1.5rem; border: 1px solid rgb(255 255 255 / .7); border-radius: 1rem; background: rgb(255 255 255 / .9); }
-.hero-website-button { border-radius: 8rem; background: rgb(255 255 255 / .9); }
 .comparison-hint { margin-top: 2.5rem; font-size: .9rem; }
 .comparison-scroll { overflow-x: auto; margin-top: 1rem; border: 1px solid #83afaf; border-radius: .75rem; }
 .comparison-scroll:focus-visible { outline: 3px solid #0074e1; outline-offset: 4px; }

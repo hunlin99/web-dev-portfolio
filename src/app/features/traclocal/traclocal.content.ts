@@ -381,38 +381,17 @@ export const travlocalContent = {
     "eyebrow": "12 / THE CASE STUDY",
     "title": "Reflection and Next Steps",
     "headings": [
-      "What This Project Helped Us Explore",
-      "What Could Be Improved",
-      "Final Thoughts"
-    ],
-    "subheadings": [
-      "01 — Designing for Two User Roles",
-      "02 — Connecting Features to a Core Idea",
-      "03 — Considering Trust in the User Experience",
-      "04 — Thinking Beyond the Interface"
+      "What We Learned",
+      "Next Steps"
     ],
     "paragraphs": [
-      "TravLocal needed to support people acting as travelers and as guides.",
-      "This made it important to think about how each role participates in the same exchange system.",
-      "The ticket system was the central concept.",
-      "Matching, rewards, bookings, and user profiles were designed around supporting that exchange.",
-      "Meeting someone through a travel platform introduces safety concerns.",
-      "Including reviews, reporting, and verification in the proposal helped us consider those concerns early.",
-      "The project also involved possible partnerships, rewards, and revenue models.",
-      "This helped connect the mobile interface concept to broader product requirements.",
-      "The next step would be to validate the concept with potential users.",
-      "Important questions include:",
-      "We also proposed starting with a beta version in selected cities, collecting user feedback, and refining the matching and ticket systems.",
-      "TravLocal gave our team an opportunity to explore a travel platform built around community participation.",
-      "The project helped connect product strategy, user journeys, interface design, and business considerations into one concept.",
-      "The most important next step would be testing whether people understand and want to participate in the reciprocal exchange model."
+      "Designing for travelers and guides showed us how a clear exchange model can connect discovery, booking, rewards, and trust. The main lesson was to keep both roles understandable within one consistent experience.",
+      "Before a launch, we would validate the concept with travelers and local guides, then refine the design based on their feedback."
     ],
     "items": [
-      "Would travelers feel comfortable meeting guides through the platform?",
-      "Would local residents be willing to guide others in exchange for future travel opportunities?",
-      "Is the ticket system easy to understand?",
-      "Does the proposed booking flow provide enough information?",
-      "What verification steps would make both travelers and guides feel more comfortable?"
+      "Test whether users understand and want to use the ticket exchange.",
+      "Evaluate the booking flow and expectations around meeting verification.",
+      "Explore a small beta in selected cities after validating the core concept."
     ]
   }
 } as const;

@@ -431,33 +431,12 @@
                 <p class="eyebrow">{{ content.reflection.eyebrow }}</p>
                 <h2>{{ content.reflection.title }}</h2>
                 <h3>{{ content.reflection.headings[0] }}</h3>
-                <h4>{{ content.reflection.subheadings[0] }}</h4>
                 <p>{{ content.reflection.paragraphs[0] }}</p>
-                <p>{{ content.reflection.paragraphs[1] }}</p>
-                <h4>{{ content.reflection.subheadings[1] }}</h4>
-                <p>{{ content.reflection.paragraphs[2] }}</p>
-                <p>{{ content.reflection.paragraphs[3] }}</p>
-                <h4>{{ content.reflection.subheadings[2] }}</h4>
-                <p>{{ content.reflection.paragraphs[4] }}</p>
-                <p>{{ content.reflection.paragraphs[5] }}</p>
-                <h4>{{ content.reflection.subheadings[3] }}</h4>
-                <p>{{ content.reflection.paragraphs[6] }}</p>
-                <p>{{ content.reflection.paragraphs[7] }}</p>
                 <h3>{{ content.reflection.headings[1] }}</h3>
-                <p>{{ content.reflection.paragraphs[8] }}</p>
-                <p>{{ content.reflection.paragraphs[9] }}</p>
+                <p>{{ content.reflection.paragraphs[1] }}</p>
                 <ul>
-                    <li>{{ content.reflection.items[0] }}</li>
-                    <li>{{ content.reflection.items[1] }}</li>
-                    <li>{{ content.reflection.items[2] }}</li>
-                    <li>{{ content.reflection.items[3] }}</li>
-                    <li>{{ content.reflection.items[4] }}</li>
+                    @for (item of content.reflection.items; track item) { <li>{{ item }}</li> }
                 </ul>
-                <p>{{ content.reflection.paragraphs[10] }}</p>
-                <h3>{{ content.reflection.headings[2] }}</h3>
-                <p>{{ content.reflection.paragraphs[11] }}</p>
-                <p>{{ content.reflection.paragraphs[12] }}</p>
-                <p>{{ content.reflection.paragraphs[13] }}</p>
             </div>
         </div>
     </section>
