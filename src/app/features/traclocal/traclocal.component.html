@@ -42,12 +42,12 @@
                 <p>{{ content.overview.paragraphs[2] }}</p>
                 <p>{{ content.overview.paragraphs[3] }}</p>
             </div>
-            <figure class="case-image">
+            <!-- <figure class="case-image">
                 <img src="/images/TravLocal/mobile-interface.webp"
                     alt="TravLocal concept screens for sign-in, rewards, discovery, booking, chats, and profile"
                     width="2200" height="2071" loading="lazy" decoding="async">
                 <figcaption>Selected mobile interface concepts.</figcaption>
-            </figure>
+            </figure> -->
         </div>
     </section>
 
@@ -57,9 +57,9 @@
                 <p class="eyebrow">{{ content.problem.eyebrow }}</p>
                 <h2>{{ content.problem.title }}</h2>
                 <h3>{{ content.problem.headings[0] }}</h3>
-                <p>{{ content.problem.paragraphs[0] }}</p>
+                <!-- <p>{{ content.problem.paragraphs[0] }}</p>
                 <p>{{ content.problem.paragraphs[1] }}</p>
-                <p>{{ content.problem.paragraphs[2] }}</p>
+                <p>{{ content.problem.paragraphs[2] }}</p> -->
                 <h4>{{ content.problem.subheadings[0] }}</h4>
                 <p>{{ content.problem.paragraphs[3] }}</p>
                 <h4>{{ content.problem.subheadings[1] }}</h4>
@@ -143,12 +143,13 @@
             </div>
             <div class="persona-grid" aria-label="TravLocal persona profiles">
                 @for (persona of personas; track persona.id) {
-                    <button type="button" class="persona-preview" aria-haspopup="dialog"
-                        [attr.aria-label]="'Open persona ' + persona.id + ' full profile'"
-                        (click)="openPersona(persona, personaDialog)">
-                        <img [src]="persona.thumbnail" [alt]="'TravLocal persona ' + persona.id + ' preview'" loading="lazy" decoding="async">
-                        <span>View persona {{ persona.id }} <span aria-hidden="true">↗</span></span>
-                    </button>
+                <button type="button" class="persona-preview" aria-haspopup="dialog"
+                    [attr.aria-label]="'Open persona ' + persona.id + ' full profile'"
+                    (click)="openPersona(persona, personaDialog)">
+                    <img [src]="persona.thumbnail" [alt]="'TravLocal persona ' + persona.id + ' preview'" loading="lazy"
+                        decoding="async">
+                    <span>View persona {{ persona.id }} <span aria-hidden="true">↗</span></span>
+                </button>
                 }
             </div>
         </div>
@@ -209,7 +210,10 @@
             </div>
             <ol class="journey-flow" aria-label="Traveler journey from discovery to tour recap">
                 @for (step of content.journey.subheadings; track step; let i = $index) {
-                    <li><h4>{{ step }}</h4><p>{{ content.journey.paragraphs[i + 2] }}</p></li>
+                <li>
+                    <h4>{{ step }}</h4>
+                    <p>{{ content.journey.paragraphs[i + 2] }}</p>
+                </li>
                 }
             </ol>
         </div>
@@ -235,7 +239,8 @@
                     <p>{{ content.features.paragraphs[2] }}</p>
                 </div>
                 <figure class="feature-image">
-                    <img src="/images/TravLocal/feature-Match-with-Verified-Locals.png" [alt]="content.features.headings[0]" width="2084" height="2084" loading="lazy" decoding="async">
+                    <img src="/images/TravLocal/feature-Match-with-Verified-Locals.png"
+                        [alt]="content.features.headings[0]" width="2084" height="2084" loading="lazy" decoding="async">
                 </figure>
             </article>
             <article class="feature-row">
@@ -247,7 +252,8 @@
                     <p>{{ content.features.paragraphs[6] }}</p>
                 </div>
                 <figure class="feature-image">
-                    <img src="/images/TravLocal/feature-No-Money-Needed-Just-Tickets.png" [alt]="content.features.headings[1]" width="2084" height="2084" loading="lazy" decoding="async">
+                    <img src="/images/TravLocal/feature-No-Money-Needed-Just-Tickets.png"
+                        [alt]="content.features.headings[1]" width="2084" height="2084" loading="lazy" decoding="async">
                 </figure>
             </article>
             <article class="feature-row">
@@ -265,7 +271,8 @@
                     <p>{{ content.features.paragraphs[10] }}</p>
                 </div>
                 <figure class="feature-image">
-                    <img src="/images/TravLocal/feature-Explore-Earn-Rewards.png" [alt]="content.features.headings[2]" width="2084" height="2084" loading="lazy" decoding="async">
+                    <img src="/images/TravLocal/feature-Explore-Earn-Rewards.png" [alt]="content.features.headings[2]"
+                        width="2084" height="2084" loading="lazy" decoding="async">
                 </figure>
             </article>
             <article class="feature-row">
@@ -284,7 +291,8 @@
                     <p>{{ content.features.paragraphs[17] }}</p>
                 </div>
                 <figure class="feature-image">
-                    <img src="/images/TravLocal/feature-Safety-First.png" [alt]="content.features.headings[3]" width="2084" height="2084" loading="lazy" decoding="async">
+                    <img src="/images/TravLocal/feature-Safety-First.png" [alt]="content.features.headings[3]"
+                        width="2084" height="2084" loading="lazy" decoding="async">
                 </figure>
             </article>
         </div>
@@ -428,13 +436,14 @@
     </section>
     <div class="container page-end"><a class="project-button" routerLink="/projects">← Explore more projects</a></div>
 </main>
-<dialog #personaDialog class="persona-dialog" aria-labelledby="persona-title"
-    (close)="selectedPersona.set(null)" (click)="closeOnBackdrop($event, personaDialog)">
+<dialog #personaDialog class="persona-dialog" aria-labelledby="persona-title" (close)="selectedPersona.set(null)"
+    (click)="closeOnBackdrop($event, personaDialog)">
     <div class="persona-dialog-header">
         <h2 id="persona-title">TravLocal persona {{ selectedPersona()?.id }}</h2>
-        <button type="button" autofocus (click)="personaDialog.close()" aria-label="Close persona profile">Close ×</button>
+        <button type="button" autofocus (click)="personaDialog.close()" aria-label="Close persona profile">Close
+            ×</button>
     </div>
     @if (selectedPersona(); as persona) {
-        <img [src]="persona.image" [alt]="'Full profile for TravLocal persona ' + persona.id">
+    <img [src]="persona.image" [alt]="'Full profile for TravLocal persona ' + persona.id">
     }
 </dialog>

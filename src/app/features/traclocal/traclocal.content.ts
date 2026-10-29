@@ -334,7 +334,7 @@ export const travlocalProject = {
   "summary": "A travel exchange platform connecting travelers with local guides through a ticket-based system.",
   "website": "https://hunlin99.github.io/TravLocal/",
   "visitLabel": "View landing-page prototype",
-  "heroImage": "/images/TravLocal/product-showcase.webp",
+  "heroImage": "/images/TravLocal/traclocal-mockup-img.png",
   "metadata": [
     {
       "label": "Project type",
