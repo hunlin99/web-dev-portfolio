@@ -90,11 +90,7 @@ export const travlocalContent = {
       "Trust",
       "Flexibility",
       "Affordability"
-    ],
-    "placeholder": {
-      "title": "Audience profile",
-      "description": "Add the team’s audience profile or supporting illustration from pitch deck page 9. No participant counts or interview findings should be invented."
-    }
+    ]
   },
   "competitiveAnalysis": {
     "eyebrow": "05 / THE CASE STUDY",
@@ -154,26 +150,18 @@ export const travlocalContent = {
       "04 — Review the Booking",
       "05 — Prepare to Meet",
       "06 — Complete the Experience"
-    ],
-    "placeholder": {
-      "title": "Annotated traveler journey",
-      "description": "Add a labeled journey showing discovery → experience selection → date selection → booking review → meeting verification → tour recap."
-    }
+    ]
   },
   "features": {
     "eyebrow": "07 / THE CASE STUDY",
     "title": "Key Features",
     "headings": [
-      "Feature 1 — Personalized Discovery",
-      "Feature 2 — Guide Matching and Booking",
-      "Feature 3 — Reciprocal Ticket System",
-      "Feature 4 — Rewards and Gamification",
-      "Feature 5 — Safety and Verification"
+      "Feature 1 — Guide Matching and Booking",
+      "Feature 2 — Reciprocal Ticket System",
+      "Feature 3 — Rewards and Gamification",
+      "Feature 4 — Safety and Verification"
     ],
     "paragraphs": [
-      "TravLocal includes a discovery page where travelers can explore destinations and experiences.",
-      "The design uses destination images, category filters, and search to help users browse available options.",
-      "The goal is to provide a starting point for travelers who may not know exactly what activities they want to book.",
       "TravLocal proposes matching travelers with local guides based on shared interests, activities, and languages.",
       "The booking interface includes information such as:",
       "The booking review screen gives travelers a place to check these details before confirming an experience.",
@@ -209,11 +197,7 @@ export const travlocalContent = {
       "Meeting Verification",
       "Ratings and Reviews",
       "Reporting"
-    ],
-    "placeholder": {
-      "title": "Detailed booking sequence",
-      "description": "Add close-up date-selection and booking-review screens, annotated to show guide details, meeting location, and confirmation."
-    }
+    ]
   },
   "uiDesign": {
     "eyebrow": "08 / THE CASE STUDY",
@@ -242,40 +226,8 @@ export const travlocalContent = {
       "Travel Illustrations"
     ]
   },
-  "mobileInterface": {
-    "eyebrow": "09 / THE CASE STUDY",
-    "title": "Mobile App Interface",
-    "headings": [
-      "Organizing the Main Navigation",
-      "UI Components"
-    ],
-    "paragraphs": [
-      "The app design includes four main navigation areas:",
-      "Browse destinations, tours, and local experiences.",
-      "View points, available rewards, and ticket-related benefits.",
-      "Provide a space for communication between users.",
-      "View personal information, travel activity, tickets, and achievements.",
-      "The navigation design highlights the selected destination using a yellow circular background.",
-      "We also created interface components for:",
-      "Using repeated components helped establish a consistent visual style across the app concept."
-    ],
-    "subheadings": [
-      "Explore",
-      "Rewards",
-      "Chats",
-      "Profile"
-    ],
-    "items": [
-      "Navigation states.",
-      "Buttons and status messages.",
-      "Multi-step progress indicators.",
-      "Search and chat inputs.",
-      "Reward cards.",
-      "Achievement and challenge elements."
-    ]
-  },
   "landingPage": {
-    "eyebrow": "10 / THE CASE STUDY",
+    "eyebrow": "09 / THE CASE STUDY",
     "title": "Landing Page Design",
     "headings": [
       "Introducing TravLocal to New Users"
@@ -292,7 +244,7 @@ export const travlocalContent = {
     ]
   },
   "businessModel": {
-    "eyebrow": "11 / THE CASE STUDY",
+    "eyebrow": "10 / THE CASE STUDY",
     "title": "Business Model",
     "headings": [
       "Exploring How the Platform Could Be Supported"
@@ -314,7 +266,7 @@ export const travlocalContent = {
     ]
   },
   "outcome": {
-    "eyebrow": "12 / THE CASE STUDY",
+    "eyebrow": "11 / THE CASE STUDY",
     "title": "Project Outcome",
     "headings": [
       "A Mobile App and Landing Page Concept",
@@ -338,7 +290,7 @@ export const travlocalContent = {
     ]
   },
   "reflection": {
-    "eyebrow": "13 / THE CASE STUDY",
+    "eyebrow": "12 / THE CASE STUDY",
     "title": "Reflection and Next Steps",
     "headings": [
       "What This Project Helped Us Explore",
@@ -441,10 +393,6 @@ export const travlocalProject = {
     {
       "id": "ui-design",
       "title": travlocalContent.uiDesign.title
-    },
-    {
-      "id": "mobile-interface",
-      "title": travlocalContent.mobileInterface.title
     },
     {
       "id": "landing-page",

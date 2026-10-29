@@ -49,3 +49,29 @@ dd { margin: 0; }
  .section { padding-block: 3rem; }
 }
 @media (max-width: 400px) { .contents, .exchange-flow { grid-template-columns: 1fr; } }
+
+.full-width { max-width: none; }
+.needs-grid, .difference-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-block: 2rem; }
+.insight-card { padding: 1.5rem; border: 1px solid #83afaf; border-radius: .75rem; }
+.insight-card h4 { margin-top: 0; }
+.exchange-flow { list-style: none; }
+.exchange-flow h4 { margin-top: 0; }
+.exchange-flow + p { margin-top: 1.5rem; }
+.persona-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; margin-top: 2rem; }
+.persona-preview { padding: 0; border: 1px solid #83afaf; border-radius: .75rem; overflow: hidden; color: inherit; background: white; cursor: pointer; font: inherit; text-align: left; }
+.persona-preview img { height: 16rem; object-fit: cover; object-position: top; border-radius: 0; }
+.persona-preview > span { display: flex; justify-content: space-between; padding: 1rem; }
+.persona-preview:focus-visible { outline: 3px solid #0074e1; outline-offset: 4px; }
+.persona-dialog { margin: auto; width: min(1000px, 94vw); max-height: 90svh; overflow: auto; padding: 1.5rem; border: 0; border-radius: 1rem; color: #002b39; background: #f7faf9; }
+.persona-dialog::backdrop { background: rgb(0 20 30 / .8); }
+.persona-dialog-header { display: flex; gap: 1rem; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+.persona-dialog-header h2 { font-size: 1.25rem; margin: 0; }
+.persona-dialog button { padding: .75rem 1rem; border: 1px solid currentColor; border-radius: .4rem; background: white; color: inherit; cursor: pointer; font: inherit; }
+.journey-flow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; list-style: none; padding: 0; margin-top: 2rem; }
+.journey-flow li { margin: 0; padding: 1.5rem; border-top: 4px solid #ffbf22; border-radius: .5rem; background: #002b39; color: white; }
+.journey-flow h4 { margin-top: 0; }
+.feature-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem; align-items: center; padding-block: 2.5rem; border-bottom: 1px solid #aacaca; }
+.feature-row > * { min-width: 0; }
+.feature-row h3 { margin-top: 0; }
+.feature-image { margin: 0; }
+@media (max-width: 750px) { .needs-grid, .difference-grid, .persona-grid, .feature-row { grid-template-columns: 1fr; } .journey-flow { grid-template-columns: 1fr; } .persona-preview img { height: 14rem; } }

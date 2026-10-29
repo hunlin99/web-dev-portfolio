@@ -4,7 +4,7 @@ Route: `/traclocal` (the existing `/tracLocal` alias remains). The display name 
 
 ## Editing
 
-- `traclocal.content.ts`: editable copy grouped by each of the 13 section categories, hero metadata, and contents titles. Arrays follow their explicit HTML bindings.
+- `traclocal.content.ts`: editable copy grouped by each of the 12 active section categories, hero metadata, and contents titles. Arrays follow their explicit HTML bindings.
 - `traclocal.component.html`: one independently editable section per topic. This is not a generic section renderer.
 - `traclocal.component.css`: responsive navy/teal presentation, image slots, and ticket-exchange diagram.
 - `/public/images/TravLocal/`: published images. Keep Illustrator source outside this public folder; files here are deployed publicly.
@@ -17,16 +17,17 @@ Hero and closing presentation use the product showcase; Overview uses the mobile
 
 ## Image placeholders to replace
 
-Each slot is visibly labeled **IMAGE PLACEHOLDER**. No broken image requests or invented research graphics are used.
+The remaining comparison slot is visibly labeled **IMAGE PLACEHOLDER**. No broken image requests or invented research graphics are used.
 
 | Section | Slot ID | Suggested replacement | Priority |
 | --- | --- | --- | --- |
-| Understanding the Target Audience | `audience-profile` | Original audience profile or supporting illustration from pitch-deck page 9 | Recommended |
 | Competitive Analysis | `competitive-comparison` | Original team comparison table from pitch-deck page 11, with date and source context | Needed to show comparison evidence |
-| User Journey | `annotated-journey` | Labeled flow: discovery → selection → availability → booking review → meeting verification → recap | Recommended |
-| Key Features | `booking-sequence` | Readable date-selection and booking-review close-ups showing guide details and meeting location | Recommended |
 
-Add images to `/public/images/TravLocal/` and replace the corresponding `<figure data-placeholder="…">` in HTML with a real image and caption. Use accurate width/height and meaningful alt text; keep accompanying copy in its content category. The pitch deck itself was not supplied, so its audience/comparison pages could not be extracted. A detailed booking-review sequence was not available as a standalone readable image in the attached artboards. Optional discovery/reward/verification close-ups can further strengthen the Key Features section; the current Overview already provides a supplied screen overview.
+Add images to `/public/images/TravLocal/` and replace the corresponding `<figure data-placeholder="…">` in HTML with a real image and caption. Use accurate width/height and meaningful alt text; keep accompanying copy in its content category. The audience placeholder has been replaced by the supplied `user1.png` and `user2.png`, opened from lightweight thumbnails in a native modal dialog. The journey placeholder has been replaced with a six-step HTML flow. Key Features now displays four supplied feature images; Personalized Discovery is omitted per the author's comment. A separate booking-detail slot is no longer shown because the four illustrated features now carry that section. Only the original competitive comparison remains missing.
+
+## Review updates
+
+The author's removed/commented wording remains out of the rendered page. Resolved comments were removed. User Needs and differentiation use four cards each; persona dialogs support native Escape dismissal and keyboard focus; Mobile App Interface was removed as a separate section because its artwork is now in UI Design. The contents and numbering cover 12 active sections.
 
 ## Content scope
 

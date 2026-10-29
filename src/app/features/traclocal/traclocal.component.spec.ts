@@ -11,11 +11,11 @@ describe('TravLocal case study', () => {
     return RouterTestingHarness.create('/traclocal');
   }
 
-  it('renders the 13-section student concept, supplied artwork, and four labeled image slots', async () => {
+  it('renders the 12-section student concept, supplied artwork, and remaining comparison slot', async () => {
     const harness = await openPage();
     const page = harness.routeNativeElement!;
     expect(page.querySelector('h1')?.textContent).toBe('TravLocal — Travel Like a Local');
-    expect(travlocalProject.sections.length).toBe(13);
+    expect(travlocalProject.sections.length).toBe(12);
     for (const section of travlocalProject.sections) expect(page.querySelector(`#${section.id}`)).not.toBeNull();
     expect(page.textContent).toContain('Student UX/UI Design Concept');
     expect(page.textContent).toContain('Ling Chang & Nancy Huang');
@@ -25,8 +25,14 @@ describe('TravLocal case study', () => {
     expect(page.textContent).not.toContain('React.js');
     expect(page.textContent).not.toContain('Codex may');
     expect(page.textContent).not.toContain('[IMAGE:');
-    expect(page.querySelectorAll('[data-placeholder]').length).toBe(4);
+    expect(page.querySelectorAll('[data-placeholder]').length).toBe(1);
     expect(page.querySelectorAll('.exchange-flow li').length).toBe(4);
+    expect(page.querySelectorAll('.needs-grid .insight-card').length).toBe(4);
+    expect(page.querySelectorAll('.difference-grid .insight-card').length).toBe(4);
+    expect(page.querySelectorAll('.journey-flow li').length).toBe(6);
+    expect(page.querySelectorAll('.feature-row img').length).toBe(4);
+    expect(page.querySelector('#mobile-interface')).toBeNull();
+    expect(page.textContent).not.toContain('Feature 1 — Personalized Discovery');
     for (const image of Array.from(page.querySelectorAll<HTMLImageElement>('img'))) {
       expect(image.alt).toBeTruthy();
       expect(image.width).toBeGreaterThan(0);
@@ -51,4 +57,26 @@ describe('TravLocal case study', () => {
     await harness.navigateByUrl('/tracLocal');
     expect(router.url).toBe('/traclocal');
   });
+  it('opens each persona thumbnail as its full profile and closes it accessibly', async () => {
+    const harness = await openPage();
+    const page = harness.routeNativeElement!;
+    const dialog = page.querySelector<HTMLDialogElement>('dialog')!;
+    const previews = page.querySelectorAll<HTMLButtonElement>('.persona-preview');
+    expect(previews.length).toBe(2);
+    for (let i = 0; i < previews.length; i++) {
+      previews[i].click();
+      harness.fixture.detectChanges();
+      expect(dialog.open).toBeTrue();
+      const image = dialog.querySelector<HTMLImageElement>('img')!;
+      expect(image.getAttribute('src')).toBe(`/images/TravLocal/user${i + 1}.png`);
+      expect((await fetch(image.src)).ok).toBeTrue();
+      const closed = new Promise<void>(resolve => dialog.addEventListener('close', () => resolve(), { once: true }));
+      dialog.querySelector<HTMLButtonElement>('button')!.click();
+      await closed;
+      harness.fixture.detectChanges();
+      expect(dialog.open).toBeFalse();
+      expect(dialog.querySelector('img')).toBeNull();
+    }
+  });
+
 });
