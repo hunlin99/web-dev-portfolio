@@ -31,6 +31,7 @@
                     section.title }}</a>
         }
     </nav>
+    <!-- Make overview -->
     <section id="overview" class="section">
         <div class="container">
             <div class="section-copy">
@@ -40,14 +41,14 @@
                 <p>{{ content.overview.paragraphs[0] }}</p>
                 <p>{{ content.overview.paragraphs[1] }}</p>
                 <p>{{ content.overview.paragraphs[2] }}</p>
-                <p>{{ content.overview.paragraphs[3] }}</p>
+                <!-- <p>{{ content.overview.paragraphs[3] }}</p> -->
             </div>
-            <!-- <figure class="case-image">
-                <img src="/images/TravLocal/mobile-interface.webp"
+            <figure class="case-image">
+                <img src="/images/TravLocal/main page showcase-02-04.png"
                     alt="TravLocal concept screens for sign-in, rewards, discovery, booking, chats, and profile"
                     width="2200" height="2071" loading="lazy" decoding="async">
                 <figcaption>Selected mobile interface concepts.</figcaption>
-            </figure> -->
+            </figure>
         </div>
     </section>
 
@@ -186,10 +187,11 @@
                         <p>{{ content.competitiveAnalysis.paragraphs[6] }}</p>
                     </article>
                 </div>
-                <p>{{ content.competitiveAnalysis.paragraphs[7] }}</p>
-                <p>{{ content.competitiveAnalysis.paragraphs[8] }}</p>
+                <!-- <p>{{ content.competitiveAnalysis.paragraphs[7] }}</p>
+                <p>{{ content.competitiveAnalysis.paragraphs[8] }}</p> -->
             </div>
-            <p class="comparison-hint" id="comparison-scroll-hint">Scroll horizontally on smaller screens to compare all four platforms.</p>
+            <p class="comparison-hint" id="comparison-scroll-hint">Scroll horizontally on smaller screens to compare all
+                four platforms.</p>
             <div class="comparison-scroll" role="region" aria-label="Competitive analysis table"
                 aria-describedby="comparison-scroll-hint" tabindex="0">
                 <table class="comparison-table">
@@ -198,26 +200,28 @@
                         <tr>
                             <th scope="col">Features</th>
                             @for (platform of content.competitiveAnalysis.table.columns; track platform) {
-                                <th scope="col">{{ platform }}</th>
+                            <th scope="col">{{ platform }}</th>
                             }
                         </tr>
                     </thead>
                     <tbody>
                         @for (row of content.competitiveAnalysis.table.rows; track row.feature) {
-                            <tr>
-                                <th scope="row">{{ row.feature }}</th>
-                                @for (value of row.values; track $index) {
-                                    <td>
-                                        @if (value === true) {
-                                            <span class="comparison-status included"><span aria-hidden="true">✓</span><span class="sr-only">Included</span></span>
-                                        } @else if (value === false) {
-                                            <span class="comparison-status excluded"><span aria-hidden="true">×</span><span class="sr-only">Not included</span></span>
-                                        } @else {
-                                            {{ value }}
-                                        }
-                                    </td>
+                        <tr>
+                            <th scope="row">{{ row.feature }}</th>
+                            @for (value of row.values; track $index) {
+                            <td>
+                                @if (value === true) {
+                                <span class="comparison-status included"><span aria-hidden="true">✓</span><span
+                                        class="sr-only">Included</span></span>
+                                } @else if (value === false) {
+                                <span class="comparison-status excluded"><span aria-hidden="true">×</span><span
+                                        class="sr-only">Not included</span></span>
+                                } @else {
+                                {{ value }}
                                 }
-                            </tr>
+                            </td>
+                            }
+                        </tr>
                         }
                     </tbody>
                 </table>
@@ -235,16 +239,18 @@
                 <p>{{ content.journey.paragraphs[1] }}</p>
                 <h3>{{ content.journey.headings[1] }}</h3>
             </div>
-            <ol class="journey-flow" aria-label="Traveler journey from discovery to tour recap">
+            <!-- Replace with User_Flow_Full.png. When mobile screen,switch to User_Flow_mobile-1.png and User_Flow_mobile-2.png-->
+            <!-- <ol class="journey-flow" aria-label="Traveler journey from discovery to tour recap">
                 @for (step of content.journey.subheadings; track step; let i = $index) {
                 <li>
                     <h4>{{ step }}</h4>
                     <p>{{ content.journey.paragraphs[i + 2] }}</p>
                 </li>
                 }
-            </ol>
+            </ol> -->
         </div>
     </section>
+    <!--Descriptions of Key Features are way too long, make sure they are straight to the point and be brief and concise-->
     <section id="features" class="section">
         <div class="container">
             <div class="section-copy">
@@ -358,11 +364,12 @@
                 <h3>{{ content.landingPage.headings[0] }}</h3>
                 <p>{{ content.landingPage.paragraphs[0] }}</p>
                 <p>{{ content.landingPage.paragraphs[1] }}</p>
-                <p>{{ content.landingPage.paragraphs[2] }}</p>
+                <!-- <p>{{ content.landingPage.paragraphs[2] }}</p>
                 <h4>{{ content.landingPage.subheadings[0] }}</h4>
                 <p>{{ content.landingPage.paragraphs[3] }}</p>
-                <p>{{ content.landingPage.paragraphs[4] }}</p>
+                <p>{{ content.landingPage.paragraphs[4] }}</p> -->
             </div>
+            <!-- Remove image, provide a same link as hero section. Direcly link to landing page -->
             <figure class="case-image">
                 <img src="/images/TravLocal/landing-page.webp"
                     alt="TravLocal landing-page concept shown on a laptop mockup" width="2200" height="1252"
@@ -389,7 +396,7 @@
                 <p>{{ content.businessModel.paragraphs[4] }}</p>
                 <h4>{{ content.businessModel.subheadings[3] }}</h4>
                 <p>{{ content.businessModel.paragraphs[5] }}</p>
-                <p>{{ content.businessModel.paragraphs[6] }}</p>
+                <!-- <p>{{ content.businessModel.paragraphs[6] }}</p> -->
             </div>
         </div>
     </section>
