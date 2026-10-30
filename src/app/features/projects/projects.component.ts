@@ -19,8 +19,8 @@ export class ProjectsComponent {
   ];
 
   experienceProjects = [
-    { title: "Cuisines Around Us", type: "Web Application Development", Skills: "React, Bootstrap, SQL", year: "2024", image: "images/Cuisines-Around-Us/cuisines-around-us.png", link: "/cuisines-around-us" },
     { title: "TravLocal", type: "Travel App UX/UI Design", Skills: "Figma, User Journeys, Interaction Design, UI Design, Product Pitch", year: "2025", image: "images/TravLocal/TravLocal-image.jpg", link: "/traclocal" },
+    { title: "Cuisines Around Us", type: "Web Application Development", Skills: "React, Bootstrap, SQL", year: "2024", image: "images/Cuisines-Around-Us/cuisines-around-us.png", link: "/cuisines-around-us" },
     { title: "Health Pocket", type: "Mobile App UI Design", Skills: "Figma, Interactive Prototype", year: "2022", image: "images/Health-Pocket/health-pocket-imgpng.png", link: "/health-pocket" }
   ];
 

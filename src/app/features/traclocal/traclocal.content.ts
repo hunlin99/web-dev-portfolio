@@ -216,28 +216,14 @@ export const travlocalContent = {
   },
   "journey": {
     "eyebrow": "06 / THE CASE STUDY",
-    "title": "User Journey",
+    "title": "User Flow",
     "headings": [
-      "From Discovering a City to Booking a Local Experience",
-      "Main Journey"
+      "User Flow — Traveler & Guide Matching"
     ],
     "paragraphs": [
-      "We explored a traveler journey to connect the platform's main features into one experience.",
-      "The mobile design includes screens for discovering destinations, selecting dates, reviewing bookings, and preparing to meet a guide.",
-      "The traveler explores destinations and available local experiences.",
-      "The traveler selects a tour based on personal interests.",
-      "The traveler chooses a date for the experience.",
-      "The traveler reviews the guide's information, rating, tour details, and meeting location.",
-      "The app provides information related to meeting the guide, including a proposed verification-code feature.",
-      "After the tour, the user can view a tour recap and continue exploring the platform."
-    ],
-    "subheadings": [
-      "01 — Discover a Destination",
-      "02 — Choose an Experience",
-      "03 — Select Availability",
-      "04 — Review the Booking",
-      "05 — Prepare to Meet",
-      "06 — Complete the Experience"
+      "I designed a user flow connecting travelers and local guides through availability matching.",
+      "The app checks both users' schedules and offers a waitlist or return to Explore if no match is found.",
+      "After a successful match, users verify their meeting, complete the experience, and leave feedback. Guides earn tickets for future travel."
     ]
   },
   "features": {
