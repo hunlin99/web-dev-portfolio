@@ -22,7 +22,7 @@ describe('ProjectsComponent', () => {
   it('puts DC3 and AMPA first and links each visible project to its case study', () => {
     const page: HTMLElement = fixture.nativeElement;
     expect(Array.from(page.querySelectorAll('.content-block h3')).map(h => h.textContent?.trim()))
-      .toEqual(['DC3: Viral Menace', 'AMPA Project', 'Cuisines Around Us', 'TracLocal', 'Health Pocket']);
+      .toEqual(['DC3: Viral Menace', 'AMPA Project', 'TravLocal', 'Cuisines Around Us', 'Health Pocket']);
     for (const path of ['/dc3-viral-menace', '/ampa', '/cuisines-around-us', '/traclocal', '/health-pocket']) {
       expect(page.querySelector(`a[href="${path}"]`)).withContext(path).not.toBeNull();
     }

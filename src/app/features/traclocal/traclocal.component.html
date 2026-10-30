@@ -1,115 +1,431 @@
-<main class="body">
+<main>
     <app-project-detail-page-header></app-project-detail-page-header>
-    <section class="cover">
-        <div class="cover-container">
-            <div class="cover-content">
-                <h1 class="limelight-regular">TracLocal App</h1>
-                <p class="limelight-regular">App design and web Development</p>
-                <div class="external-link">
-                    <a href="https://github.com/hunlin99/TravLocal" class="limelight-regular"><i class="fa fa-github"
-                            style="font-size:24px"></i>&ensp; Code on Github</a>&emsp;
-                    <a href="https://hunlin99.github.io/TravLocal/" target="_blank" rel="noopener noreferrer"
-                        class="limelight-regular"><i class="fa fa-link" style="font-size:24px"></i>&ensp; Visit
-                        website</a>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">STUDIO PRACTICE 2 · STUDENT DESIGN CONCEPT</p>
+                    <h1>{{ project.title }}</h1>
+                    <p class="lead">{{ project.summary }}</p>
                 </div>
+                <figure>
+                    <img [src]="project.heroImage" [width]="project.heroWidth" [height]="project.heroHeight"
+                        alt="TravLocal mobile interface and landing-page design concept" fetchpriority="high">
+                </figure>
+                <app-project-website-button class="hero-website-button" [href]="project.website"
+                    [label]="project.visitLabel"></app-project-website-button>
             </div>
-            <img src="/images/TravLocal/traclocal-mockup-img.png" alt="TracLocal responsive app mockup"
-                fetchpriority="high">
+            <dl class="metadata">
+                @for (item of project.metadata; track item.label) {
+                <div>
+                    <dt>{{ item.label }}</dt>
+                    <dd>{{ item.value }}</dd>
+                </div>
+                }
+            </dl>
         </div>
     </section>
-    <section class="description">
-        <div class="description-container">
-            <h2 class=" limelight-regular">APP Main Pages</h2>
-            <hr>
-            <img class="logo-design" src="/images/TravLocal/main page showcase-02-04.png"
-                alt="TracLocal main app screens" loading="lazy" decoding="async">
-            <h2 class="limelight-regular">Problem Statement</h2>
-            <hr>
-            <p>Travelers often struggle to plan itineraries in unfamiliar cities, with tour groups offering experiences
-                that
-                feel generic, commercialized, and disconnected from local culture. This results in shallow interactions
-                and
-                limited cultural understanding. At the same time, there’s increasing demand for culturally respectful
-                travel
-                that benefits both visitors and hosts. The challenge is to deliver authentic immersion while ensuring
-                convenience, safety, and reliability.</p>
-            <h2 class="limelight-regular">Solution Overview</h2>
-            <hr>
-            <p>This platform connects travelers with local guides through a ticket-based exchange, replacing monetary
-                transactions with a community-driven model. The system offers personalized tours, fostering authentic
-                cultural experiences while empowering locals. Engagement is enhanced through rewards programs,
-                partnerships,
-                referrals, and gamified challenges, while built-in safety measures ensure trust. The result is a secure,
-                immersive, and mutually beneficial way to explore and share cultures.</p>
-            <h2 class="limelight-regular">Technologies Used</h2>
-            <hr>
-            <p>React.js for building the user interface.</p>
-            <p>Next.js for server-side rendering and routing.</p>
-            <p>Bootstrap 5 for responsive design and prebuilt UI components.</p>
-            <p>JavaScript (ES6+) for logic and interactivity.</p>
-            <p>HTML5/CSS3 for structure and layout.</p>
-            <p>GSAP (GreenSock Animation Platform) for advanced animations and scroll effects.</p>
-            <h2 class=" limelight-regular">App Main Features</h2>
-            <hr>
-            <div class="features-container">
-                <div class="features-block">
-                    <h3>Reciprocal Ticket System</h3>
-                    <p>Tickets replace money, fostering community participation and reducing costs.</p>
-                </div>
-                <div class="features-block">
-                    <h3>Personalized Matching</h3>
-                    <p>Match travelers and guides based on interests, hobbies, preferred activities, and languages.</p>
-                </div>
-                <div class="features-block">
-                    <h3>Flexibility and Control</h3>
-                    <p>Tours can be fully customized to fit traveler preferences (sightseeing, food, history, shopping,
-                        etc.).</p>
-                </div>
-                <div class="features-block">
-                    <h3>Support for Local Businesses</h3>
-                    <p>Partnerships with small businesses and attractions ensure discounts and exclusive access to
-                        hidden
-                        gems.</p>
-                </div>
+    <nav class="contents container" aria-label="Case study sections">
+        @for (section of project.sections; track section.id; let i = $index) {
+        <a routerLink="/traclocal" [fragment]="section.id"><span>{{ i + 1 < 10 ? '0' : '' }}{{ i + 1 }}</span> {{
+                    section.title }}</a>
+        }
+    </nav>
+    <section id="overview" class="section">
+        <div class="container">
+            <div class="section-copy">
+                <p class="eyebrow">{{ content.overview.eyebrow }}</p>
+                <h2>{{ content.overview.title }}</h2>
+                <h3>{{ content.overview.headings[0] }}</h3>
+                <p>{{ content.overview.paragraphs[0] }}</p>
+                <p>{{ content.overview.paragraphs[1] }}</p>
+                <p>{{ content.overview.paragraphs[2] }}</p>
+                <!-- <p>{{ content.overview.paragraphs[3] }}</p> -->
+            </div>
+            <figure class="case-image">
+                <img src="/images/TravLocal/main page showcase-02-04.png"
+                    alt="TravLocal concept screens for sign-in, rewards, discovery, booking, chats, and profile"
+                    width="2200" height="2071" loading="lazy" decoding="async">
+                <figcaption>Selected mobile interface concepts.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section id="problem" class="section warm">
+        <div class="container">
+            <div class="section-copy">
+                <p class="eyebrow">{{ content.problem.eyebrow }}</p>
+                <h2>{{ content.problem.title }}</h2>
+                <h3>{{ content.problem.headings[0] }}</h3>
+                <!-- <p>{{ content.problem.paragraphs[0] }}</p>
+                <p>{{ content.problem.paragraphs[1] }}</p>
+                <p>{{ content.problem.paragraphs[2] }}</p> -->
+                <h4>{{ content.problem.subheadings[0] }}</h4>
+                <p>{{ content.problem.paragraphs[3] }}</p>
+                <h4>{{ content.problem.subheadings[1] }}</h4>
+                <p>{{ content.problem.paragraphs[4] }}</p>
+                <h4>{{ content.problem.subheadings[2] }}</h4>
+                <p>{{ content.problem.paragraphs[5] }}</p>
+                <h3>{{ content.problem.headings[1] }}</h3>
+                <p>{{ content.problem.paragraphs[6] }}</p>
             </div>
         </div>
     </section>
 
-    <section class="design-system">
-        <div class="design-system-container">
-            <h2 class=" limelight-regular">Logo Design</h2>
-            <hr>
-            <img class="logo-design" src="/images/TravLocal/logo.jpg" alt="TracLocal logo" loading="lazy"
-                decoding="async">
-            <h2 class=" limelight-regular">UI Design</h2>
-            <hr>
-            <img class="ui-design" src="/images/TravLocal/UI.jpg" alt="TracLocal user interface design" loading="lazy"
-                decoding="async">
+    <section id="solution" class="section dark">
+        <div class="container">
+            <div class="section-copy">
+                <p class="eyebrow">{{ content.solution.eyebrow }}</p>
+                <h2>{{ content.solution.title }}</h2>
+                <h3>{{ content.solution.headings[0] }}</h3>
+                <p>{{ content.solution.paragraphs[0] }}</p>
+                <p>{{ content.solution.paragraphs[1] }}</p>
+                <h4>{{ content.solution.subheadings[0] }}</h4>
+                <p>{{ content.solution.paragraphs[2] }}</p>
+                <h3>{{ content.solution.headings[1] }}</h3>
+
+            </div>
+            <ol class="exchange-flow" aria-label="How the proposed ticket exchange works">
+                <li>
+                    <h4>{{ content.solution.subheadings[1] }}</h4>
+                    <p>{{ content.solution.paragraphs[3] }}</p>
+                </li>
+                <li>
+                    <h4>{{ content.solution.subheadings[2] }}</h4>
+                    <p>{{ content.solution.paragraphs[4] }}</p>
+                </li>
+                <li>
+                    <h4>{{ content.solution.subheadings[3] }}</h4>
+                    <p>{{ content.solution.paragraphs[5] }}</p>
+                </li>
+                <li>
+                    <h4>{{ content.solution.subheadings[4] }}</h4>
+                    <p>{{ content.solution.paragraphs[6] }}</p>
+                </li>
+            </ol>
+            <p>{{ content.solution.paragraphs[7] }}</p>
         </div>
     </section>
-    <section class="team-member">
-        <div class="team-member-container">
-            <h2>Design and Development Team</h2>
-            <hr>
-            <div class="team-grid-container">
-                <div class="member-block">
-                    <img src="/images/TravLocal/profile picture-nancy.jpg" alt="Nancy Huang" loading="lazy"
-                        decoding="async">
-                    <div>
-                        <h3>Nancy Huang</h3>
-                        <p>Project designer/App Interface Designer</p>
-                    </div>
-                </div>
-                <div class="member-block">
-                    <img src="/images/TravLocal/profile picture-ling.jpg" alt="Ling Chang" loading="lazy"
-                        decoding="async">
-                    <div>
-                        <h3>Ling Chang</h3>
-                        <p>Project designer/Web Developer</p>
-                    </div>
 
+    <section id="audience" class="section">
+        <div class="container">
+            <div class="section-copy full-width">
+                <p class="eyebrow">{{ content.audience.eyebrow }}</p>
+                <h2>{{ content.audience.title }}</h2>
+                <h3>{{ content.audience.headings[0] }}</h3>
+                <ul>
+                    <li>{{ content.audience.items[0] }}</li>
+                    <li>{{ content.audience.items[1] }}</li>
+                    <li>{{ content.audience.items[2] }}</li>
+                    <li>{{ content.audience.items[3] }}</li>
+                    <li>{{ content.audience.items[4] }}</li>
+                </ul>
+                <h3>{{ content.audience.headings[1] }}</h3>
+                <p>{{ content.audience.paragraphs[2] }}</p>
+                <div class="needs-grid">
+                    <article class="insight-card">
+                        <h4>{{ content.audience.subheadings[0] }}</h4>
+                        <p>{{ content.audience.paragraphs[3] }}</p>
+                    </article>
+                    <article class="insight-card">
+                        <h4>{{ content.audience.subheadings[1] }}</h4>
+                        <p>{{ content.audience.paragraphs[4] }}</p>
+                    </article>
+                    <article class="insight-card">
+                        <h4>{{ content.audience.subheadings[2] }}</h4>
+                        <p>{{ content.audience.paragraphs[5] }}</p>
+                    </article>
+                    <article class="insight-card">
+                        <h4>{{ content.audience.subheadings[3] }}</h4>
+                        <p>{{ content.audience.paragraphs[6] }}</p>
+                    </article>
                 </div>
+            </div>
+            <div class="persona-grid" aria-label="TravLocal persona profiles">
+                @for (persona of personas; track persona.id) {
+                <button type="button" class="persona-preview" aria-haspopup="dialog"
+                    [attr.aria-label]="'Open persona ' + persona.id + ' full profile'"
+                    (click)="openPersona(persona, personaDialog)">
+                    <img [src]="persona.thumbnail" [alt]="'TravLocal persona ' + persona.id + ' preview'" loading="lazy"
+                        decoding="async">
+                    <span>View persona {{ persona.id }} <span aria-hidden="true">↗</span></span>
+                </button>
+                }
             </div>
         </div>
     </section>
+
+    <section id="competitive-analysis" class="section warm">
+        <div class="container">
+            <div class="section-copy full-width">
+                <p class="eyebrow">{{ content.competitiveAnalysis.eyebrow }}</p>
+                <h2>{{ content.competitiveAnalysis.title }}</h2>
+                <h3>{{ content.competitiveAnalysis.headings[0] }}</h3>
+                <p>{{ content.competitiveAnalysis.paragraphs[0] }}</p>
+                <ul>
+                    <li>{{ content.competitiveAnalysis.items[0] }}</li>
+                    <li>{{ content.competitiveAnalysis.items[1] }}</li>
+                    <li>{{ content.competitiveAnalysis.items[2] }}</li>
+                </ul>
+                <h3>{{ content.competitiveAnalysis.headings[1] }}</h3>
+                <div class="difference-grid">
+                    <article class="insight-card">
+                        <h4>{{ content.competitiveAnalysis.subheadings[0] }}</h4>
+                        <p>{{ content.competitiveAnalysis.paragraphs[3] }}</p>
+                    </article>
+                    <article class="insight-card">
+                        <h4>{{ content.competitiveAnalysis.subheadings[1] }}</h4>
+                        <p>{{ content.competitiveAnalysis.paragraphs[4] }}</p>
+                    </article>
+                    <article class="insight-card">
+                        <h4>{{ content.competitiveAnalysis.subheadings[2] }}</h4>
+                        <p>{{ content.competitiveAnalysis.paragraphs[5] }}</p>
+                    </article>
+                    <article class="insight-card">
+                        <h4>{{ content.competitiveAnalysis.subheadings[3] }}</h4>
+                        <p>{{ content.competitiveAnalysis.paragraphs[6] }}</p>
+                    </article>
+                </div>
+                <!-- <p>{{ content.competitiveAnalysis.paragraphs[7] }}</p>
+                <p>{{ content.competitiveAnalysis.paragraphs[8] }}</p> -->
+            </div>
+            <p class="comparison-hint" id="comparison-scroll-hint">Scroll horizontally on smaller screens to compare all
+                four platforms.</p>
+            <div class="comparison-scroll" role="region" aria-label="Competitive analysis table"
+                aria-describedby="comparison-scroll-hint" tabindex="0">
+                <table class="comparison-table">
+                    <caption>{{ content.competitiveAnalysis.table.caption }}</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Features</th>
+                            @for (platform of content.competitiveAnalysis.table.columns; track platform) {
+                            <th scope="col">{{ platform }}</th>
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (row of content.competitiveAnalysis.table.rows; track row.feature) {
+                        <tr>
+                            <th scope="row">{{ row.feature }}</th>
+                            @for (value of row.values; track $index) {
+                            <td>
+                                @if (value === true) {
+                                <span class="comparison-status included"><span aria-hidden="true">✓</span><span
+                                        class="sr-only">Included</span></span>
+                                } @else if (value === false) {
+                                <span class="comparison-status excluded"><span aria-hidden="true">×</span><span
+                                        class="sr-only">Not included</span></span>
+                                } @else {
+                                {{ value }}
+                                }
+                            </td>
+                            }
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section id="journey" class="section dark">
+        <div class="container">
+            <div class="section-copy">
+                <p class="eyebrow">{{ content.journey.eyebrow }}</p>
+                <h2>{{ content.journey.title }}</h2>
+                <h3>{{ content.journey.headings[0] }}</h3>
+                <p>{{ content.journey.paragraphs[0] }}</p>
+                <p>{{ content.journey.paragraphs[1] }}</p>
+                <p>{{ content.journey.paragraphs[2] }}</p>
+            </div>
+            <figure class="case-image journey-desktop">
+                <img src="/images/TravLocal/User_Flow_Full.png" width="4001" height="758"
+                    alt="TravLocal user flow from discovery and guide matching to booking and tour completion"
+                    loading="lazy" decoding="async">
+            </figure>
+            <div class="journey-mobile">
+                <figure class="case-image">
+                    <img src="/images/TravLocal/User_Flow_mobile-1.png" width="2001" height="842"
+                        alt="TravLocal user flow, part 1: discovery, guide matching, and booking"
+                        loading="lazy" decoding="async">
+                </figure>
+                <figure class="case-image">
+                    <img src="/images/TravLocal/User_Flow_mobile-2.png.png" width="2001" height="832"
+                        alt="TravLocal user flow, part 2: meeting verification, tour completion, and rewards"
+                        loading="lazy" decoding="async">
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section id="features" class="section">
+        <div class="container">
+            <div class="section-copy">
+                <p class="eyebrow">{{ content.features.eyebrow }}</p>
+                <h2>{{ content.features.title }}</h2>
+            </div>
+            <article class="feature-row">
+                <div>
+                    <h3>{{ content.features.headings[0] }}</h3>
+                    <p>{{ content.features.paragraphs[0] }}</p>
+                </div>
+                <figure class="feature-image">
+                    <img src="/images/TravLocal/feature-Match-with-Verified-Locals.png" [alt]="content.features.headings[0]"
+                        width="2084" height="2084" loading="lazy" decoding="async">
+                </figure>
+            </article>
+            <article class="feature-row">
+                <div>
+                    <h3>{{ content.features.headings[1] }}</h3>
+                    <p>{{ content.features.paragraphs[1] }}</p>
+                </div>
+                <figure class="feature-image">
+                    <img src="/images/TravLocal/feature-No-Money-Needed-Just-Tickets.png" [alt]="content.features.headings[1]"
+                        width="2084" height="2084" loading="lazy" decoding="async">
+                </figure>
+            </article>
+            <article class="feature-row">
+                <div>
+                    <h3>{{ content.features.headings[2] }}</h3>
+                    <p>{{ content.features.paragraphs[2] }}</p>
+                </div>
+                <figure class="feature-image">
+                    <img src="/images/TravLocal/feature-Explore-Earn-Rewards.png" [alt]="content.features.headings[2]"
+                        width="2084" height="2084" loading="lazy" decoding="async">
+                </figure>
+            </article>
+            <article class="feature-row">
+                <div>
+                    <h3>{{ content.features.headings[3] }}</h3>
+                    <p>{{ content.features.paragraphs[3] }}</p>
+                </div>
+                <figure class="feature-image">
+                    <img src="/images/TravLocal/feature-Safety-First.png" [alt]="content.features.headings[3]"
+                        width="2084" height="2084" loading="lazy" decoding="async">
+                </figure>
+            </article>
+        </div>
+    </section>
+    <section id="ui-design" class="section warm">
+        <div class="container">
+            <div class="section-copy">
+                <p class="eyebrow">{{ content.uiDesign.eyebrow }}</p>
+                <h2>{{ content.uiDesign.title }}</h2>
+                <h3>{{ content.uiDesign.headings[0] }}</h3>
+                <p>{{ content.uiDesign.paragraphs[1] }}</p>
+                <h3>{{ content.uiDesign.headings[1] }}</h3>
+                <figure class="case-image">
+                    <img src="/images/TravLocal/UI.jpg"
+                        alt="TravLocal UI components including navigation states, progress indicators, buttons, and reward cards"
+                        width="2084" height="865" loading="lazy" decoding="async">
+                    <figcaption>Reusable navigation, inputs, progress indicators, and status treatments.</figcaption>
+                </figure>
+                <h3>{{ content.uiDesign.headings[2] }}</h3>
+                <p>{{ content.uiDesign.paragraphs[8] }}</p>
+            </div>
+            <figure class="case-image">
+                <img src="/images/TravLocal/logo.jpg"
+                    alt="TravLocal logo and wordmark variations with light and dark mobile branding" width="2084"
+                    height="865" loading="lazy" decoding="async">
+                <figcaption>Identity exploration: a person, location pin, and airplane.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section id="landing-page" class="section">
+        <div class="container">
+            <div class="section-copy">
+                <p class="eyebrow">{{ content.landingPage.eyebrow }}</p>
+                <h2>{{ content.landingPage.title }}</h2>
+                <h3>{{ content.landingPage.headings[0] }}</h3>
+                <p>{{ content.landingPage.paragraphs[0] }}</p>
+                <p>{{ content.landingPage.paragraphs[1] }}</p>
+                <!-- <p>{{ content.landingPage.paragraphs[2] }}</p>
+                <h4>{{ content.landingPage.subheadings[0] }}</h4>
+                <p>{{ content.landingPage.paragraphs[3] }}</p>
+                <p>{{ content.landingPage.paragraphs[4] }}</p> -->
+            </div>
+            <app-project-website-button class="landing-website-button" [href]="project.website"
+                [label]="project.visitLabel"></app-project-website-button>
+        </div>
+    </section>
+
+    <section id="business-model" class="section warm">
+        <div class="container">
+            <div class="section-copy">
+                <p class="eyebrow">{{ content.businessModel.eyebrow }}</p>
+                <h2>{{ content.businessModel.title }}</h2>
+                <h3>{{ content.businessModel.headings[0] }}</h3>
+                <p>{{ content.businessModel.paragraphs[0] }}</p>
+                <p>{{ content.businessModel.paragraphs[1] }}</p>
+                <h4>{{ content.businessModel.subheadings[0] }}</h4>
+                <p>{{ content.businessModel.paragraphs[2] }}</p>
+                <h4>{{ content.businessModel.subheadings[1] }}</h4>
+                <p>{{ content.businessModel.paragraphs[3] }}</p>
+                <h4>{{ content.businessModel.subheadings[2] }}</h4>
+                <p>{{ content.businessModel.paragraphs[4] }}</p>
+                <h4>{{ content.businessModel.subheadings[3] }}</h4>
+                <p>{{ content.businessModel.paragraphs[5] }}</p>
+                <!-- <p>{{ content.businessModel.paragraphs[6] }}</p> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="outcome" class="section dark">
+        <div class="container">
+            <div class="section-copy">
+                <p class="eyebrow">{{ content.outcome.eyebrow }}</p>
+                <h2>{{ content.outcome.title }}</h2>
+                <h3>{{ content.outcome.headings[0] }}</h3>
+                <p>{{ content.outcome.paragraphs[0] }}</p>
+                <h3>{{ content.outcome.headings[1] }}</h3>
+                <ul>
+                    <li>{{ content.outcome.items[0] }}</li>
+                    <li>{{ content.outcome.items[1] }}</li>
+                    <li>{{ content.outcome.items[2] }}</li>
+                    <li>{{ content.outcome.items[3] }}</li>
+                    <li>{{ content.outcome.items[4] }}</li>
+                    <li>{{ content.outcome.items[5] }}</li>
+                    <li>{{ content.outcome.items[6] }}</li>
+                    <li>{{ content.outcome.items[7] }}</li>
+                    <li>{{ content.outcome.items[8] }}</li>
+                </ul>
+                <p>{{ content.outcome.paragraphs[1] }}</p>
+                <p>{{ content.outcome.paragraphs[2] }}</p>
+            </div>
+            <figure class="case-image">
+                <img src="/images/TravLocal/product-showcase.webp"
+                    alt="TravLocal mobile and landing-page concept presentation" width="2200" height="1237"
+                    loading="lazy" decoding="async">
+                <figcaption>Student design concept, not a launched travel platform.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section id="reflection" class="section">
+        <div class="container">
+            <div class="section-copy">
+                <p class="eyebrow">{{ content.reflection.eyebrow }}</p>
+                <h2>{{ content.reflection.title }}</h2>
+                <h3>{{ content.reflection.headings[0] }}</h3>
+                <p>{{ content.reflection.paragraphs[0] }}</p>
+                <h3>{{ content.reflection.headings[1] }}</h3>
+                <p>{{ content.reflection.paragraphs[1] }}</p>
+                <ul>
+                    @for (item of content.reflection.items; track item) { <li>{{ item }}</li> }
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="container page-end"><a class="project-button" routerLink="/projects">← Explore more projects</a></div>
 </main>
+<dialog #personaDialog class="persona-dialog" aria-labelledby="persona-title" (close)="selectedPersona.set(null)"
+    (click)="closeOnBackdrop($event, personaDialog)">
+    <div class="persona-dialog-header">
+        <h2 id="persona-title">TravLocal persona {{ selectedPersona()?.id }}</h2>
+        <button type="button" autofocus (click)="personaDialog.close()" aria-label="Close persona profile">Close
+            ×</button>
+    </div>
+    @if (selectedPersona(); as persona) {
+    <img [src]="persona.image" [alt]="'Full profile for TravLocal persona ' + persona.id">
+    }
+</dialog>
