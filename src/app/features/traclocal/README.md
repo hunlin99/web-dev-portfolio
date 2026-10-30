@@ -19,7 +19,7 @@ Hero and closing presentation use the product showcase; Overview uses the mobile
 
 The final comparison placeholder is replaced by a semantic HTML table transcribed from the supplied comparison image. It includes nine feature rows and four platform columns. Its caption identifies TravLocal features as proposed and competitor entries as the team's original comparison, not a current verified audit. Change the cells in `competitiveAnalysis.table` in the content file. Boolean cells render labeled check/cross indicators; matching cells render text. The table is keyboard-focusable and horizontally scrollable on narrow screens.
 
-There are no image placeholders left. The audience profiles, HTML journey, and illustrated features replace their earlier slots. The hero uses `traclocal-coverimg.jpg`; the image is rendered in a separate layer at 25% opacity over a pale teal base. Hero text, metadata, and the button have no white backing panels, and foreground content remains fully opaque.
+There are no image placeholders left. The audience profiles, responsive user-flow artwork, and illustrated features replace their earlier slots. The hero uses `traclocal-coverimg.jpg`; the image is rendered in a separate layer at 50% opacity over a pale teal base. Hero text, metadata, and the button have no white backing panels, and foreground content remains fully opaque.
 
 ## Review updates
 
@@ -30,3 +30,5 @@ The author's removed/commented wording remains out of the rendered page. Resolve
 This is a Studio Practice 2 student UX/UI design concept from April 2025 by Ling Chang and Nancy Huang. Ticket purchases, rewards, verification, partnerships, and business models are proposed, not validated or launched features. The original competitor comparison is not presented as a current market audit. No interviews, user counts, or measured business outcomes are invented. The existing GitHub Pages URL is labeled as a landing-page prototype, not a production app. The four-step exchange diagram summarizes the supplied concept in HTML. Text in the attachment describing image placement was used as editorial context, not executed as instructions.
 
 Reflection and Next Steps is intentionally brief: two paragraphs and three validation priorities.
+
+The journey uses `User_Flow_Full.png` above 750px and the two supplied `User_Flow_mobile-*` images in order on smaller screens. The landing-page section links to the same prototype as the hero. Key features have one short paragraph each. Persona thumbnails are refreshed from the full profiles.

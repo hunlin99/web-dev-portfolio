@@ -21,7 +21,7 @@ describe('TravLocal case study', () => {
     expect(page.textContent).toContain('Ling Chang & Nancy Huang');
     expect(page.textContent).toContain('April 2025');
     expect(page.textContent).toContain('design proposal rather than a launched product');
-    expect(page.textContent).toContain('not an independently verified current feature audit');
+    expect(page.textContent).toContain('not a current independently verified audit');
     expect(page.textContent).not.toContain('React.js');
     expect(page.textContent).not.toContain('Codex may');
     expect(page.textContent).not.toContain('[IMAGE:');
@@ -38,7 +38,9 @@ describe('TravLocal case study', () => {
     expect(page.querySelectorAll('.exchange-flow li').length).toBe(4);
     expect(page.querySelectorAll('.needs-grid .insight-card').length).toBe(4);
     expect(page.querySelectorAll('.difference-grid .insight-card').length).toBe(4);
-    expect(page.querySelectorAll('.journey-flow li').length).toBe(6);
+    expect(page.querySelectorAll('#journey img').length).toBe(3);
+    expect(page.querySelector('#landing-page img')).toBeNull();
+    expect(page.querySelector<HTMLAnchorElement>('#landing-page app-project-website-button a')?.href).toBe(travlocalProject.website);
     expect(page.querySelectorAll('.feature-row img').length).toBe(4);
     expect(page.querySelector('#mobile-interface')).toBeNull();
     expect(page.textContent).not.toContain('Feature 1 — Personalized Discovery');

@@ -31,7 +31,6 @@
                     section.title }}</a>
         }
     </nav>
-    <!-- Make overview -->
     <section id="overview" class="section">
         <div class="container">
             <div class="section-copy">
@@ -239,18 +238,25 @@
                 <p>{{ content.journey.paragraphs[1] }}</p>
                 <h3>{{ content.journey.headings[1] }}</h3>
             </div>
-            <!-- Replace with User_Flow_Full.png. When mobile screen,switch to User_Flow_mobile-1.png and User_Flow_mobile-2.png-->
-            <!-- <ol class="journey-flow" aria-label="Traveler journey from discovery to tour recap">
-                @for (step of content.journey.subheadings; track step; let i = $index) {
-                <li>
-                    <h4>{{ step }}</h4>
-                    <p>{{ content.journey.paragraphs[i + 2] }}</p>
-                </li>
-                }
-            </ol> -->
+            <figure class="case-image journey-desktop">
+                <img src="/images/TravLocal/User_Flow_Full.png" width="4001" height="758"
+                    alt="TravLocal user flow from discovery and guide matching to booking and tour completion"
+                    loading="lazy" decoding="async">
+            </figure>
+            <div class="journey-mobile">
+                <figure class="case-image">
+                    <img src="/images/TravLocal/User_Flow_mobile-1.png" width="2001" height="842"
+                        alt="TravLocal user flow, part 1: discovery, guide matching, and booking"
+                        loading="lazy" decoding="async">
+                </figure>
+                <figure class="case-image">
+                    <img src="/images/TravLocal/User_Flow_mobile-2.png.png" width="2001" height="832"
+                        alt="TravLocal user flow, part 2: meeting verification, tour completion, and rewards"
+                        loading="lazy" decoding="async">
+                </figure>
+            </div>
         </div>
     </section>
-    <!--Descriptions of Key Features are way too long, make sure they are straight to the point and be brief and concise-->
     <section id="features" class="section">
         <div class="container">
             <div class="section-copy">
@@ -261,47 +267,26 @@
                 <div>
                     <h3>{{ content.features.headings[0] }}</h3>
                     <p>{{ content.features.paragraphs[0] }}</p>
-                    <p>{{ content.features.paragraphs[1] }}</p>
-                    <ul>
-                        <li>{{ content.features.items[0] }}</li>
-                        <li>{{ content.features.items[1] }}</li>
-                        <li>{{ content.features.items[2] }}</li>
-                        <li>{{ content.features.items[3] }}</li>
-                        <li>{{ content.features.items[4] }}</li>
-                    </ul>
-                    <p>{{ content.features.paragraphs[2] }}</p>
                 </div>
                 <figure class="feature-image">
-                    <img src="/images/TravLocal/feature-Match-with-Verified-Locals.png"
-                        [alt]="content.features.headings[0]" width="2084" height="2084" loading="lazy" decoding="async">
+                    <img src="/images/TravLocal/feature-Match-with-Verified-Locals.png" [alt]="content.features.headings[0]"
+                        width="2084" height="2084" loading="lazy" decoding="async">
                 </figure>
             </article>
             <article class="feature-row">
                 <div>
                     <h3>{{ content.features.headings[1] }}</h3>
-                    <p>{{ content.features.paragraphs[3] }}</p>
-                    <p>{{ content.features.paragraphs[4] }}</p>
-                    <p>{{ content.features.paragraphs[5] }}</p>
-                    <p>{{ content.features.paragraphs[6] }}</p>
+                    <p>{{ content.features.paragraphs[1] }}</p>
                 </div>
                 <figure class="feature-image">
-                    <img src="/images/TravLocal/feature-No-Money-Needed-Just-Tickets.png"
-                        [alt]="content.features.headings[1]" width="2084" height="2084" loading="lazy" decoding="async">
+                    <img src="/images/TravLocal/feature-No-Money-Needed-Just-Tickets.png" [alt]="content.features.headings[1]"
+                        width="2084" height="2084" loading="lazy" decoding="async">
                 </figure>
             </article>
             <article class="feature-row">
                 <div>
                     <h3>{{ content.features.headings[2] }}</h3>
-                    <p>{{ content.features.paragraphs[7] }}</p>
-                    <p>{{ content.features.paragraphs[8] }}</p>
-                    <ul>
-                        <li>{{ content.features.items[5] }}</li>
-                        <li>{{ content.features.items[6] }}</li>
-                        <li>{{ content.features.items[7] }}</li>
-                        <li>{{ content.features.items[8] }}</li>
-                    </ul>
-                    <p>{{ content.features.paragraphs[9] }}</p>
-                    <p>{{ content.features.paragraphs[10] }}</p>
+                    <p>{{ content.features.paragraphs[2] }}</p>
                 </div>
                 <figure class="feature-image">
                     <img src="/images/TravLocal/feature-Explore-Earn-Rewards.png" [alt]="content.features.headings[2]"
@@ -311,17 +296,7 @@
             <article class="feature-row">
                 <div>
                     <h3>{{ content.features.headings[3] }}</h3>
-                    <p>{{ content.features.paragraphs[11] }}</p>
-                    <p>{{ content.features.paragraphs[12] }}</p>
-                    <h4>{{ content.features.subheadings[0] }}</h4>
-                    <p>{{ content.features.paragraphs[13] }}</p>
-                    <h4>{{ content.features.subheadings[1] }}</h4>
-                    <p>{{ content.features.paragraphs[14] }}</p>
-                    <h4>{{ content.features.subheadings[2] }}</h4>
-                    <p>{{ content.features.paragraphs[15] }}</p>
-                    <h4>{{ content.features.subheadings[3] }}</h4>
-                    <p>{{ content.features.paragraphs[16] }}</p>
-                    <p>{{ content.features.paragraphs[17] }}</p>
+                    <p>{{ content.features.paragraphs[3] }}</p>
                 </div>
                 <figure class="feature-image">
                     <img src="/images/TravLocal/feature-Safety-First.png" [alt]="content.features.headings[3]"
@@ -369,14 +344,8 @@
                 <p>{{ content.landingPage.paragraphs[3] }}</p>
                 <p>{{ content.landingPage.paragraphs[4] }}</p> -->
             </div>
-            <!-- Remove image, provide a same link as hero section. Direcly link to landing page -->
-            <figure class="case-image">
-                <img src="/images/TravLocal/landing-page.webp"
-                    alt="TravLocal landing-page concept shown on a laptop mockup" width="2200" height="1252"
-                    loading="lazy" decoding="async">
-                <figcaption>Promotional landing-page concept; app download badges are part of the mockup, not released
-                    apps.</figcaption>
-            </figure>
+            <app-project-website-button class="landing-website-button" [href]="project.website"
+                [label]="project.visitLabel"></app-project-website-button>
         </div>
     </section>
 

@@ -250,41 +250,10 @@ export const travlocalContent = {
       "Feature 4 — Safety and Verification"
     ],
     "paragraphs": [
-      "TravLocal proposes matching travelers with local guides based on shared interests, activities, and languages.",
-      "The booking interface includes information such as:",
-      "The booking review screen gives travelers a place to check these details before confirming an experience.",
-      "The ticket system is the central idea behind TravLocal.",
-      "New users receive an initial ticket, while users who guide travelers can earn tickets for their own future trips.",
-      "This model encourages users to contribute to the platform rather than participate only as customers.",
-      "The proposed business model also includes the option to purchase additional tickets.",
-      "We proposed a rewards system to encourage users to continue participating.",
-      "Users could earn points through:",
-      "Points could be exchanged for tickets, coupons, or gift cards.",
-      "The UI concept includes a rewards dashboard displaying points, progress toward the next tier, and available rewards.",
-      "Because travelers and guides would meet in person, safety was an important consideration in our concept.",
-      "We proposed several safety features:",
-      "Verification using identification documents and selfies.",
-      "A verification code to help confirm that the correct people are meeting.",
-      "Allowing travelers and guides to share feedback after an experience.",
-      "Providing a way to report inappropriate behavior.",
-      "These were proposed features intended to support trust and accountability. Their effectiveness would need to be evaluated before a real launch."
-    ],
-    "items": [
-      "Guide profile",
-      "Guide rating",
-      "Tour name",
-      "Meeting location",
-      "Selected date",
-      "Travel achievements and challenges.",
-      "Visiting partner attractions.",
-      "Purchasing from partner businesses.",
-      "Referring friends or family."
-    ],
-    "subheadings": [
-      "Identity Verification",
-      "Meeting Verification",
-      "Ratings and Reviews",
-      "Reporting"
+      "Match with local guides by destination, interests, and availability, then review their profiles and book a tour.",
+      "Earn tickets by guiding visitors in your city, then use them to book a local experience on your next trip.",
+      "Earn points and badges through tours, guiding, and referrals. Redeem points for partner rewards.",
+      "Confirm the meeting with a shared code or QR code, review guides through profiles and ratings, and access emergency tools during a tour."
     ]
   },
   "uiDesign": {
