@@ -384,3 +384,15 @@ video {
     }
     .hero-grid > .hero-website-button { justify-self: center; margin-top: 0; }
 }
+
+.process-step {
+    margin-top: 2.5rem;
+    scroll-margin-top: 7rem;
+}
+
+.iteration-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.outcome-note { margin-top: 1.5rem; }
+
+@media (max-width: 950px) {
+    .iteration-grid { grid-template-columns: 1fr; }
+}

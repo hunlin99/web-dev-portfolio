@@ -1,31 +1,32 @@
 # DC3: Viral Menace / S-Qubed case study
 
-The page follows the updated AMPA layout: shared project header, two-column hero and project goals, metadata grid, numbered contents links, alternating section backgrounds, responsive media, and the expanding portfolio link button.
+Route: `/dc3-viral-menace`. The page retains the existing header, cover-image hero, metadata, reusable website button, palette, typography, and responsive media.
 
 ## Editing
 
-- `dc3-viral-menace.content.ts`: `dc3Content` holds text grouped by goals, responsibilities, architecture, visualDesign, highFidelity, iteration, development, cms, outcome, and reflection. `dc3Project` holds hero metadata, navigation labels, palette values, and contents entries (titles reference the section copy).
-- `dc3-viral-menace.component.html`: 11 individually editable sections with their own layout, headings, paragraphs, lists, images, and silent implementation videos. Text binds to its named `content` category; arrays follow the explicit HTML binding order. Edit layout by section `id`, and copy in the content file; there is no shared section-rendering loop.
-- `dc3-viral-menace.component.css`: scoped layout, game-inspired navy/light-blue palette, typography, and mobile styles.
-- `/public/images/DC3-Viral-Menace/`: media assets.
+- `dc3-viral-menace.content.ts`: seven copy categories (`goals`, `responsibilities`, `designProcess`, `iteration`, `development`, `outcome`, `reflection`). `dc3Project` retains project metadata, palette, navigation labels, and seven contents entries.
+- `dc3-viral-menace.component.html`: seven independently editable sections. Design Process contains sitemap, wireframes, visual direction, and high-fidelity subsections. Development & CMS keeps distinct implementation and content-management subsections. Local card/list loops do not control whole-section layouts.
+- `dc3-viral-menace.component.css`: existing scoped layouts, plus spacing for merged steps and a responsive three-card iteration grid.
+- `dc3-viral-menace.component.spec.ts`: seven-section structure, merged and legacy fragment targets, both co-op roles, media, silent video attributes, and contents navigation.
 
-The supplied case-study text replaces the older personal continuation narrative with the 2025 design co-op and 2026 development co-op. The 90+ PageSpeed Insights SEO result is the author's supplied result, not an independently rerun audit. It refers to SEO, not the performance score.
+## Content optimization
 
-## Missing supporting assets
+The narrative follows Project Overview & Goals → My Role & Responsibilities → Design Process → Design Decisions & Iterations → Development & CMS → Final Outcomes → Reflection.
 
-The attachment requests several screenshots not currently present in the repository:
+The four design sections were merged into a visual progression, and development/CMS now share one section. Goals are a four-item list. Responsibilities retain distinct 2025 design and 2026 development placements. Iteration keeps Steam CTA, readability, and hierarchy examples using problem/change/intent; the overlapping Color Balance explanation is removed. CMS capabilities appear once as a compact feature list. Outcomes summarize the deployed website, CMS, and reported SEO result; the former eight-item list is removed. Reflection is one personal learning paragraph. Unused content properties were removed alongside their bindings.
 
-- Additional low-fidelity variants, if desired; the supplied `lofi.png` is displayed in Low-Fidelity Design.
-- Additional annotated high-fidelity screens, if desired; the supplied `hi-fi.png` is now displayed.
-- `image(20261026-070503).png`: original palette image (the page renders the six supplied colors as CSS swatches instead).
-- Dedicated mobile and full-page final website screenshots, if desired; the supplied `landing-showcase.png` is displayed with the project goals.
-- A dedicated image-upload workflow screenshot, if available; both supplied CMS administration screenshots are displayed.
-- PageSpeed Insights evidence showing the reported 90+ SEO score.
+All existing image and video paths, alternative text, silent video labels, and muted/inline attributes are retained. Old `#architecture`, `#low-fidelity`, `#visual-design`, `#high-fidelity`, and `#cms` fragments still target their corresponding subsections. The contents now links to `#design-process` for the merged design narrative.
 
-Overview, Wireframing, and Deployment and SEO were removed at the author’s request to avoid duplicate content; the contents and section numbering now cover 11 sections. Responsibilities use two phase cards, iteration uses four cards, and development pairs concise explanations with the two silent demos. Resolved review comments have been removed.
+## Evidence
 
-No broken placeholder images are rendered. Existing project showcase, sitemap, iteration comparison, hero mockup, and two silent implementation clips are used with captions. Add missing images and their real dimensions directly to the relevant HTML section when supplied; do not substitute unrelated imagery for CMS or audit evidence.
+This is the author's professional co-op project: design in 2025 and development in 2026. The 90+ PageSpeed Insights SEO result is supplied by the author, not an independently rerun audit or a performance score. No traffic, conversion, wishlist, or usability improvement is claimed. Iteration improvements are explicitly design intentions.
 
-CMS layout: equal text/gallery columns, with two equally sized screenshot rows on desktop and natural-height rows on mobile. H1/H2 use Limelight; other text uses Roboto. Icon fonts remain available for the link icons.
+No new assets were required. The current showcase, sitemap, wireframes, high-fidelity mockup, iteration comparison, two CMS views, and two silent implementation clips remain. A dated PageSpeed Insights report or screenshot would further substantiate the supplied SEO result; none has been invented.
 
-The hero uses dc3-viral-menace-cover-img.jpg with a dark overlay and white text. Information Architecture uses a two-column text/image layout on desktop and stacks on mobile. Low-Fidelity Design is a separate brief section with its own contents link.
+## Reading estimate and validation
+
+The seven rendered main sections contain 651 English words, including headings, palette labels, and the outcome link, but excluding hero metadata, navigation, and text inside images. At 200–250 words/minute, reading takes about 2.6–3.3 minutes. Allow another 1.5–2 minutes for visuals and video review: approximately 4–5 minutes in total.
+
+Both component tests pass. Browser checks at 1440px, 768px, and 390px found seven sections, loaded images, muted inline videos, and no horizontal overflow. `git diff --check` passes.
+
+The standard production build encounters a Google Fonts HTTP 403 during font inlining in this cloud environment. Production compilation succeeds with only font inlining temporarily disabled (script/style optimization and production budgets retained); `angular.json` is restored unchanged. Existing unrelated style-budget/unused-import warnings remain.

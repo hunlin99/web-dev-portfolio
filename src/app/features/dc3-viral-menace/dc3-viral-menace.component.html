@@ -41,283 +41,158 @@
                 <p class="eyebrow">{{ content.goals.eyebrow }}</p>
                 <h2>{{ content.goals.title }}</h2>
                 <p>{{ content.goals.paragraphs[0] }}</p>
-                <p>{{ content.goals.paragraphs[1] }}</p>
-                <h4>{{ content.goals.subheadings[0] }}</h4>
-                <p>{{ content.goals.paragraphs[2] }}</p>
-                <h4>{{ content.goals.subheadings[1] }}</h4>
-                <p>{{ content.goals.paragraphs[3] }}</p>
-                <h4>{{ content.goals.subheadings[2] }}</h4>
-                <p>{{ content.goals.paragraphs[4] }}</p>
-                <h4>{{ content.goals.subheadings[3] }}</h4>
-                <p>{{ content.goals.paragraphs[5] }}</p>
-                <p>{{ content.goals.paragraphs[6] }}</p>
+                <ul>@for (item of content.goals.items; track item) { <li>{{ item }}</li> }</ul>
             </div>
             <figure class="case-image">
-                <img src="/images/DC3-Viral-Menace/landing-showcase.png" [alt]="content.goals.images[0].alt"
+                <img src="/images/DC3-Viral-Menace/landing-showcase.png" [alt]="content.goals.imageAlt"
                     loading="lazy" decoding="async" width="1542" height="1601">
             </figure>
         </div>
     </section>
+
     <section id="responsibilities" class="section dark">
         <div class="container">
-            <div class="section-copy full-width">
-                <p class="eyebrow">{{ content.responsibilities.eyebrow }}</p>
-                <h2>{{ content.responsibilities.title }}</h2>
-                <div class="phase-grid">
-                    <article class="phase-card">
-                        <h3>{{ content.responsibilities.headings[0] }}</h3>
-                        <p>{{ content.responsibilities.paragraphs[0] }}</p>
-                        <p>{{ content.responsibilities.paragraphs[1] }}</p>
-                        <ul>
-                            <li>{{ content.responsibilities.items[0] }}</li>
-                            <li>{{ content.responsibilities.items[1] }}</li>
-                            <li>{{ content.responsibilities.items[2] }}</li>
-                            <li>{{ content.responsibilities.items[3] }}</li>
-                            <li>{{ content.responsibilities.items[4] }}</li>
-                            <li>{{ content.responsibilities.items[5] }}</li>
-                        </ul>
-                    </article>
-                    <article class="phase-card">
-                        <h3>{{ content.responsibilities.headings[1] }}</h3>
-                        <p>{{ content.responsibilities.paragraphs[2] }}</p>
-                        <p>{{ content.responsibilities.paragraphs[3] }}</p>
-                        <ul>
-                            <li>{{ content.responsibilities.items[6] }}</li>
-                            <li>{{ content.responsibilities.items[7] }}</li>
-                            <li>{{ content.responsibilities.items[8] }}</li>
-                            <li>{{ content.responsibilities.items[9] }}</li>
-                            <li>{{ content.responsibilities.items[10] }}</li>
-                            <li>{{ content.responsibilities.items[11] }}</li>
-                        </ul>
-                    </article>
-                </div>
-                <p>{{ content.responsibilities.paragraphs[4] }}</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="architecture" class="section">
-        <div class="container architecture-grid">
-            <div class="section-copy">
-                <p class="eyebrow">{{ content.architecture.eyebrow }}</p>
-                <h2>{{ content.architecture.title }}</h2>
-                <h3>{{ content.architecture.headings[0] }}</h3>
-                <p>{{ content.architecture.paragraphs[0] }}</p>
-                <p>{{ content.architecture.paragraphs[1] }}</p>
-                <ul>
-                    <li>{{ content.architecture.items[0] }}</li>
-                    <li>{{ content.architecture.items[1] }}</li>
-                    <li>{{ content.architecture.items[2] }}</li>
-                    <li>{{ content.architecture.items[3] }}</li>
-                </ul>
-                <p>{{ content.architecture.paragraphs[2] }}</p>
-                <p>{{ content.architecture.paragraphs[3] }}</p>
-            </div>
-            <figure class="case-image">
-                <img src="/images/DC3-Viral-Menace/dc3-viral-menace-sitemap.png"
-                    [alt]="content.architecture.images[0].alt" loading="lazy" decoding="async" width="1709"
-                    height="1758">
-            </figure>
-        </div>
-    </section>
-    <section id="low-fidelity" class="section warm">
-        <div class="container">
-            <div class="section-copy">
-                <p class="eyebrow">{{ content.lowFidelity.eyebrow }}</p>
-                <h2>{{ content.lowFidelity.title }}</h2>
-                <p>{{ content.lowFidelity.brief }}</p>
-            </div>
-            <figure class="case-image">
-                <img src="/images/DC3-Viral-Menace/lofi.png" [alt]="content.lowFidelity.imageAlt"
-                    width="3295" height="2753" loading="lazy" decoding="async">
-            </figure>
-        </div>
-    </section>
-
-    <section id="visual-design" class="section dark">
-        <div class="container">
-            <div class="section-copy">
-                <p class="eyebrow">{{ content.visualDesign.eyebrow }}</p>
-                <h2>{{ content.visualDesign.title }}</h2>
-                <h3>{{ content.visualDesign.headings[0] }}</h3>
-                <p>{{ content.visualDesign.paragraphs[0] }}</p>
-                <p>{{ content.visualDesign.paragraphs[1] }}</p>
-                <ul>
-                    <li>{{ content.visualDesign.items[0] }}</li>
-                    <li>{{ content.visualDesign.items[1] }}</li>
-                    <li>{{ content.visualDesign.items[2] }}</li>
-                    <li>{{ content.visualDesign.items[3] }}</li>
-                    <li>{{ content.visualDesign.items[4] }}</li>
-                </ul>
-            </div>
-            <div class="palette" [attr.aria-label]="project.paletteLabel">
-                @for (color of project.colors; track color.hex) {
-                <div class="swatch" [style.background-color]="color.hex" [style.color]="color.ink">
-                    <strong>{{ color.name }}</strong><span>{{ color.hex }}</span>
-                </div>
+            <p class="eyebrow">{{ content.responsibilities.eyebrow }}</p>
+            <h2>{{ content.responsibilities.title }}</h2>
+            <div class="phase-grid">
+                @for (phase of content.responsibilities.phases; track phase.title) {
+                <article class="phase-card">
+                    <h3>{{ phase.title }}</h3>
+                    <p>{{ phase.brief }}</p>
+                    <ul>@for (item of phase.items; track item) { <li>{{ item }}</li> }</ul>
+                </article>
                 }
             </div>
         </div>
     </section>
-    <section id="high-fidelity" class="section">
+
+    <section id="design-process" class="section">
         <div class="container">
-            <div class="section-copy">
-                <p class="eyebrow">{{ content.highFidelity.eyebrow }}</p>
-                <h2>{{ content.highFidelity.title }}</h2>
-                <p>{{ content.highFidelity.paragraphs[0] }}</p>
-            </div>
-            <figure class="case-image">
-                <img src="/images/DC3-Viral-Menace/hi-fi.png" [alt]="content.highFidelity.images[0].alt" loading="lazy"
-                    decoding="async" width="3453" height="2909">
-            </figure>
-        </div>
-    </section>
-    <section id="iteration" class="section warm">
-        <div class="container">
-            <div class="section-copy full-width">
-                <p class="eyebrow">{{ content.iteration.eyebrow }}</p>
-                <h2>{{ content.iteration.title }}</h2>
-                <h3>{{ content.iteration.headings[0] }}</h3>
-                <p>{{ content.iteration.paragraphs[0] }}</p>
-                <p>{{ content.iteration.paragraphs[1] }}</p>
-                <div class="iteration-grid">
-                    <article class="iteration-card">
-                        <h3>{{ content.iteration.headings[1] }}</h3>
-                        <p>{{ content.iteration.paragraphs[2] }}</p>
-                        <p>{{ content.iteration.paragraphs[3] }}</p>
-                        <p>{{ content.iteration.paragraphs[4] }}</p>
-                    </article>
-                    <article class="iteration-card">
-                        <h3>{{ content.iteration.headings[2] }}</h3>
-                        <p>{{ content.iteration.paragraphs[5] }}</p>
-                        <p>{{ content.iteration.paragraphs[6] }}</p>
-                        <p>{{ content.iteration.paragraphs[7] }}</p>
-                    </article>
-                    <article class="iteration-card">
-                        <h3>{{ content.iteration.headings[3] }}</h3>
-                        <p>{{ content.iteration.paragraphs[8] }}</p>
-                        <p>{{ content.iteration.paragraphs[9] }}</p>
-                    </article>
-                    <article class="iteration-card">
-                        <h3>{{ content.iteration.headings[4] }}</h3>
-                        <p>{{ content.iteration.paragraphs[10] }}</p>
-                        <p>{{ content.iteration.paragraphs[11] }}</p>
-                    </article>
+            <p class="eyebrow">{{ content.designProcess.eyebrow }}</p>
+            <h2>{{ content.designProcess.title }}</h2>
+            <div id="architecture" class="architecture-grid process-step">
+                <div class="section-copy">
+                    <h3>{{ content.designProcess.architecture.title }}</h3>
+                    <p>{{ content.designProcess.architecture.paragraph }}</p>
                 </div>
+                <figure class="case-image">
+                    <img src="/images/DC3-Viral-Menace/dc3-viral-menace-sitemap.png"
+                        [alt]="content.designProcess.architecture.imageAlt" loading="lazy" decoding="async"
+                        width="1709" height="1758">
+                </figure>
             </div>
-            <figure class="case-image">
-                <img src="/images/DC3-Viral-Menace/Design-iteration.png" [alt]="content.iteration.images[0].alt"
-                    loading="lazy" decoding="async" width="3103" height="2273">
-            </figure>
-        </div>
-    </section>
-    <section id="development" class="section dark">
-        <div class="container">
-            <div class="section-copy">
-                <p class="eyebrow">{{ content.development.eyebrow }}</p>
-                <h2>{{ content.development.title }}</h2>
-                <p>{{ content.development.paragraphs[0] }}</p>
+            <div id="low-fidelity" class="process-step">
+                <h3>{{ content.designProcess.lowFidelity.title }}</h3>
+                <p>{{ content.designProcess.lowFidelity.paragraph }}</p>
+                <figure class="case-image">
+                    <img src="/images/DC3-Viral-Menace/lofi.png" [alt]="content.designProcess.lowFidelity.imageAlt"
+                        width="3295" height="2753" loading="lazy" decoding="async">
+                </figure>
             </div>
-            <div class="video-grid">
-                <article class="implementation-card">
-                    <h3>{{ content.development.headings[0] }}</h3>
-                    <p>{{ content.development.paragraphs[1] }}</p>
-                    <video autoplay muted [muted]="true" loop playsinline preload="metadata"
-                        [attr.aria-label]="content.development.videos[0].label">
-                        <source src="/images/DC3-Viral-Menace/interactive.mp4" type="video/mp4">
-                    </video>
-                </article>
-                <article class="implementation-card">
-                    <h3>{{ content.development.headings[1] }}</h3>
-                    <p>{{ content.development.paragraphs[2] }}</p>
-                    <video autoplay muted [muted]="true" loop playsinline preload="metadata"
-                        [attr.aria-label]="content.development.videos[1].label">
-                        <source src="/images/DC3-Viral-Menace/clip-path.mp4" type="video/mp4">
-                    </video>
-                </article>
+            <div id="visual-design" class="process-step">
+                <h3>{{ content.designProcess.visualDirection.title }}</h3>
+                <ul>@for (item of content.designProcess.visualDirection.items; track item) { <li>{{ item }}</li> }</ul>
+                <div class="palette" [attr.aria-label]="project.paletteLabel">
+                    @for (color of project.colors; track color.hex) {
+                    <div class="swatch" [style.background-color]="color.hex" [style.color]="color.ink">
+                        <strong>{{ color.name }}</strong><span>{{ color.hex }}</span>
+                    </div>
+                    }
+                </div>
+                <p>{{ content.designProcess.visualDirection.paragraph }}</p>
+                <figure id="high-fidelity" class="case-image process-step">
+                    <img src="/images/DC3-Viral-Menace/hi-fi.png" [alt]="content.designProcess.visualDirection.imageAlt"
+                        loading="lazy" decoding="async" width="3453" height="2909">
+                </figure>
             </div>
         </div>
     </section>
 
-    <section id="cms" class="section">
-        <div class="container cms-grid">
-            <div class="section-copy">
-                <p class="eyebrow">{{ content.cms.eyebrow }}</p>
-                <h2>{{ content.cms.title }}</h2>
-                <h3>{{ content.cms.headings[0] }}</h3>
-                <p>{{ content.cms.paragraphs[0] }}</p>
-                <p>{{ content.cms.paragraphs[1] }}</p>
-                <h3>{{ content.cms.headings[1] }}</h3>
-                <h4>{{ content.cms.subheadings[0] }}</h4>
-                <p>{{ content.cms.paragraphs[2] }}</p>
-                <h4>{{ content.cms.subheadings[1] }}</h4>
-                <p>{{ content.cms.paragraphs[3] }}</p>
-                <h4>{{ content.cms.subheadings[2] }}</h4>
-                <p>{{ content.cms.paragraphs[4] }}</p>
-                <h4>{{ content.cms.subheadings[3] }}</h4>
-                <p>{{ content.cms.paragraphs[5] }}</p>
-                <h4>{{ content.cms.subheadings[4] }}</h4>
-                <p>{{ content.cms.paragraphs[6] }}</p>
-                <p>{{ content.cms.paragraphs[7] }}</p>
-            </div>
-            <div class="cms-gallery">
-                <figure class="case-image">
-                    <img src="/images/DC3-Viral-Menace/dc3-viral-menace-web-admin-1.png"
-                        [alt]="content.cms.images[0].alt" loading="lazy" decoding="async" width="2521" height="4207">
-                </figure>
-                <figure class="case-image">
-                    <img src="/images/DC3-Viral-Menace/dc3-viral-menace-web-admin-2.png"
-                        [alt]="content.cms.images[1].alt" loading="lazy" decoding="async" width="2522" height="5427">
-                </figure>
-            </div>
-        </div>
-    </section>
-    <section id="outcome" class="section dark">
+    <section id="iteration" class="section warm">
         <div class="container">
-            <div class="section-copy">
-                <p class="eyebrow">{{ content.outcome.eyebrow }}</p>
-                <h2>{{ content.outcome.title }}</h2>
-                <h3>{{ content.outcome.headings[0] }}</h3>
-                <p>{{ content.outcome.paragraphs[0] }}</p>
-                <p>{{ content.outcome.paragraphs[1] }}</p>
-                <p>{{ content.outcome.paragraphs[2] }}</p>
-                <h3>{{ content.outcome.headings[1] }}</h3>
-                <ul>
-                    <li>{{ content.outcome.items[0] }}</li>
-                    <li>{{ content.outcome.items[1] }}</li>
-                    <li>{{ content.outcome.items[2] }}</li>
-                    <li>{{ content.outcome.items[3] }}</li>
-                    <li>{{ content.outcome.items[4] }}</li>
-                    <li>{{ content.outcome.items[5] }}</li>
-                    <li>{{ content.outcome.items[6] }}</li>
-                    <li>{{ content.outcome.items[7] }}</li>
-                </ul>
-                <p>{{ content.outcome.paragraphs[3] }}</p>
+            <p class="eyebrow">{{ content.iteration.eyebrow }}</p>
+            <h2>{{ content.iteration.title }}</h2>
+            <div class="iteration-grid">
+                @for (item of content.iteration.cases; track item.title) {
+                <article class="iteration-card">
+                    <h3>{{ item.title }}</h3>
+                    <p><strong>Problem:</strong> {{ item.problem }}</p>
+                    <p><strong>Change:</strong> {{ item.change }}</p>
+                    <p><strong>Intent:</strong> {{ item.intention }}</p>
+                </article>
+                }
+            </div>
+            <p>{{ content.iteration.note }}</p>
+            <figure class="case-image">
+                <img src="/images/DC3-Viral-Menace/Design-iteration.png" [alt]="content.iteration.imageAlt"
+                    loading="lazy" decoding="async" width="3103" height="2273">
+            </figure>
+        </div>
+    </section>
+
+    <section id="development" class="section dark">
+        <div class="container">
+            <p class="eyebrow">{{ content.development.eyebrow }}</p>
+            <h2>{{ content.development.title }}</h2>
+            <div class="process-step">
+                <h3>{{ content.development.websiteTitle }}</h3>
+                <p>{{ content.development.paragraph }}</p>
+                <div class="video-grid">
+                    <article class="implementation-card">
+                        <h4>{{ content.development.videos[0].title }}</h4>
+                        <video autoplay muted [muted]="true" loop playsinline preload="metadata"
+                            [attr.aria-label]="content.development.videos[0].label">
+                            <source src="/images/DC3-Viral-Menace/interactive.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                    <article class="implementation-card">
+                        <h4>{{ content.development.videos[1].title }}</h4>
+                        <video autoplay muted [muted]="true" loop playsinline preload="metadata"
+                            [attr.aria-label]="content.development.videos[1].label">
+                            <source src="/images/DC3-Viral-Menace/clip-path.mp4" type="video/mp4">
+                        </video>
+                    </article>
+                </div>
+            </div>
+            <div id="cms" class="cms-grid process-step">
+                <div class="section-copy">
+                    <h3>{{ content.development.cms.title }}</h3>
+                    <p>{{ content.development.cms.paragraph }}</p>
+                    <ul>@for (item of content.development.cms.items; track item) { <li>{{ item }}</li> }</ul>
+                </div>
+                <div class="cms-gallery">
+                    <figure class="case-image">
+                        <img src="/images/DC3-Viral-Menace/dc3-viral-menace-web-admin-1.png"
+                            [alt]="content.development.cms.images[0].alt" loading="lazy" decoding="async" width="2521" height="4207">
+                    </figure>
+                    <figure class="case-image">
+                        <img src="/images/DC3-Viral-Menace/dc3-viral-menace-web-admin-2.png"
+                            [alt]="content.development.cms.images[1].alt" loading="lazy" decoding="async" width="2522" height="5427">
+                    </figure>
+                </div>
             </div>
         </div>
     </section>
+
+    <section id="outcome" class="section warm">
+        <div class="container">
+            <p class="eyebrow">{{ content.outcome.eyebrow }}</p>
+            <h2>{{ content.outcome.title }}</h2>
+            @for (item of content.outcome.items; track item.title) {
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.text }}</p>
+            }
+            <p class="outcome-note">{{ content.outcome.note }}</p>
+            <a class="project-button" [href]="project.website" target="_blank" rel="noopener noreferrer"
+                [attr.aria-label]="project.visitAriaLabel">{{ project.visitLabel }} ↗</a>
+        </div>
+    </section>
+
     <section id="reflection" class="section">
         <div class="container">
-            <div class="section-copy">
-                <p class="eyebrow">{{ content.reflection.eyebrow }}</p>
-                <h2>{{ content.reflection.title }}</h2>
-                <h3>{{ content.reflection.headings[0] }}</h3>
-                <h4>{{ content.reflection.subheadings[0] }}</h4>
-                <p>{{ content.reflection.paragraphs[0] }}</p>
-                <p>{{ content.reflection.paragraphs[1] }}</p>
-                <h4>{{ content.reflection.subheadings[1] }}</h4>
-                <p>{{ content.reflection.paragraphs[2] }}</p>
-                <p>{{ content.reflection.paragraphs[3] }}</p>
-                <h4>{{ content.reflection.subheadings[2] }}</h4>
-                <p>{{ content.reflection.paragraphs[4] }}</p>
-                <p>{{ content.reflection.paragraphs[5] }}</p>
-                <h4>{{ content.reflection.subheadings[3] }}</h4>
-                <p>{{ content.reflection.paragraphs[6] }}</p>
-                <p>{{ content.reflection.paragraphs[7] }}</p>
-                <h3>{{ content.reflection.headings[1] }}</h3>
-                <p>{{ content.reflection.paragraphs[8] }}</p>
-                <p>{{ content.reflection.paragraphs[9] }}</p>
-            </div>
+            <p class="eyebrow">{{ content.reflection.eyebrow }}</p>
+            <h2>{{ content.reflection.title }}</h2>
+            <p>{{ content.reflection.paragraph }}</p>
         </div>
     </section>
     <div class="container page-end"><a class="project-button" routerLink="/projects">{{ project.moreProjectsLabel }}</a>
