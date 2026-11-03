@@ -10,7 +10,6 @@
             <div class="hero-grid">
                 <div class="hero-copy">
                     <h1>{{ project.title }}</h1>
-                    <!-- <p class="lead">{{ project.subtitle }}</p> -->
                 </div>
                 <figure>
                     <img [src]="project.image" alt="AMPA project visual from the portfolio" fetchpriority="high"
@@ -33,6 +32,10 @@
                     <dt>Tools</dt>
                     <dd>{{ project.tools }}</dd>
                 </div>
+                <div>
+                    <dt>Deliverables</dt>
+                    <dd>{{ project.scope }}</dd>
+                </div>
             </dl>
         </div>
     </section>
@@ -42,32 +45,35 @@
         <a routerLink="/ampa" [fragment]="section.id"><span>0{{ i + 1 }}</span> {{ section.title }}</a>
         }
     </nav>
-    <section id="overview" class="section container overview-grid">
-        <div>
-            <p class="eyebrow">01 / CONTEXT</p>
-            <h2>Project Overview</h2>
-            <p class="section-lead">Connecting cultural identity with a functional digital product.</p>
-            <p>AMPA is a marketplace concept for the Afro-diaspora, bringing culturally relevant discovery and digital
-                commerce together. The design scope spans brand identity, consumer and vendor journeys, mobile
-                interfaces,
-                and responsive web experiences.</p>
-            <p>The central design question is how a recognizable brand can support practical workflows for two different
-                user groups, rather than existing only as a visual layer.</p>
+    <section id="overview" class="section container">
+        <div class="overview-grid">
+            <div>
+                <p class="eyebrow">01 / CONTEXT &amp; CHALLENGE</p>
+                <h2>Project Overview</h2>
+                <p>AMPA is a marketplace concept connecting Afro-diaspora consumers with independent vendors.
+                    My scope spans brand identity, consumer and vendor UX flows, mobile interfaces, and responsive web design.</p>
+                <blockquote>How can one marketplace connect cultural identity with two distinct user experiences?</blockquote>
+            </div>
+            <div>
+                <img src="/images/AMPA/APP Mockup.jpg" alt="AMPA shopping interface shown in a mobile application mockup"
+                    loading="lazy" decoding="async" width="1600" height="2000">
+            </div>
         </div>
-        <div>
-            <img src="/images/AMPA/APP Mockup.jpg" alt="AMPA mobile application mockup" loading="lazy" decoding="async"
-                width="1600" height="2000">
+        <div id="strategy" class="subsection">
+            <h3>A shared direction before individual screens.</h3>
+            <ul class="principle-list">
+                @for (principle of project.principles; track principle.title) {
+                <li><strong>{{ principle.title }}</strong> — {{ principle.text }}</li>
+                }
+            </ul>
+            <p class="note">These are design assumptions and project requirements, not validated research findings.</p>
         </div>
-
     </section>
+
     <section id="challenge" class="section warm">
         <div class="container">
-            <p class="eyebrow">02 / THE CHALLENGE</p>
+            <p class="eyebrow">02 / UNDERSTANDING TWO USER GROUPS</p>
             <h2>One community. Two sets of needs.</h2>
-            <p>Afro-diaspora consumers need accessible ways to discover culturally relevant products, services, and
-                businesses. Independent vendors need practical tools to reach customers and manage their operations.</p>
-            <blockquote>How might we create a marketplace that feels culturally authentic while remaining intuitive,
-                scalable, and useful for both consumers and vendors?</blockquote>
             <div class="two-column">
                 @for (audience of project.audiences; track audience.title) {
                 <article class="card">
@@ -76,6 +82,8 @@
                 </article>
                 }
             </div>
+            <p class="visual-caption">The flow maps where shopping and business tasks diverge, including account states
+                and the transition into vendor tools. It defines the scope before individual screen design.</p>
         </div>
         <div class="container flow-illustration">
             <picture>
@@ -89,160 +97,127 @@
         </div>
     </section>
 
-    <section id="strategy" class="section container">
-        <p class="eyebrow">03 / DISCOVERY &amp; STRATEGY</p>
-        <h2>A shared direction before individual screens.</h2>
-        <p>The following goals describe project requirements and design assumptions. They are not presented as findings
-            from validated user interviews or usability studies.</p>
-        <ul class="goal-list">@for (goal of project.goals; track goal) { <li>{{ goal }}</li> }</ul>
-    </section>
-
     <section id="identity" class="section dark">
         <div class="container">
             <header class="identity-intro">
-                <p class="eyebrow">04 / BRAND IDENTITY</p>
-                <h2>From cultural meaning to visual identity.</h2>
-                <p class="section-lead">Community and interdependence form the thread between the brand and the
-                    marketplace.</p>
+                <p class="eyebrow">03 / BRAND &amp; PRODUCT LANGUAGE</p>
+                <h2>Building a Cultural Design System</h2>
+                <p>Cultural inspiration → Logo exploration → Design system → UI application</p>
             </header>
             <div class="identity-stages">
                 @for (stage of project.brandStages; track stage.title; let i = $index) {
                 <article class="identity-stage">
-                    <span class="stage-number">0{{ i + 1 }}</span>
-                    <div>
-                        <h3>{{ stage.title }}</h3>
-                        <p>{{ stage.text }}</p>
-                    </div>
+                    <span class="stage-number" aria-hidden="true">0{{ i + 1 }}</span>
+                    <div><h3>{{ stage.title }}</h3><p>{{ stage.text }}</p></div>
                 </article>
                 }
             </div>
             <div class="identity-gallery">
-                <figure class="identity-application">
-                    <img src="/images/AMPA/Brand-application.png"
-                        alt="AMPA brand identity applications and visual variations" loading="lazy" decoding="async"
-                        width="2001" height="1404">
-                    <figcaption><strong>Brand application</strong> · Bringing the visual identity into real brand
-                        touchpoints.</figcaption>
-                </figure>
                 <div class="identity-exploration">
-                    <figure>
-                        <img src="/images/AMPA/Logo-ideation.png" alt="AMPA logo sketches and concept exploration"
-                            loading="lazy" decoding="async" width="682" height="682">
-                        <figcaption><strong>Logo ideation</strong> · Exploring community and connection.</figcaption>
-                    </figure>
                     <figure>
                         <img src="/images/AMPA/Ndebele-inspired geometry.png"
                             alt="Ndebele-inspired geometric references for AMPA’s visual identity" loading="lazy"
                             decoding="async" width="682" height="683">
-                        <figcaption><strong>Cultural references</strong> · Geometry informing the visual language.
-                        </figcaption>
+                        <figcaption><strong>Inspiration</strong> · Geometry informs the visual language.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="/images/AMPA/Logo-ideation.png" alt="AMPA logo sketches and concept exploration"
+                            loading="lazy" decoding="async" width="682" height="682">
+                        <figcaption><strong>Exploration</strong> · Circular forms express community and connection.</figcaption>
                     </figure>
                 </div>
+                <figure id="system" class="identity-application subsection">
+                    <img src="/images/AMPA/Brand-application.png"
+                        alt="AMPA final logo variations, Sora and DM Sans typography, color palette, buttons, and navigation components"
+                        loading="lazy" decoding="async" width="2001" height="1404">
+                    <figcaption><strong>System to interface</strong> · The logo, type, color, and component board connects
+                        cultural expression with usable navigation, inputs, and states.</figcaption>
+                </figure>
             </div>
+            <div class="palette" aria-label="AMPA design palette">
+                @for (color of project.colors; track color.hex) {
+                <div class="swatch" [style.background-color]="color.hex" [style.color]="color.ink">
+                    <strong>{{ color.name }}</strong><span>{{ color.hex }}</span>
+                </div>
+                }
+            </div>
+            <p class="visual-caption">Sora supports display headings; DM Sans supports interface labels and body text.
+                Simple surfaces keep forms legible while patterns identify brand moments.</p>
         </div>
     </section>
 
-    <section id="system" class="section container">
-        <p class="eyebrow">05 / DESIGN SYSTEM</p>
-        <h2>A warm palette. A clear product language.</h2>
-        <div class="palette">
-            @for (color of project.colors; track color.hex) {
-            <div class="swatch" [style.background-color]="color.hex" [style.color]="color.ink"><strong>{{ color.name
-                    }}</strong><span>{{ color.hex }}</span></div>
-            }
-        </div>
-        <div class="two-column typography">
-            <div>
-                <h3>Sora</h3>
-                <p>Headings and display typography in the AMPA design direction.</p>
-            </div>
-            <div>
-                <h3>DM Sans</h3>
-                <p>Body text and functional interface labels in the AMPA design direction.</p>
-            </div>
-        </div>
-        <p>Expressive patterns belong in brand moments; simpler backgrounds support form-heavy tasks. Small-size logo
-            legibility, contrast, spacing, clear labels, and component states are important checks when turning this
-            direction into product UI.</p>
-    </section>
     <section id="architecture" class="section warm">
         <div class="container">
-            <p class="eyebrow">06 / UX ARCHITECTURE</p>
+            <p class="eyebrow">04 / UX DECISIONS &amp; USER FLOWS</p>
             <h2>Two roles, with a clear way between them.</h2>
-            <p>A profile-level switch connects the consumer experience to the appropriate vendor flow.</p>
-            <div class="role-flow" aria-label="Vendor role switching flow">
-                <div class="flow-start">User profile → Switch interface</div>
-                <div class="two-column">
-                    <div class="card">
-                        <h3>Existing vendor</h3>
-                        <p>→ Vendor dashboard</p>
-                    </div>
-                    <div class="card">
-                        <h3>Not yet a vendor</h3>
-                        <p>→ Vendor registration</p>
-                    </div>
-                </div>
+            <p>Separating consumer and vendor navigation keeps each role’s primary tasks in focus.
+                A profile-level switch gives users access to business tools without adding them to the shopping journey.</p>
+            <figure class="flow-illustration">
+                <img src="/images/AMPA/App-Switch-interface-flow.webp"
+                    alt="AMPA flow from a consumer profile to vendor registration or an existing vendor dashboard"
+                    loading="lazy" decoding="async" width="4000" height="2250">
+                <figcaption><strong>Decision → Reason → Design result</strong> · Branch by account state so existing
+                    vendors reach their dashboard and new vendors reach registration.</figcaption>
+            </figure>
+            <div class="two-column">
+                @for (journey of project.journeys; track journey.title) {
+                <figure class="journey">
+                    <h3>{{ journey.title }}</h3>
+                    <p>{{ journey.text }}</p>
+                    <img [src]="journey.image" [alt]="journey.title + ' high-fidelity interface screens'"
+                        loading="lazy" decoding="async">
+                    <figcaption>{{ journey.steps.join(' → ') }}</figcaption>
+                </figure>
+                }
             </div>
-            <img class="flow-illustration" src="/images/AMPA/App-Switch-interface-flow.png"
-                alt="AMPA flow from a consumer profile to vendor registration or an existing vendor dashboard"
-                loading="lazy" decoding="async" width="4000" height="2250">
+            <div id="decisions" class="subsection">
+                <h3>Designing for the work behind the marketplace.</h3>
+                @for (decision of project.decisions; track decision.title; let i = $index) {
+                <article class="decision">
+                    <div>
+                        <p class="eyebrow">CASE 0{{ i + 1 }} / {{ decision.discipline }}</p>
+                        <h4>{{ decision.title }}</h4>
+                    </div>
+                    <dl>
+                        <dt>Problem</dt><dd>{{ decision.problem }}</dd>
+                        <dt>Decision</dt><dd>{{ decision.decision }}</dd>
+                        <dt>Design result</dt><dd>{{ decision.benefit }}</dd>
+                    </dl>
+                </article>
+                }
+                <p class="note">These describe interface decisions and intended benefits, not measured usability or business outcomes.
+                    Dashboard figures are illustrative.</p>
+            </div>
         </div>
-    </section>
-
-    <section id="decisions" class="section container">
-        <p class="eyebrow">07 / KEY UX DECISIONS</p>
-        <h2>Designing for the work behind the marketplace.</h2>
-        @for (decision of project.decisions; track decision.title; let i = $index) {
-        <article class="decision">
-            <div>
-                <p class="eyebrow">CASE 0{{ i + 1 }} / {{ decision.discipline }}</p>
-                <h3>{{ decision.title }}</h3>
-            </div>
-            <dl>
-                <dt>Problem</dt>
-                <dd>{{ decision.problem }}</dd>
-                <dt>Constraint</dt>
-                <dd>{{ decision.constraint }}</dd>
-                <dt>Design response</dt>
-                <dd>{{ decision.decision }}</dd>
-                <dt>Expected benefit</dt>
-                <dd>{{ decision.benefit }}</dd>
-            </dl>
-        </article>
-        }
-        <p class="note">These are intended benefits, not measured usability or business outcomes. No illustrative
-            revenue, order, or follower figures are presented as actual performance.</p>
     </section>
 
     <section id="experience" class="section dark">
         <div class="container">
-            <p class="eyebrow">08 / UI &amp; PROTOTYPE DIRECTION</p>
-            <h2>Organized around journeys, not isolated screens.</h2>
-            <div class="two-column">
-                @for (journey of project.journeys; track journey.title) {
-                <article class="journey">
-                    <h3>{{ journey.title }}</h3>
-                    <p>{{ journey.text }}</p>
-                    <ol>@for (step of journey.steps; track step) { <li>{{ step }}</li> }</ol>
-                    <img [src]="journey.image" [alt]="journey.title + ' interface screens'" loading="lazy"
-                        decoding="async">
-                </article>
-                }
-            </div>
-            <p>These flows describe the product design direction; they do not imply that every feature is released on
-                the company website.</p>
+            <p class="eyebrow">05 / FINAL PRODUCT &amp; RESPONSIVE DESIGN</p>
+            <h2>One identity, across mobile and web.</h2>
+            <p>The mobile screens above apply the same palette, rounded controls, and navigation language to shopping
+                and vendor tasks. The responsive website extends the brand into a public introduction to the marketplace.</p>
+            <figure class="flow-illustration">
+                <img [src]="project.image" alt="AMPA responsive website presented across desktop, laptop, tablet, and phone"
+                    loading="lazy" decoding="async" width="2703" height="1458">
+                <figcaption><strong>Cross-platform consistency</strong> · Brand colors and hierarchy carry across viewport
+                    sizes, while content and actions adapt to the available space.</figcaption>
+            </figure>
+            <p class="visual-caption">These visuals document design direction; they do not establish which app features are released.</p>
+            <a class="project-button" [href]="project.website" target="_blank" rel="noopener noreferrer"
+                aria-label="Visit Afroidentity website (opens in a new tab)">Visit Afroidentity website ↗</a>
         </div>
     </section>
 
     <section id="reflection" class="section container">
-        <p class="eyebrow">09 / OUTCOME &amp; REFLECTION</p>
+        <p class="eyebrow">06 / OUTCOMES &amp; REFLECTION</p>
         <h2>Connecting identity and functionality.</h2>
         <ul class="goal-list">@for (item of project.deliverables; track item) { <li>{{ item }}</li> }</ul>
-        <p>This case study documents design direction and intended behavior. Launch status, adoption, and usability
-            improvements require separate evidence; no unverified business impact is claimed here.</p>
-        <blockquote>This project challenged me to connect cultural storytelling with functional product design. The most
-            important lesson was learning how to preserve a distinctive brand identity while designing practical
-            workflows for users with very different needs.</blockquote>
+        <p><strong>Lesson:</strong> A distinctive identity works best when its expression adapts to the task:
+            richer in brand moments, quieter in operational screens.</p>
+        <p><strong>Next:</strong> Validate role switching and listing setup with consumers and vendors, then refine
+            navigation, form states, and cross-device behavior. Launch status, adoption, and usability improvements
+            require separate evidence.</p>
         <a class="project-button" routerLink="/projects">← Explore more projects</a>
     </section>
 </main>

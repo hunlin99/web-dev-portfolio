@@ -18,7 +18,19 @@ describe('AMPA case study', () => {
     const external = page.querySelector<HTMLAnchorElement>('a[href="https://afroidentity.com/"]')!;
     expect(external.target).toBe('_blank');
     expect(external.rel).toBe('noopener noreferrer');
-    expect(page.querySelectorAll('.decision').length).toBe(3);
+    expect(ampaProject.sections.length).toBe(6);
+    expect(page.querySelectorAll('main > section[id]').length).toBe(6);
+    expect(page.querySelectorAll('.decision').length).toBe(2);
+    expect(page.querySelectorAll('.identity-stage').length).toBe(4);
+    expect(page.querySelectorAll('.journey img').length).toBe(2);
+    for (const legacyAnchor of ['strategy', 'system', 'decisions']) {
+      expect(page.querySelector(`#${legacyAnchor}`)).not.toBeNull();
+    }
+    expect(page.querySelector('#system')?.closest('section')?.id).toBe('identity');
+    expect(page.querySelector('#decisions')?.closest('section')?.id).toBe('architecture');
+    expect(page.querySelector('#architecture')?.textContent).toContain('Design result');
+    expect(page.querySelector('#experience img')?.getAttribute('src')).toBe(ampaProject.image);
+    expect(page.querySelector('.hero-background source')?.getAttribute('src')).toBe('/images/AMPA/hero-bg.mp4');
     expect(page.textContent).toContain('design assumptions');
     expect(page.textContent).toContain('not measured usability or business outcomes');
     const image = page.querySelector<HTMLImageElement>('img')!;
