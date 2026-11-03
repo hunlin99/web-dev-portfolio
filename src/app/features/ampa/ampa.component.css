@@ -144,8 +144,8 @@ figcaption {
 
 .metadata {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
     border-top: 1px solid #c9bdae;
     padding-top: 2rem;
     margin-top: 3rem;
@@ -492,4 +492,23 @@ blockquote {
         gap: 1.5rem;
     }
     .hero-grid > .hero-website-button { justify-self: center; margin-top: 0; }
+}
+
+.subsection {
+    margin-top: 2.5rem;
+    scroll-margin-top: 7rem;
+}
+
+.principle-list {
+    padding-left: 1.25rem;
+    margin-block: 1.5rem;
+}
+
+.principle-list li + li { margin-top: .75rem; }
+.visual-caption { margin-top: 1.5rem; }
+.journey { margin: 0; min-width: 0; }
+.decision h4 { font: 600 1.2rem/1.4 "Roboto", sans-serif; }
+
+@media (max-width: 750px) {
+    .identity-exploration { grid-template-columns: 1fr; }
 }

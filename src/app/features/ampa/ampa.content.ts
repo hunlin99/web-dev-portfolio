@@ -5,33 +5,30 @@ export const ampaProject = {
   platform: 'Mobile App · Responsive Web',
   tools: 'Figma · Illustrator',
   website: 'https://afroidentity.com/',
-  image: '/images/AMPA/AMPA_w_device.png',
+  image: '/images/AMPA/AMPA_w_device.webp',
+  scope: 'Brand identity · UX flows · Product UI',
   sections: [
-    { id: 'overview', title: 'Project Overview' },
-    { id: 'challenge', title: 'The Challenge' },
-    { id: 'strategy', title: 'Discovery & Strategy' },
-    { id: 'identity', title: 'Brand Identity' },
-    { id: 'system', title: 'Design System' },
-    { id: 'architecture', title: 'UX Architecture' },
-    { id: 'decisions', title: 'Solving Key UX Problems' },
-    { id: 'experience', title: 'UI & Prototype Direction' },
-    { id: 'reflection', title: 'Outcome & Reflection' }
+    { id: 'overview', title: 'Context & Challenge' },
+    { id: 'challenge', title: 'Understanding Two User Groups' },
+    { id: 'identity', title: 'Building a Cultural Design System' },
+    { id: 'architecture', title: 'UX Decisions & User Flows' },
+    { id: 'experience', title: 'Final Product & Responsive Design' },
+    { id: 'reflection', title: 'Outcomes & Reflection' }
   ],
   audiences: [
-    { title: 'Consumers', text: 'Discover culturally relevant businesses, compare offerings, communicate with vendors, and shop confidently.' },
-    { title: 'Vendors', text: 'Create storefronts, manage listings and orders, and understand business performance.' }
+    { title: 'Consumers', text: 'Finding culturally relevant businesses, comparing unfamiliar offerings, and deciding whom to buy from.' },
+    { title: 'Vendors', text: 'Presenting a storefront, keeping listings and orders organized, and understanding business activity.' }
   ],
-  goals: [
-    'Build a recognizable identity rooted in community and cultural expression.',
-    'Support consumer and vendor workflows within one coherent marketplace.',
-    'Reduce complexity in vendor operations through clear, progressive steps.',
-    'Maintain a consistent, usable experience across mobile and responsive web layouts.'
+  principles: [
+    { title: 'Cultural authenticity', text: 'Ground the visual language in community and interdependence.' },
+    { title: 'Functional clarity', text: 'Keep labels, states, and next steps clear during practical tasks.' },
+    { title: 'Role-specific usability', text: 'Organize shopping and business tools around each role’s primary tasks.' }
   ],
   brandStages: [
-    { title: 'Cultural exploration', text: 'The visual direction explores Ese Ne Tekrema as a reference for interdependence, Nkyinkyim for adaptability, and Ndebele-inspired geometry for cultural expression. These concepts connect the identity to the relationship between consumers, vendors, and community.' },
-    { title: 'Logo ideation', text: 'Circular compositions explore connection and shared community, translating the marketplace concept into a recognizable visual identity.' },
-    { title: 'Refinement', text: 'Detailed and simplified border treatments frame a key design tradeoff: cultural richness versus legibility at small sizes.' },
-    { title: 'Brand application', text: 'The identity direction extends across the AMPA wordmark, social icons, and light and dark applications, keeping cultural expression connected to the product experience.' }
+    { title: 'Cultural inspiration', text: 'Ese Ne Tekrema suggests interdependence, Nkyinkyim adaptability, and Ndebele-inspired geometry cultural expression.' },
+    { title: 'Logo exploration', text: 'Circular compositions connect the idea of shared community with the marketplace identity.' },
+    { title: 'Logo refinement', text: 'Simplified borders balance cultural detail with recognition at small sizes.' },
+    { title: 'UI application', text: 'Carry the identity into navigation and buttons; reserve expressive patterns for brand moments.' }
   ],
   colors: [
     { name: 'Cream', hex: '#FAF7F0', ink: '#1E1A1B' },
@@ -41,35 +38,26 @@ export const ampaProject = {
   ],
   decisions: [
     {
-      title: 'One marketplace, two user roles', discipline: 'Role-based navigation',
-      problem: 'A user may be a shopper, a vendor, or both. Switching roles must preserve a clear sense of context.',
-      constraint: 'Existing vendors and users who have not registered as vendors require different destinations.',
-      decision: 'Branch from the user profile: existing vendors enter the dashboard, while new vendors enter registration.',
-      benefit: 'A clear path for each account state, with registration presented only when it is needed.'
-    },
-    {
       title: 'Simplifying vendor product setup', discipline: 'Progressive disclosure',
-      problem: 'Products can have different inventory, pricing, and fulfillment needs, making a single dense form difficult to navigate.',
-      constraint: 'The setup flow needs to support bundle pricing, stock or lead-time options, and multiple fulfillment methods.',
-      decision: 'Group product details, inventory, and fulfillment into understandable steps. Expand optional settings when relevant and separate local delivery, national shipping, and pickup.',
-      benefit: 'Less information to process at once while retaining the flexibility needed for different kinds of products.'
+      problem: 'A single form must accommodate pricing, inventory, lead times, and fulfillment.',
+      decision: 'Group details into steps, reveal optional settings when relevant, and distinguish delivery, shipping, and pickup.',
+      benefit: 'A staged listing flow that retains product flexibility without presenting every setting at once.'
     },
     {
       title: 'Making business performance understandable', discipline: 'Information hierarchy',
-      problem: 'Vendors need different perspectives on business performance rather than one undifferentiated dashboard.',
-      constraint: 'Revenue, completed orders, and followers represent different questions and time scales.',
-      decision: 'Offer distinct metric views and time-period controls, keeping the selected measure and period visible.',
-      benefit: 'A focused way to explore a business question without competing charts or ambiguous labels.'
+      problem: 'Revenue, orders, and followers answer different business questions.',
+      decision: 'Separate metric views and keep the selected measure and time period visible.',
+      benefit: 'A dashboard organized around a focused business question, with recent orders and customer-message entry points nearby.'
     }
   ],
   journeys: [
-    { title: 'Consumer experience', steps: ['Discover & search', 'Explore vendor profiles', 'Compare & save', 'Checkout'], text: 'Organize discovery, saved items, vendor communication, and checkout around a clear shopping journey.', image: '/images/AMPA/Consumer-experience.png' },
-    { title: 'Vendor experience', steps: ['Register', 'Create listings', 'Manage orders', 'Review analytics'], text: 'Connect onboarding, inventory, fulfillment, and analytics in a practical operational workflow.', image: '/images/AMPA/Vendor-experience.png' }
+    { title: 'Consumer experience', steps: ['Discover & search', 'Explore vendor profiles', 'Compare & save', 'Checkout'], text: 'Category and location filters support discovery; saved items and checkout stay within the shopping context.', image: '/images/AMPA/Consumer-experience.png' },
+    { title: 'Vendor experience', steps: ['Register', 'Create listings', 'Manage orders', 'Review analytics'], text: 'A dedicated dashboard groups listings, order status, and analytics, keeping operational tools out of consumer navigation.', image: '/images/AMPA/Vendor-experience.png' }
   ],
   deliverables: [
-    'Brand direction: cultural rationale, logo exploration, color, and typography.',
-    'UX architecture: consumer and vendor journeys, account states, and interaction specifications.',
-    'Product interface direction: mobile screens, responsive layouts, and reusable components.',
-    'Handoff focus: annotated flows, component behavior, and clear implementation guidance.'
+    'Brand identity: cultural rationale, logo exploration, palette, and typography.',
+    'UX architecture: consumer/vendor flows, account states, and interaction specifications.',
+    'Product design: high-fidelity mobile screens, responsive web direction, and reusable UI.',
+    'Handoff: annotated flows and component behavior for implementation.'
   ]
 } as const;
