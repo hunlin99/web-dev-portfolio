@@ -316,6 +316,10 @@ video {
     margin-top: 1.5rem;
 }
 
+hr {
+    margin-top: 2.5em;
+}
+
 .cms-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
@@ -351,15 +355,36 @@ video {
         grid-template-rows: auto;
     }
 }
+
 .hero {
     color: #fff;
     background: linear-gradient(90deg, rgb(2 27 46 / .92), rgb(2 27 46 / .65)), url('/images/DC3-Viral-Menace/dc3-viral-menace-cover-img.jpg') center / cover no-repeat;
 }
-.hero .metadata { border-color: rgb(255 255 255 / .4); }
-.architecture-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(2rem, 5vw, 4rem); align-items: center; }
-.architecture-grid > * { min-width: 0; }
-.architecture-grid .case-image { margin-top: 0; }
-@media (max-width: 750px) { .architecture-grid { grid-template-columns: 1fr; } }
+
+.hero .metadata {
+    border-color: rgb(255 255 255 / .4);
+}
+
+.architecture-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: center;
+}
+
+.architecture-grid>* {
+    min-width: 0;
+}
+
+.architecture-grid .case-image {
+    margin-top: 0;
+}
+
+@media (max-width: 750px) {
+    .architecture-grid {
+        grid-template-columns: 1fr;
+    }
+}
 
 .hero-website-button {
     margin-top: 1rem;
@@ -374,13 +399,50 @@ video {
     grid-template-areas: "copy image" "action image";
     row-gap: 0;
 }
-.hero-copy { grid-area: copy; align-self: end; min-width: 0; }
-.hero-grid > figure { grid-area: image; margin: 0; }
-.hero-grid > .hero-website-button { grid-area: action; align-self: start; }
+
+.hero-copy {
+    grid-area: copy;
+    align-self: end;
+    min-width: 0;
+}
+
+.hero-grid>figure {
+    grid-area: image;
+    margin: 0;
+}
+
+.hero-grid>.hero-website-button {
+    grid-area: action;
+    align-self: start;
+}
+
 @media (max-width: 750px) {
     .hero-grid {
         grid-template-areas: "copy" "image" "action";
         gap: 1.5rem;
     }
-    .hero-grid > .hero-website-button { justify-self: center; margin-top: 0; }
+
+    .hero-grid>.hero-website-button {
+        justify-self: center;
+        margin-top: 0;
+    }
+}
+
+.process-step {
+    margin-top: 2.5rem;
+    scroll-margin-top: 7rem;
+}
+
+.iteration-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.outcome-note {
+    margin-top: 1.5rem;
+}
+
+@media (max-width: 950px) {
+    .iteration-grid {
+        grid-template-columns: 1fr;
+    }
 }
