@@ -12,9 +12,8 @@
                     <img [src]="project.coverImage" [width]="project.coverWidth" [height]="project.coverHeight"
                         [alt]="project.coverAlt" fetchpriority="high">
                 </figure>
-                <app-project-website-button class="hero-website-button"
-                    [href]="project.website" [label]="project.visitLabel"
-                    [ariaLabel]="project.visitAriaLabel"></app-project-website-button>
+                <app-project-website-button class="hero-website-button" [href]="project.website"
+                    [label]="project.visitLabel" [ariaLabel]="project.visitAriaLabel"></app-project-website-button>
             </div>
             <dl class="metadata">
                 @for (item of project.metadata; track item.label) {
@@ -44,8 +43,8 @@
                 <ul>@for (item of content.goals.items; track item) { <li>{{ item }}</li> }</ul>
             </div>
             <figure class="case-image">
-                <img src="/images/DC3-Viral-Menace/landing-showcase.png" [alt]="content.goals.imageAlt"
-                    loading="lazy" decoding="async" width="1542" height="1601">
+                <img src="/images/DC3-Viral-Menace/landing-showcase.png" [alt]="content.goals.imageAlt" loading="lazy"
+                    decoding="async" width="1542" height="1601">
             </figure>
         </div>
     </section>
@@ -77,10 +76,11 @@
                 </div>
                 <figure class="case-image">
                     <img src="/images/DC3-Viral-Menace/dc3-viral-menace-sitemap.png"
-                        [alt]="content.designProcess.architecture.imageAlt" loading="lazy" decoding="async"
-                        width="1709" height="1758">
+                        [alt]="content.designProcess.architecture.imageAlt" loading="lazy" decoding="async" width="1709"
+                        height="1758">
                 </figure>
             </div>
+            <hr>
             <div id="low-fidelity" class="process-step">
                 <h3>{{ content.designProcess.lowFidelity.title }}</h3>
                 <p>{{ content.designProcess.lowFidelity.paragraph }}</p>
@@ -89,6 +89,7 @@
                         width="3295" height="2753" loading="lazy" decoding="async">
                 </figure>
             </div>
+            <hr>
             <div id="visual-design" class="process-step">
                 <h3>{{ content.designProcess.visualDirection.title }}</h3>
                 <ul>@for (item of content.designProcess.visualDirection.items; track item) { <li>{{ item }}</li> }</ul>
@@ -154,6 +155,7 @@
                     </article>
                 </div>
             </div>
+            <hr>
             <div id="cms" class="cms-grid process-step">
                 <div class="section-copy">
                     <h3>{{ content.development.cms.title }}</h3>
@@ -163,11 +165,13 @@
                 <div class="cms-gallery">
                     <figure class="case-image">
                         <img src="/images/DC3-Viral-Menace/dc3-viral-menace-web-admin-1.png"
-                            [alt]="content.development.cms.images[0].alt" loading="lazy" decoding="async" width="2521" height="4207">
+                            [alt]="content.development.cms.images[0].alt" loading="lazy" decoding="async" width="2521"
+                            height="4207">
                     </figure>
                     <figure class="case-image">
                         <img src="/images/DC3-Viral-Menace/dc3-viral-menace-web-admin-2.png"
-                            [alt]="content.development.cms.images[1].alt" loading="lazy" decoding="async" width="2522" height="5427">
+                            [alt]="content.development.cms.images[1].alt" loading="lazy" decoding="async" width="2522"
+                            height="5427">
                     </figure>
                 </div>
             </div>
