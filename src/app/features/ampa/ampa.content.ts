@@ -1,5 +1,5 @@
 export const ampaProject = {
-  title: 'AMPA — From Cultural Identity to Digital Marketplace',
+  title: 'AMPA (Afroidentity Marketplace) by Afroidentity Inc.',
   subtitle: 'Building a culturally inspired brand and dual-sided marketplace experience that connects Afro-diaspora consumers with independent vendors.',
   role: 'UX/UI Designer · Brand Designer',
   platform: 'Mobile App · Responsive Web',
