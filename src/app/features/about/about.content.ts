@@ -90,7 +90,7 @@ export const workExperience: WorkExperience[] = [
     {
         period: "May 2025 - Present",
         jobTitle: "UX Designer",
-        project: { url: "https://afroidentity.com/", external: true },
+        project: { url: "https://afroidentity.ca/", external: true },
         company: "Afroidentity Inc. | Toronto, Canada",
         highlights: [
             [{ "text": "Translated product requirements and user research into " }, { "text": "end-to-end user flows", "bold": true }, { "text": ", responsive interfaces, and " }, { "text": "interactive Figma prototypes", "bold": true }, { "text": " for web and mobile experiences." }],

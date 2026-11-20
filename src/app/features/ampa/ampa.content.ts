@@ -4,7 +4,7 @@ export const ampaProject = {
   role: 'UX/UI Designer · Brand Designer',
   platform: 'Mobile App · Responsive Web',
   tools: 'Figma · Illustrator',
-  website: 'https://afroidentity.com/',
+  website: 'https://afroidentity.ca/',
   image: '/images/AMPA/AMPA_w_device.webp',
   scope: 'Brand identity · UX flows · Product UI',
   sections: [
